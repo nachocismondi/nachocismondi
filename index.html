@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
         <title>Nacho Cismondi - Digital experience designer</title>
-        <meta name="description" content="">
+        <meta name="description" content="Here are my most important works as a designer. Challenges are my weakness." />
+        <meta name="author" content="Nacho Cismondi" />
+        <meta name="keywords" content="ignacio cismondi, cismondi, argentine designer, #ef801a, design, portfolio, designer, digital"/>
+
+        <!--
+        * Main HTML
+        * By nachocismondi.com. Powered by Boostrap 5.0
+        * Cismondi Holdings -->
 
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://nachocismondi.com/">
+        <meta property="og:url" content="https://nachocismondi.com">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Nacho Cismondi - Digital experience designer">
-        <meta property="og:description" content="">
-        <meta property="og:image" content="assets/social-preview.png">
+        <meta property="og:description" content="Here are my most important works as a designer. Challenges are my weakness.">
+        <meta property="og:image" content="assets/social-preview.webp">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="nachocismondi.com">
         <meta property="twitter:url" content="https://nachocismondi.com/">
         <meta name="twitter:title" content="Nacho Cismondi - Digital experience designer">
-        <meta name="twitter:description" content="">
-        <meta name="twitter:image" content="assets/social-preview.png">
+        <meta name="twitter:description" content="Here are my most important works as a designer. Challenges are my weakness.">
+        <meta name="twitter:image" content="assets/social-preview.webp">
 
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -44,15 +49,32 @@
     </head>
 
     <body id="home">
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container px-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav gap-4">
+                        <li class="nav-item"> <a class="nav-link" aria-current="page" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link disabled" href="#noup">Proyects <span class="badge text-bg-dark">soon</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
     <!-- Hero -->
-    <header class="bg-black pt-5 pb-3 vh-100 justify-content-center">
-            <div class="container px-5 justify-content-center">
+    <header class="bg-black pt-5 pb-3">
+            <div class="container px-5">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-md-10 col-lg-7">
                     <div class="text-left mt-5 mb-3">
 
                         <div class="d-flex flex-row gap-4 d-sm-flex mb-4 animate__animated animate__fadeIn">
-                            <img class="rounded-circle" width="40" height="40" src="assets/profile.png" alt="">
+                            <img class="rounded-circle" width="40" height="40" src="assets/profile.webp" alt="">
                             
                             <span class="chip-available badge d-flex align-items-center py-1 px-3 pe-3 rounded-pill"><img class="rounded-circle me-2" width="16" height="16" src="assets/available.gif" alt="">Available for new projects</span>
                         </div>
@@ -62,13 +84,13 @@
                         <p class="lead mt-3 mb-4 animate__animated animate__fadeIn animate__slower">Hi! I'm <strong>Nacho Cismondi</strong> – a Argentine passionate about technology. I try to leave a mark and make the world a better place.</br></br>I'm curious about everything, currently focused on improve LATAM restaurants with <a href="https://fu.do" target="blank"><span class="chip-main badge align-items-center rounded-pill"><img class="rounded me-2" width="24" height="24" src="https://fu.do/assets/img/icons/waiters-app-f2caf3b4.svg">Fudo</span></a>
                         </p>
 
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-left" id="work">
-                            <a class="button-primary btn-lg px-4 me-sm-3 p-3 animate__animated animate__fadeIn animate__delay-1s" href="https://www.behance.net/nachocismondi">See my work</a>
-                            <a class="button-secondary btn-lg px-4 me-sm-3 p-3 animate__animated animate__fadeIn animate__delay-1s" href="mailto:nachocismondi@gmail.com">Contact me</a>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-left">
+                            <a class="button-primary btn-lg px-4 me-sm-3 p-3 animate__animated animate__fadeIn animate__delay-1s" href="#work">See my work</a>
+                            <a class="button-secondary btn-lg px-4 me-sm-3 p-3 animate__animated animate__fadeIn animate__delay-1s" href="#contact">Contact me</a>
                                 
                         </div>
 
-                        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-between animate__animated animate__fadeIn animate__delay-1s">
+                        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-between animate__animated animate__fadeIn animate__delay-1s" id="work">
                               <ul class="social-icons list-unstyled d-flex gap-4">
                                     <li><a href="https://twitter.com/nachocismondi" target="blank"><i class="bi bi-twitter-x"></i></a></li>
                                     <li><a href="https://www.linkedin.com/in/nachocismondi" target="blank"><i class="bi bi-linkedin"></i></a></li>
@@ -81,6 +103,175 @@
                 </div>
             </div>
     </header>
+
+
+    <!-- Work section-->
+    <section class="work bg-black pt-1 pb-3">
+
+        <div class="container my-5 col-12 col-md-9 animate__animated animate__fadeIn animate__delay-1s">
+            <a href="https://www.behance.net/gallery/94388553/Jungla-Branding-Web" target="blank">
+                <div class="card-portfolio-two row p-3 pb-0 pe-lg-0 pt-lg-4 align-items-center rounded-3">
+                    <div class="col-lg-6 p-3 pb-sm-5 p-lg-5 pt-lg-3">
+
+                            <span class="chip-secondary badge rounded-pill mb-3">Branding</span>
+                            <span class="chip-secondary badge rounded-pill mb-3">Website</span>
+
+                        <h2 class="text-white">Jungla</h2>
+                        <p class="text-white-50">A cultural space that promotes and provides a free and diverse place for emerging artists.</p>
+                        <button class="button-tertiary btn bg-white d-inline-flex align-items-center" type="button">See case study <i class="bi bi-arrow-right ps-2"></i></button>
+
+                    </div>
+
+                    <div class="col-lg-5 offset-lg-1 p-0 overflow-hidden shadow-lg rounded-3">
+                        <img class="rounded-lg-3" src="assets/jungla.webp" alt="" width="720">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="container my-5 col-12 col-md-9">
+            <a href="https://www.behance.net/gallery/115589639/emeliuz-Branding-Web" target="blank">
+                <div class="card-portfolio-one row p-3 pb-0 pe-lg-0 pt-lg-4 align-items-center rounded-3">
+                    <div class="col-lg-6 p-3 pb-sm-5 p-lg-5 pt-lg-3">
+
+                            <span class="chip-secondary badge rounded-pill mb-3">Branding</span>
+                            <span class="chip-secondary badge rounded-pill mb-3">Website</span>
+                            <span class="chip-secondary badge rounded-pill mb-3">Naming</span>
+
+                        <h2 class="text-white">Emeliuz</h2>
+                        <p class="text-white-50">Digital consultancy with the target of helping small companies to be profitable.</p>
+                        <button class="button-tertiary btn bg-white d-inline-flex align-items-center" type="button">See case study <i class="bi bi-arrow-right ps-2"></i></button>
+
+                    </div>
+
+                    <div class="col-lg-5 offset-lg-1 p-0 overflow-hidden shadow-lg rounded-3">
+                        <img class="rounded-lg-3" src="assets/emeliuz.webp" alt="" width="720">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="container my-5 col-12 col-md-9">
+            <a href="https://www.behance.net/gallery/93870741/Chill-it" target="blank">
+                <div class="card-portfolio-three row p-3 pb-0 pe-lg-0 pt-lg-4 align-items-center rounded-3">
+                    <div class="col-lg-6 p-3 pb-sm-5 p-lg-5 pt-lg-3">
+
+                            <span class="chip-secondary badge rounded-pill mb-3">Branding</span>
+                            <span class="chip-secondary badge rounded-pill mb-3">Product Design</span>
+
+                        <h2 class="text-white">Chillit</h2>
+                        <p class="text-white-50">Startup that manufactures a rapid cooling machine for drinks.</p>
+                        <button class="button-tertiary btn bg-white d-inline-flex align-items-center" type="button">See case study <i class="bi bi-arrow-right ps-2"></i></button>
+
+                    </div>
+
+                    <div class="col-lg-5 offset-lg-1 p-0 overflow-hidden shadow-lg rounded-3">
+                        <img class="rounded-lg-3" src="assets/chillit.webp" alt="Ops... Temporarily broken image" width="720">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Blog section-->
+    <section class="bg-black py-5" id="blog">
+        <div class="container col-lg-7 p-4 gap-5 py-md-5 align-items-center">
+
+            <h2 class="display-8 text-white mb-3 text-center">Lastes posts</h2>
+            <div class="first-post list-group justify-content-center">
+                <a href="https://medium.com/nachocismondi/lationamerica-esta-asi-por-tu-culpa-803229490284" class="bg-black list-group-item list-group-item d-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
+                <img src="blog/lationamerica-esta-asi-por-tu-culpa/image-main.webp" class="rounded">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h5 class="mb-1 text-white">Latinoamérica está así por tu culpa</h5>
+                            <p class="mb-0 text-white-50">Sí, es momento de aceptarlo. Por tu culpa y por la mía. No es válida la excusa de que el resto también hace todo mal. Es momento de actuar.</p>
+                        </div>
+                            <small class="text-white-50 text-nowrap">Apr. 2021</small>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="list-post list-group justify-content-center">
+                <a href="https://medium.com/nachocismondi/mucho-que-ocultar-5b85ef57cfa9" class="bg-black list-group-item list-group-item d-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
+                <img src="blog/mucho-que-ocultar/image-main.webp" class="rounded">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h5 class="mb-1 text-white">Mucho que ocultar</h5>
+                            <p class="mb-0 text-white-50">Me encargo de borrar uno a uno todos los sitios donde hay información personal sensible.</p>
+                        </div>
+                            <small class="text-white-50 text-nowrap">Jan. 2021</small>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="list-post list-group justify-content-center">
+                <a href="https://medium.com/nachocismondi/fascinacion-por-vender-hielo-a-un-esquimal-e460b52831b7" class="bg-black list-group-item list-group-item d-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
+                <img src="blog/venderle-hielo-a-esquimal/image-main.webp" class="rounded">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h5 class="mb-1 text-white">Fascinación por venderle hielo a un esquimal</h5>
+                            <p class="mb-0 text-white-50">Soy consciente que es solo una frase, pero las palabras importan ¿Qué hay detrás?</p>
+                        </div>
+                            <small class="text-white-50 text-nowrap">Oct. 2020</small>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+            <div class="col text-center">
+                <a id="contact" class="link-secondary text-secondary" href="https://medium.com/nachocismondi" target="blank">Ver más post<i class="bi bi-plus-circle ms-2"></i></a>
+            </div>
+
+    </section>
+
+    <section class="contact">
+        <div class="container col-lg-12 p-4 gap-4 py-5 align-items-center justify-content-center">
+             <aside class="contact-cta rounded-3 p-4 p-sm-5 mb-5">
+                        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                            <div class="mb-4 mb-xl-0">
+                                <div class="fs-3 fw-bold text-white">Let's create something amazing</div>
+                                <div class="text-white-50">Write to me at <a class="text-white-50" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> or complete the form.</div>
+                        </div>
+                            <div class="col-6">
+                            <iframe data-tally-src="https://tally.so/embed/nrAYxX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100" frameborder="0" marginheight="0" marginwidth="0" title="Contact"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                            <style type="text/css">.jrOEWo, .tally-powered {
+    display: none !important;
+}</style>
+
+                            </div>
+                        </div>
+                </aside>
+        </div>
+    </section>
+
+
+    <!-- Contact section-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+                <div class="col-md-10 d-flex align-items-center">
+                  <a href="/" class="mb-3 me-3 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <img src="assets/logo.svg" height="48px">
+                  </a>
+                  <span class="mb-3 mb-md-0 text-white-50"><a href="https://creativecommons.org/licenses/by/3.0/" targer="blank" class="text-white-50">© CC 3.0</a> | Web made with <i class="bi bi-heart-fill"></i> and Boostrap 5. <script>document.write(new Date().getFullYear());</script>
+                  </span>
+                </div>
+
+                <ul class="social-icons list-unstyled d-flex gap-4">
+                    <li><a href="https://twitter.com/nachocismondi" target="blank"><i class="bi bi-twitter-x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/nachocismondi" target="blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="https://www.behance.net/nachocismondi" target="blank"><i class="bi bi-behance"></i></a></li>
+                </ul>
+
+        </footer>
+    </div>
+
+
+        <!-- Core JS (with Popper)-->
+        <script src="js/scripts.js"></script>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
