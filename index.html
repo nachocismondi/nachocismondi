@@ -48,6 +48,25 @@
 
         <!-- CSS Animations -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <!-- Highligth.io -->
+        <script src="https://unpkg.com/highlight.run"></script>
+        <script>
+        H.init('ldwq64ld    ', { // Get your project ID from https://app.highlight.io/setup
+            environment: 'production',
+            version: 'commit:abcdefg12345',
+            networkRecording: {
+                enabled: true,
+                recordHeadersAndBody: true,
+                urlBlocklist: [
+					// insert full or partial urls that you don't want to record here
+					// Out of the box, Highlight will not record these URLs (they can be safely removed):
+					"https://www.googleapis.com/identitytoolkit",
+					"https://securetoken.googleapis.com",
+                ],
+            },
+        });
+    </script>
 
     </head>
 
@@ -283,7 +302,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
-        <script src="https://unpkg.com/highlight.run"></script>
-
+        
     </body>
 </html>
