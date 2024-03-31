@@ -21,6 +21,8 @@ body {
 /*! Menu style */
 .navbar {
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transform: translate3d(0, 0, 0);
     border: 1px solid rgba(255, 255, 255, .1);
     background-color: rgba(0, 0, 0, .7);
 }
@@ -142,6 +144,24 @@ header p {
 
 .button-tertiary:hover {
     color: #212529 !important;
+}
+
+.card-quote {
+    background-color: #ef801a !important;
+    text-decoration: none;
+    transition: box-shadow .8s ease-in-out;  
+}
+
+.card-quote:hover {
+    background-color: #ef801a !important;
+    text-decoration: none;
+    box-shadow: inset 0px 4px 4px 0px hsla(0,0%,100%,.2);
+
+    box-shadow: 0px 0px 32px 0px rgba(245, 156, 76, .5);
+    -webkit-box-shadow: 0px 0px 32px 0px rgba(245, 156, 76, .5);
+    -moz-box-shadow: 0px 0px 32px 0px rgba(245, 156, 76, .5);
+
+    transition: box-shadow .3s ease-in-out;   
 }
 
 .work a {
