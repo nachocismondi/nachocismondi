@@ -58,6 +58,7 @@ Follow the white rabbit<!DOCTYPE html>
     </head>
 
     <body id="home">
+
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container px-5">
@@ -95,7 +96,7 @@ Follow the white rabbit<!DOCTYPE html>
 
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-left">
                             <a class="button-primary btn-lg px-4 me-sm-3 p-3 animate__animated animate__fadeIn animate__delay-1s" href="#work">See my work</a>
-                            <a class="button-secondary btn-lg px-4 me-sm-3 p-3 animate__animated animate__fadeIn animate__delay-1s" href="#contact">Contact me</a>
+                            <a class="button-secondary btn-lg px-4 me-sm-3 p-3 animate__animated animate__fadeIn animate__delay-1s" href="#contact">Let's talk</a>
                                 
                         </div>
 
@@ -206,7 +207,7 @@ Follow the white rabbit<!DOCTYPE html>
     </section>
 
     <!-- Blog section-->
-    <section class="bg-black py-5" id="blog">
+    <section class="bg-black py-5 my-5" id="blog">
         <div class="container col-lg-7 p-4 gap-5 py-md-5 align-items-center">
 
             <h2 class="display-8 text-white mb-3 text-center">Lastes posts</h2>
@@ -253,35 +254,88 @@ Follow the white rabbit<!DOCTYPE html>
 
         </div>
             <div class="col text-center">
-                <a id="contact" class="link-secondary text-secondary" href="https://medium.com/nachocismondi" target="blank">Ver más post<i class="bi bi-plus-circle ms-2"></i></a>
+                <a id="contact" class="link-secondary text-secondary" href="https://medium.com/nachocismondi" target="blank">See more posts in spanish<i class="bi bi-plus-circle ms-2"></i></a>
             </div>
 
     </section>
 
-    <section class="contact">
-        <div class="container col-lg-12 p-4 gap-4 py-5 align-items-center justify-content-center">
-             <aside class="contact-cta rounded-3 p-4 p-sm-5 mb-5">
-                        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-                            <div class="mb-4 mb-xl-0">
-                                <div class="fs-3 fw-bold text-white">Let's create something amazing</div>
-                                <div class="text-white-50">Write to me at <a class="text-white-50" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> or complete the form.</div>
-                        </div>
-                            <div class="col-12 col-md-10 col-lg-6">
-                            <iframe data-tally-src="https://tally.so/embed/nrAYxX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100" frameborder="0" marginheight="0" marginwidth="0" title="Contact"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-                            <style type="text/css">.jrOEWo, .tally-powered {
-    display: none !important;
-}</style>
 
-                            </div>
+    <!-- Contact section -->
+    <section class="contact my-5 py-5">
+
+    <div class="container contact-cta rounded-3 my-5">
+        <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
+
+            <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
+                <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
+                <div class="h4 text-white text-opacity-75">Write to me at <a class="text-white text-opacity-75" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> or complete the form <i class="bi bi-arrow-down-circle-fill d-lg-none"></i><i class="bi bi-arrow-right-circle-fill d-none d-lg-block"></i></div>
+            </div>
+
+            <div class="col-12 col-md-10 col-lg-6">
+
+                <!-- Contact form -->
+                <div id="form">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdk0TJmrfs6SefQYICHgYsI2LImj8aGRIzG4vFV6QFvSnAVIQ/formResponse" method="post" target="hiddenConfirm" onsubmit="formSubmit()">
+
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control bg-dark text-white border-secondary" name="entry.1815432459" id="floatingInput" placeholder="Best Client" required>
+                            <label class="text-white text-opacity-75" for="entry.1815432459 floatingInput email">Your name?</label>
                         </div>
-                </aside>
+
+                        <div class="form-floating mb-2">
+                            <input type="email" class="form-control bg-dark text-white border-secondary" name="entry.467343636" id="floatingInput" placeholder="best@client.com" required>
+                            <label class="text-white text-opacity-75" for="entry.467343636 floatingInput email">What's your email?</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <textarea class="form-control bg-dark text-white border-secondary" name="entry.546330365" style="height: 100px" id="floatingInput" placeholder="Do whatever" required></textarea>
+                            <label class="text-white text-opacity-75" for="entry.546330365 floatingInput">Tell me about your project...</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <select class="form-select bg-dark text-white border-secondary" id="floatingSelect" aria-label="Budget" name="entry.562823855" required>
+                                <option selected disabled value="">Select an approximate budget option</option>
+                                <option name="$500+-+$1,500+USD">$500 - $1,500 USD</option>
+                                <option name="$1,500+-+$2,500+USD">$1,500 - $2,500 USD</option>
+                                <option name="$2,500+-+$3,500+USD">$2,500 - $3,500 USD</option>
+                                <option name="%2B+$3,500+USD">+ $3,500 USD</option>
+                            </select>
+                            <label class="text-white text-opacity-75" for="entry.562823855 floatingSelect">What's your budget?</label>
+                        </div>
+
+                        <button type="submit" class="button-secondary btn-lg px-5 text-black">Send</button>
+
+                    </form>
+                </div>
+
+                <iframe name="hiddenConfirm" style="display: none;">
+                </iframe>
+
+                <!-- Submitted message confirmation -->
+                <div id="completion-msg" class="col-12 text-center mb-5 pb-5" style="display: none; transition: all .1s ease;">
+                    <i class="bi bi-check-circle text-success mb-3 h2"></i>
+                    <h5 class="text-white mb-1">Request sent</h5>
+                    <p class="text-white text-opacity-75 mb-5 pb-5 mb-5 pb-5">Thanks for your interest. I will answer your request as soon as possible.</p>
+                </div>
+
+                <!-- Script to hide form after submitted -->
+                <script type="text/javascript">
+                    var submitted=false
+                    function formSubmit(){
+                        document.getElementById("form").style.display = "none";  // make form invisible
+                        document.getElementById("completion-msg").style.display = "block"; // Optional if you want to give a completion feedback!
+                    }
+                </script>
+            </div>
         </div>
+    </div>
+
     </section>
 
 
-    <!-- Contact section-->
+    <!-- Footer -->
     <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-top">
 
                 <div class="col-md-10 d-flex align-items-center">
                   <a href="/" class="mb-3 me-3 mb-md-0 text-body-secondary text-decoration-none lh-1">
@@ -301,6 +355,7 @@ Follow the white rabbit<!DOCTYPE html>
         </footer>
     </div>
 
+    </body>
 
         <!-- Core JS (with Popper)-->
         <script src="js/scripts.js"></script>
@@ -310,5 +365,5 @@ Follow the white rabbit<!DOCTYPE html>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
-    </body>
+
 </html>
