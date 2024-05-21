@@ -16,6 +16,7 @@ strong {
 
 body {
     background-color: #000 !important;
+    position: relative;
 }
 
 /*! Menu style */
@@ -23,7 +24,7 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     transform: translate3d(0, 0, 0);
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .1);
     background-color: rgba(0, 0, 0, .7);
 }
 
@@ -285,6 +286,14 @@ width: 64px;
 height: 64px; 
 object-fit: cover;
 object-position: 50% 25%; 
+}
+
+.list-post-soon {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
 
 .list-post a {
