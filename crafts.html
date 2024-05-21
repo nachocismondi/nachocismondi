@@ -3,7 +3,7 @@ Follow the white rabbit<!DOCTYPE html>
     <head>
         <meta charset="utf-8" hreflang="en"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Nacho Cismondi - Digital experience designer</title>
+        <title>Nacho Cismondi - Crafts</title>
         <meta name="description" content="Here are my most important works as a designer. Challenges are my weakness." />
         <meta name="author" content="Nacho Cismondi" />
         <meta name="copyright" content="Copyright owner"/>
@@ -39,16 +39,20 @@ Follow the white rabbit<!DOCTYPE html>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
         
         <!-- Main CSS-->
-        <link href="../../css/style.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
 
         <!-- Bootstrap CSS-->
-        <link href="../../css/boostrap-styles.css" rel="stylesheet" />
+        <link href="css/boostrap-styles.css" rel="stylesheet" />
         
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
         <!-- CSS Animations -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- Boostrap Masonry -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" sync></script>
+
 
         <!-- Posthog script -->
         <script>
@@ -58,7 +62,7 @@ Follow the white rabbit<!DOCTYPE html>
 
     </head>
 
-    <body id="home">
+    <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
 
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -66,11 +70,11 @@ Follow the white rabbit<!DOCTYPE html>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav gap-4">
-                        <li class="nav-item"> <a class="nav-link" aria-current="page" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://nachocismondi.com#work">Work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://nachocismondi.com#blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="crafts.html">Crafts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#craft">Crafts</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,14 +82,14 @@ Follow the white rabbit<!DOCTYPE html>
 
 
     <!-- Hero -->
-    <header class="bg-black pt-5 pb-3">
+    <header class="bg-black pt-5 pb-3" id="craft">
             <div class="container px-5">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-md-10 col-lg-7">
+                    <div class="col-md-10 col-lg-8">
                     <div class="text-left mt-5">
 
                         <h1 class="display-4 fw-bolder mb-2 animate__animated animate__fadeIn animate__slow">Crafts</h1>
-                        <p class="lead mt-3 animate__animated animate__fadeIn animate__slow">Varied compilation of stuff created for work, pleasure and fun.</p>
+                        <p class="lead mt-3 animate__animated animate__fadeIn animate__slow">Varied compilation of stuff and projects created for work, pleasure and fun.</p>
 
                     </div>
                     </div>
@@ -94,7 +98,7 @@ Follow the white rabbit<!DOCTYPE html>
 
             <div class="container px-5 mt-4 align-items-center">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-md-10 col-lg-7 align-items-center">
+                    <div class="col-md-10 col-lg-8 align-items-center">
 
                             <h3 class="mb-2 me-4 text-light animate__animated animate__fadeIn animate__slow">Side projects</h3>
 
@@ -102,11 +106,33 @@ Follow the white rabbit<!DOCTYPE html>
                 </div>
 
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-md-10 col-lg-7 d-flex align-items-center">
-                            <!--
-                            <p class="animate__animated animate__fadeIn animate__slow"><a href="clic-guru/index.html" class="text-white"><i class="bi bi-arrow-up-right-circle-fill me-1"></i>ReadyBrand</a><span class="text-white-50"> — Pre created logo for fast companies.</span></p>-->
-
+                    <!--<div class="col-md-10 col-lg-7 d-flex align-items-center">
                             <p class="animate__animated animate__fadeIn animate__slow"><a href="assets/crafts/clic-guru/index.html" class="text-white" target="blank"><i class="bi bi-arrow-up-right-circle-fill me-1"></i>Clic.guru</a><span class="text-white-50"> — eBook about to upgrade your work profile and CV to get a job.</span></p>
+                    </div>-->
+
+                <div class="col-md-10 col-lg-8 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slow">
+                    <a href="assets/crafts/clic-guru/index.html" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
+                        <img src="assets/crafts/clic-logo.jpeg" width="64px" class="rounded mb-3 mb-md-0" alt="Clic Guru">
+                        <div class="d-md-flex gap-2 w-100 justify-content-between">
+                            <div>
+                                <h5 class="mb-1 text-white">Clic.guru <i class="bi bi-arrow-up-right-circle-fill me-1"></i></h5>
+                                <p class="mb-0 text-white-50 pb-3 pb-md-0">eBook about to upgrade your work profile and CV to get a job.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-10 col-lg-8 d-flex list-group justify-content-center animate__animated animate__fadeIn animate__slow">
+                    <a href="#" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true"a>
+                        <img src="assets/crafts/ready-logo.png" width="64px" class="rounded mb-3 mb-md-0 list-post-soon" alt="Clic Guru">
+                        <div class="d-md-flex gap-2 w-100 justify-content-between">
+                            <div>
+                                <h5 class="mb-1 text-white">Soon <i class="bi bi-arrow-up-right-circle-fill me-1"></i></h5>
+                                <p class="mb-0 text-white-50 pb-3 pb-md-0">Logos for fast companies.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
                     </div>
                 </div>
@@ -218,7 +244,7 @@ Follow the white rabbit<!DOCTYPE html>
     </section>
 
     <!-- Contact section -->
-    <section class="contact my-5 py-5">
+    <section class="contact my-5 py-5" id="contact">
 
     <div class="container contact-cta rounded-3 my-5">
         <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
@@ -316,7 +342,7 @@ Follow the white rabbit<!DOCTYPE html>
     </body>
 
         <!-- Core JS (with Popper)-->
-        <script src="../../js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
