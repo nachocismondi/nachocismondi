@@ -50,10 +50,6 @@ Follow the white rabbit<!DOCTYPE html>
         <!-- CSS Animations -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-        <!-- Boostrap Masonry -->
-        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" sync></script>
-
-
         <!-- Posthog script -->
         <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -88,7 +84,7 @@ Follow the white rabbit<!DOCTYPE html>
                     <div class="col-md-10 col-lg-8">
                     <div class="text-left mt-5">
 
-                        <h1 class="display-4 fw-bolder mb-2 animate__animated animate__fadeIn animate__slow">Crafts</h1>
+                        <h1 class="display-4 fw-bolder mb-2 animate__animated animate__fadeIn">Crafts</h1>
                         <p class="lead mt-3 animate__animated animate__fadeIn animate__slow">Varied compilation of stuff and projects created for work, pleasure and fun.</p>
 
                     </div>
@@ -106,12 +102,9 @@ Follow the white rabbit<!DOCTYPE html>
                 </div>
 
                 <div class="row gx-4 justify-content-center">
-                    <!--<div class="col-md-10 col-lg-7 d-flex align-items-center">
-                            <p class="animate__animated animate__fadeIn animate__slow"><a href="assets/crafts/clic-guru/index.html" class="text-white" target="blank"><i class="bi bi-arrow-up-right-circle-fill me-1"></i>Clic.guru</a><span class="text-white-50"> — eBook about to upgrade your work profile and CV to get a job.</span></p>
-                    </div>-->
-
-                <div class="col-md-10 col-lg-8 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slow">
-                    <a href="assets/crafts/clic-guru/index.html" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
+                    
+                <div class="col-md-10 col-lg-8 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
+                    <a href="assets/crafts/clic-guru/index" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
                         <img src="assets/crafts/clic-logo.jpeg" width="64px" class="rounded mb-3 mb-md-0" alt="Clic Guru">
                         <div class="d-md-flex gap-2 w-100 justify-content-between">
                             <div>
@@ -122,7 +115,7 @@ Follow the white rabbit<!DOCTYPE html>
                     </a>
                 </div>
 
-                <div class="col-md-10 col-lg-8 d-flex list-group justify-content-center animate__animated animate__fadeIn animate__slow">
+                <div class="col-md-10 col-lg-8 d-flex list-group justify-content-center animate__animated animate__fadeIn animate__slower">
                     <a href="#" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true"a>
                         <img src="assets/crafts/ready-logo.png" width="64px" class="rounded mb-3 mb-md-0 list-post-soon" alt="Clic Guru">
                         <div class="d-md-flex gap-2 w-100 justify-content-between">
@@ -145,25 +138,25 @@ Follow the white rabbit<!DOCTYPE html>
     <section class="container py-3">
 
         <div class="row" data-masonry='{"percentPosition": true }'>
-            <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__slower">
+            <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__delay-1s">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/icon-bill.webp">
+                <img class="card-img-top" src="assets/crafts/icon-bill.webp" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Invoices icon<small class="text-white-50"> | Feb. 2024</small></p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__slower">
+            <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__delay-1s">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/empty-state.webp">
+                <img class="card-img-top" src="assets/crafts/empty-state.webp" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Empty state<small class="text-white-50"> | Jan. 2024</small></p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__slower">
+            <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__delay-1s">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/loop.gif">
+                <img class="card-img-top" src="assets/crafts/loop.gif" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Looping animation<small class="text-white-50"> | Nov. 2023</small></p>
                 </div>
@@ -171,7 +164,7 @@ Follow the white rabbit<!DOCTYPE html>
             </div>
             <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__slower">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/icon-building.webp">
+                <img class="card-img-top" src="assets/crafts/icon-building.webp" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Icon building<small class="text-white-50"> | Sep. 2023</small></p>
                 </div>
@@ -179,7 +172,7 @@ Follow the white rabbit<!DOCTYPE html>
             </div>
             <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__slower">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/poster2.webp">
+                <img class="card-img-top" src="assets/crafts/poster2.webp" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Experimental poster<small class="text-white-50"> | Apr. 2021</small></p>
                 </div>
@@ -187,7 +180,7 @@ Follow the white rabbit<!DOCTYPE html>
             </div>
             <div class="col-sm-6 col-lg-4 mb-4 animate__animated animate__fadeIn animate__slower">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/book.webp">
+                <img class="card-img-top" src="assets/crafts/book.webp" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Cover book<small class="text-white-50"> | Jan. 2021</small></p>
                 </div>
@@ -195,7 +188,7 @@ Follow the white rabbit<!DOCTYPE html>
             </div>
             <div class="col-sm-6 col-lg-4 mb-4">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/miscelanea.gif">
+                <img class="card-img-top" src="assets/crafts/miscelanea.gif" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Expand<small class="text-white-50"> | Sep. 2020</small></p>
                 </div>
@@ -203,7 +196,7 @@ Follow the white rabbit<!DOCTYPE html>
             </div>
             <div class="col-sm-6 col-lg-4 mb-4">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/bang.gif">
+                <img class="card-img-top" src="assets/crafts/bang.gif" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Bang<small class="text-white-50"> | Aug. 2020</small></p>
                 </div>
@@ -211,7 +204,7 @@ Follow the white rabbit<!DOCTYPE html>
             </div>
             <div class="col-sm-6 col-lg-4 mb-4">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/poster1.webp">
+                <img class="card-img-top" src="assets/crafts/poster1.webp" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Invisible project poster<small class="text-white-50"> | Nov. 2019</small></p>
                 </div>
@@ -219,7 +212,7 @@ Follow the white rabbit<!DOCTYPE html>
             </div>
             <div class="col-sm-6 col-lg-4 mb-4">
               <div class="card bg-black border-dark">
-                <img class="card-img-top" src="assets/crafts/nice.gif">
+                <img class="card-img-top" src="assets/crafts/nice.gif" rel="preload">
                 <div class="card-body">
                   <p class="card-text text-light">Nice fluid<small class="text-white-50"> | Nov. 2019</small></p>
                 </div>
@@ -326,6 +319,10 @@ Follow the white rabbit<!DOCTYPE html>
     </div>
 
     </body>
+
+        <!-- Boostrap Masonry -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" sync></script>
+
 
         <!-- Core JS (with Popper)-->
         <script src="js/scripts.js"></script>
