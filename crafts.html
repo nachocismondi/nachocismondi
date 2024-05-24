@@ -3,7 +3,7 @@ Follow the white rabbit
 <html lang="en-US">
     <head>
         <meta charset="utf-8" hreflang="en"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <title>Nacho Cismondi - Crafts</title>
         <meta name="description" content="Here are my most important works as a designer. Challenges are my weakness." />
         <meta name="author" content="Nacho Cismondi" />
@@ -334,6 +334,10 @@ Follow the white rabbit
             var grid = document.querySelector('.grid');
             
             imagesLoaded(grid, function() {
+              grid.style.display = 'none';
+              grid.offsetHeight; 
+              grid.style.display = '';
+
               new Masonry(grid, {
                 itemSelector: '.grid-item'
               });
