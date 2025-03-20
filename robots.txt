@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://nachocismondi.com/blog/sitemap.xml
