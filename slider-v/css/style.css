@@ -145,7 +145,7 @@ header p {
 
 @media (max-width: 991.98px) {
     .button-primary {
-      padding: .4rem 1.5rem;
+      padding: .6rem 1.5rem;
     }
 }
 
@@ -261,7 +261,7 @@ header p {
 
 @media (max-width: 991.98px) {
     .button-secondary {
-      padding: .4rem 1.5rem;
+      padding: .6rem 1.5rem;
     }
 }
 
