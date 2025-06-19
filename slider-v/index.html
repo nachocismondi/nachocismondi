@@ -77,36 +77,33 @@
 <nav id="smartNavbar" class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
   <div class="container justify-content-center position-relative">    
     <!-- Toggle (solo visible en mobile) -->
-    <button class="navbar-toggler position-absolute mt-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+    <button class="navbar-toggler position-absolute animate__animated animate__fadeIn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Lista principal centrada -->
-    <ul class="navbar-nav align-items-center">
+    <ul class="navbar-nav align-items-center animate__animated animate__fadeIn">
       <!-- Logo GIF -->
-
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.nachocismondi.com" target="_blank">Blog</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         <li class="nav-item"><a class="nav-link" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a></li>
     </ul>
   </div>
 </nav>
 
 <!-- Mobile Offcanvas Menu -->
 <div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="height: 80vw;">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="mobileMenuLabel">
-      <img src="assets/logo.svg" alt="Logo" width="32" height="32" style="border-radius: 50%;" />
-    </h5>
+  <div class="offcanvas-header justify-content-center">
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column gap-3">
     <a class="nav-link text-white" href="#home">Home</a>
     <a class="nav-link text-white" href="#work">Work</a>
-    <a class="nav-link text-white" href="https://blog.nachocismondi.com" target="_blank">Blog</a>
-    <a class="nav-link text-white" href="#contact">Contact</a>
     <a class="nav-link text-white" href="crafts">Crafts</a>
+    <a class="nav-link text-white" href="#contact">Contact</a>
+    <a class="nav-link text-white" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a>
   </div>
 </div>
 
@@ -116,15 +113,15 @@
             <div class="container">
                 <div class="row gx-4 justify-content-center">
 
-                    <div class="col-md-10 col-lg-8 col-xl-6 px-5 px-sm-0">
+                    <div class="col-md-10 col-lg-8 col-xl-6 px-4 px-sm-0">
                     <div class="text-left mb-2">
-                        <div class="d-flex flex-row gap-4 d-sm-flex mb-3 animate__animated animate__fadeIn">  
+                        <div class="d-flex flex-row gap-4 d-sm-flex mb-2 mb-sm-3 animate__animated animate__fadeIn">  
                             <span class="chip-available badge d-flex align-items-center py-1 pe-3 rounded-pill"><img class="rounded-circle me-2" width="12" height="12" src="assets/available.gif" alt="Active status gif">Available for new projects</span>                
                         </div>
 
-                        <h1 class="mb-3 fw-bolder animate__animated animate__fadeIn animate__slower">Digital product designer</h1>
+                        <h1 class="mb-3 fw-bolder animate__animated animate__fadeIn animate__slower">Designing intuitive digital products</h1>
                         
-                        <p class="mb-sm-2 mb-md-4 animate__animated animate__fadeIn animate__slower">Hi! I'm <strong>Nacho Cismondi</strong> – I strive to leave a mark and make the world a better (and prettier) place. Currently focused on revolutionizing LATAM restaurants with <a href="https://fu.do" class="text-white" target="blank">Fudo</a>.
+                        <p class="mb-sm-2 mb-md-4 animate__animated animate__fadeIn animate__slower">I'm <strong>Nacho Cismondi</strong>. For +8 years, I’ve been crafting things to leave my mark and turn the world into a prettier place. Now, I’m innovating LATAM restaurants with <a href="https://fu.do" class="text-white" target="blank">Fudo</a>.
                         </p>
 
                         <div class="d-grid d-sm-flex gap-2 justify-content-sm-left my-3 my-md-0">
@@ -144,13 +141,28 @@
 <!-- Carrusel -->
 <div class="container">
         <div class="row gx-4 justify-content-center">
-<div class="carousel-container col-md-10 col-lg-8 col-xl-6">
+<div class="carousel-container col-md-10 col-lg-8">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
 
+    <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <a class="cursor-slider" href="#">
+        <img class="slide-bg animate__animated animate__fadeIn" src="assets/blur-02.png" alt="Fondo difuminado" />
+        <img class="slide-image" src="assets/slider-magazine.png" alt="Diseño 4" />
+        </a>
+        <div class="caption">Digital crypto brochure | <a href="#">View project</a></div>
+      </div>
+
       <!-- Slide 1 -->
       <div class="swiper-slide">
-        <img class="slide-bg" src="assets/blur-01.png" alt="Fondo difuminado" />
+        <!--<img class="slide-bg" src="assets/blur-01.png" />-->
+
+        <picture><source media="(min-width: 768px)" srcset="assets/blur-01.png"><img class="slide-bg" src="assets/blur-01-m.png" alt="Imagen responsiva según el ancho de pantalla"></picture>
+
+            <!--
+        <img class="slide-bg" src="assets/blur-01-m.png" srcset="assets/blur-01.png 1024w, assets/blur-01-m.png 767w" sizes="(min-width: 768px) 100vw, 100vw" alt="Fondo difuminado">-->
+
         <div class="multi-image">
           <img src="assets/slider-fudo-1.png" alt="Img1" id="slide1"/>
           <img src="assets/slider-fudo-2.png" alt="Img2" />
@@ -158,15 +170,6 @@
         </div>
         <div class="caption">Waiter app with QR payment experience</div>
 
-      </div>
-
-    <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <a class="cursor-slider" href="#">
-        <img class="slide-bg" src="assets/blur-02.png" alt="Fondo difuminado" />
-        <img class="slide-image" src="assets/slider-magazine.png" alt="Diseño 4" />
-        </a>
-        <div class="caption">Digital crypto brochure | <a href="#">View project</a></div>
       </div>
 
       <!-- Slide 3 -->
@@ -198,8 +201,8 @@
     </div>
 
     <!-- Botones -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next animate__animated animate__fadeIn"></div>
+    <div class="swiper-button-prev animate__animated animate__fadeIn"></div>
   </div>
 </div>
 </div>
@@ -213,7 +216,7 @@
   <div class="row justify-content-center">
     <!-- Heading -->
     <div class="col-10 text-center mb-2">
-      <p class="text-white-50">Experience with companies, governments and NGOs.</p>
+      <p class="text-white-50">Experience with companies, governments and NGOs:</p>
     </div>
     <!-- Logos Wrapper: full width on xs, max 10 cols on md+ -->
     <div class="col-md-10">
@@ -228,11 +231,11 @@
         </div>
         <!-- Logo 3 -->
         <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
-          <img src="assets/logo-temaiken.svg" alt="Logo 3" class="img-fluid">
+          <img src="assets/logo-ong.svg" alt="Logo 4" class="img-fluid">
         </div>
         <!-- Logo 4 -->
         <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
-          <img src="assets/logo-ong.svg" alt="Logo 4" class="img-fluid">
+          <img src="assets/logo-temaiken.svg" alt="Logo 3" class="img-fluid">
         </div>
       </div>
     </div>
@@ -246,7 +249,7 @@
             <div class="container">
                 <div class="row gx-4 justify-content-center">
 
-                    <div class="col-md-10 col-lg-8 col-xl-6 px-5 px-sm-0">
+                    <div class="col-md-10 col-lg-8 col-xl-6 px-4 px-sm-0">
                     <div class="text-left">
 
 
@@ -296,6 +299,11 @@
                     </div>
                 </div>
             </div>
+
+
+                     <div class="d-grid d-sm-flex gap-2 justify-content-sm-center my-5">
+                              <a class="button-primary me-sm-3 animate__animated animate__fadeIn animate__slower" href="mailto:nachocismondi@gmail.com"><span class="button-label">Let's work together</span></a>
+                        </div>
 
 
                     </div>
@@ -610,7 +618,7 @@
         <script>
           new Swiper(".mySwiper", {
             loop: true,
-            autoplay: { delay: 3000, disableOnInteraction: false },
+            autoplay: { delay: 280000, disableOnInteraction: false },
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev"
