@@ -67,21 +67,39 @@ Follow the white rabbit
 
     <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
 
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="container px-5">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav gap-4">
-                        <li class="nav-item"> <a class="nav-link" href="https://nachocismondi.com">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://nachocismondi.com#work">Work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://nachocismondi.com#blog">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Crafts</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<!-- Menú responsive flotante -->
+<nav id="smartNavbar" class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+  <div class="container justify-content-center position-relative">    
+    <!-- Toggle (solo visible en mobile) -->
+    <button class="navbar-toggler position-absolute animate__animated animate__fadeIn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Lista principal centrada -->
+    <ul class="navbar-nav align-items-center animate__animated animate__fadeIn">
+      <!-- Logo GIF -->
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+      <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         <li class="nav-item"><a class="nav-link" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="height: 80vw;">
+  <div class="offcanvas-header justify-content-center">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column gap-3">
+    <a class="nav-link text-white" href="#home">Home</a>
+    <a class="nav-link text-white" href="#work">Work</a>
+    <a class="nav-link text-white" href="crafts">Crafts</a>
+    <a class="nav-link text-white" href="#contact">Contact</a>
+    <a class="nav-link text-white" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a>
+  </div>
+</div>
 
 
 
