@@ -562,7 +562,7 @@ a.cursor-slider:hover {
                   top: 44%;
                   left: 50%;
                   width: auto;
-                  height: 92%;
+                  height: 69%;
                   transform: translate(-50%, -50%);
                   object-fit: cover;
                   filter: blur(15px);
