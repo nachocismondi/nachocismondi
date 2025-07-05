@@ -1,4 +1,4 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="utf-8" hreflang="en"/>
@@ -65,13 +65,13 @@ s<!DOCTYPE html>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Posthog script -->
-<script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_WKkGTdRhMT3KPXayGdLbpa38yiOBy3oN4IDtMp8TYPx', {
-        api_host: 'https://eu.i.posthog.com',
-        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-    })
-</script>
+        <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_WKkGTdRhMT3KPXayGdLbpa38yiOBy3oN4IDtMp8TYPx', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+            })
+        </script>
 
 
   <style>
@@ -153,89 +153,86 @@ s<!DOCTYPE html>
 
 <!-- Carrusel -->
 <div class="container">
-        <div class="row gx-4 justify-content-center">
-<div class="carousel-container col-md-10 col-lg-8">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper animate__animated animate__fadeIn">
+    <div class="row gx-4 justify-content-center">
+        <div class="carousel-container col-md-10 col-lg-8">
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper animate__animated animate__fadeIn">
 
-    <!-- Slide 4 -->
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <a class="cursor-slider" href="https://www.behance.net/gallery/193608933/LABITCONF-22" target="blank">
+                <img class="slide-bg" src="assets/blur-02.png" alt="Fondo difuminado" />
+
+                <video class="slide-image slide-video" id="first" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="assets/slide-magazine.mp4" type="video/mp4" />
+                    <source src="assets/slide-magazine-xs.webm" type="video/webm" />
+                </video>
+                </a>
+
+                <div class="caption">Digital brochure | <a href="https://www.behance.net/gallery/193608933/LABITCONF-22" target="blank">View project</a></div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <img class="slide-bg" src="assets/blur-01.png" />
+                <picture><source media="(min-width: 768px)" srcset="assets/blur-01-m.png"><img class="slide-bg" src="assets/blur-01-m.png" alt="Imagen responsiva según el ancho de pantalla"></picture>
+
+                <div class="multi-image">
+                  <img src="assets/slider-fudo-1.png" alt="Img1" id="slide1"/>
+                  <img src="assets/slider-fudo-2.png" alt="Img2" />
+                  <img src="assets/slider-fudo-3.png" alt="Img3" id="slide1"/>
+                </div>
+
+                <div class="caption">Waiter app with QR code payment</div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <img class="slide-bg" src="assets/blur-03.png" alt="Fondo difuminado" />
+                
+                <video class="slide-image slide-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="assets/slide-clients.mp4" type="video/mp4" />
+                    <source src="assets/slide-clients-xs.webm" type="video/webm" />
+                </video>
+
+                <div class="caption">Fudo Stories | Customer wins and testimonials</div>
+            </div>
 
 
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <a class="cursor-slider" href="https://www.behance.net/gallery/192966467/Descentralizar-Branding-Web-Social-media" target="blank">
+                
+                <img class="slide-bg" src="assets/blur-04.png" alt="Fondo difuminado" />
+                <img class="slide-image" src="assets/slider-web.png" alt="Diseño 2" />
+                </a>
+                
+                <div class="caption">Website for a crypto event | <a href="https://www.behance.net/gallery/192966467/Descentralizar-Branding-Web-Social-media" target="blank">View project</a></div>
+              </div>
 
-      <div class="swiper-slide">
-        <a class="cursor-slider" href="https://www.behance.net/gallery/193608933/LABITCONF-22" target="blank">
-        <img class="slide-bg" src="assets/blur-02.png" alt="Fondo difuminado" />
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+                <img class="slide-bg" src="assets/blur-05.png" alt="Fondo difuminado" />
+                
+                <video class="slide-image slide-video rounded" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="assets/slide-create.mp4" type="video/gif" />
+                    <source src="assets/slide-create-xs.webm" type="video/webm" />
+                </video>
 
-<video class="slide-image slide-video" id="first" autoplay muted loop playsinline webkit-playsinline preload="auto">
-  <source src="assets/slide-magazine.mp4" type="video/mp4" />
-  <source src="assets/slide-magazine-xs.webm" type="video/webm" />
-</video>
+                <video class="slide-image slide-video rounded" src="assets/slide-create-xs.webm" autoplay muted loop></video>
+                
+                <div class="caption">Micro-animation for the sign-up</div>
+            </div>
 
-<!-- 
-<video class="slide-image slide-video" id="first" autoplay muted loop>
-  <source src="assets/slide-magazine.mp4" type="video/mp4" />
-  <source src="assets/slide-magazine-xs.webm" type="video/webm" />
-</video>-->
-        </a>
-        <div class="caption">Digital brochure | <a href="https://www.behance.net/gallery/193608933/LABITCONF-22" target="blank">View project</a></div>
-      </div>
+            </div>
 
-
-
-
-
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img class="slide-bg" src="assets/blur-01.png" />
-
-            <picture><source media="(min-width: 768px)" srcset="assets/blur-01-m.png"><img class="slide-bg" src="assets/blur-01-m.png" alt="Imagen responsiva según el ancho de pantalla"></picture>
-
-            <!--
-        <img class="slide-bg" src="assets/blur-01-m.png" srcset="assets/blur-01.png 1024w, assets/blur-01-m.png 767w" sizes="(min-width: 768px) 100vw, 100vw" alt="Fondo difuminado">-->
-
-        <div class="multi-image">
-          <img src="assets/slider-fudo-1.png" alt="Img1" id="slide1"/>
-          <img src="assets/slider-fudo-2.png" alt="Img2" />
-          <img src="assets/slider-fudo-3.png" alt="Img3" id="slide1"/>
+                <!-- Swipe arrows -->
+                <div class="swiper-button-next animate__animated animate__fadeIn"></div>
+                <div class="swiper-button-prev animate__animated animate__fadeIn"></div>
+            </div>
         </div>
-        <div class="caption">Waiter app with QR code payment</div>
-
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img class="slide-bg" src="assets/blur-03.png" alt="Fondo difuminado" />
-        <!--<video class="slide-image slide-video" src="assets/slide-clients-xs.webm" autoplay muted loop></video>-->
-        <img class="slide-image" src="assets/slider-clients.png" alt="Diseño centrado" />
-        <div class="caption">Fudo Success Stories | Customer wins and testimonials</div>
-      </div>
-
-
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <a class="cursor-slider" href="https://www.behance.net/gallery/192966467/Descentralizar-Branding-Web-Social-media" target="blank">
-        <img class="slide-bg" src="assets/blur-04.png" alt="Fondo difuminado" />
-        <img class="slide-image" src="assets/slider-web.png" alt="Diseño 2" />
-        </a>
-        <div class="caption">Website for a crypto event | <a href="https://www.behance.net/gallery/192966467/Descentralizar-Branding-Web-Social-media" target="blank">View project</a></div>
-      </div>
-
-      <!-- Slide 6 -->
-      <div class="swiper-slide">
-        <img class="slide-bg" src="assets/blur-05.png" alt="Fondo difuminado" />
-        <video class="slide-image slide-video rounded" src="assets/slide-create-xs.webm" autoplay muted loop></video>
-        <div class="caption">Micro-animation for the sign-up</div>
-      </div>
-
+        </div>
     </div>
-
-    <!-- Botones -->
-    <div class="swiper-button-next animate__animated animate__fadeIn"></div>
-    <div class="swiper-button-prev animate__animated animate__fadeIn"></div>
-  </div>
-</div>
-</div>
-</div>
 
 
 
@@ -300,7 +297,7 @@ s<!DOCTYPE html>
                             <span class="chip-secondary badge rounded-pill mb-3">Branding</span>
 
                         <h2 class="text-white">Labitconf 22</h2>
-                        <p class="text-white-50">The largest crypto event in LATAM that brings together industry leaders and companies.</p>
+                        <p class="text-white-50 d-none d-md-block">The largest crypto event in LATAM that brings together industry leaders and companies.</p>
                         <button class="button-tertiary btn bg-white d-inline-flex align-items-center mb-3" type="button">View project <i class="bi bi-arrow-right ps-2"></i></button>
 
                     </div>
