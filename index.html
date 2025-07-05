@@ -166,8 +166,13 @@
         <a class="cursor-slider" href="https://www.behance.net/gallery/193608933/LABITCONF-22" target="blank">
         <img class="slide-bg" src="assets/blur-02.png" alt="Fondo difuminado" />
         <!-- <img class="slide-image" src="assets/slider-magazine.png" alt="Diseño" />-->
-        <video class="slide-image slide-video" id="first" src="assets/slide-magazine-xs.webm" autoplay muted loop></video>
 
+
+
+<video class="slide-image slide-video" id="first" autoplay muted loop>
+  <source src="assets/slide-magazine.mp4" type="video/mp4" />
+  <source src="assets/slide-magazine-xs.webm" type="video/webm" />
+</video>
         </a>
         <div class="caption">Digital brochure | <a href="https://www.behance.net/gallery/193608933/LABITCONF-22" target="blank">View project</a></div>
       </div>
@@ -395,7 +400,7 @@
 
                         <h3 class="mb-3 fw-bolder text-white">At the intersection between usability and beauty</h3>
 
-                        <p class="mb-4">My specialty spans a wide range of formats. I built my foundational skills working with physical media—books and packaging—and then dove into the digital world. I consider myself a digital creator.Every design I craft embodies simplicity, clarity, and beauty. I bring consistent, solution-driven experience to all the areas I specialize in. Let’s chat about how I can help elevate your next project.</p>
+                        <p class="mb-4">My specialty spans a wide range of formats. I built my foundational skills working with physical media—books and packaging—and then dove into the digital world. I consider myself a digital creator. Every design I craft embodies simplicity, clarity, and beauty. I bring consistent, solution-driven experience to all the areas I specialize in. Let’s chat about how I can help elevate your next project.</p>
 
             <div class="list-post-icon list-group justify-content-center">
                 <div class="bg-black mt-3 d-flex gap-3 pb-3 pb-sm-4 mb-3 mb-sm-4 align-items-center border-bottom border-dark">
@@ -464,6 +469,9 @@
                 <div class="row gx-4 justify-content-center">
 
                     <div class="col-md-10 col-lg-8 col-xl-6 px-4 px-sm-0">
+
+
+
 
 
 
@@ -631,7 +639,7 @@
 
         <!-- Swiper Carrousel JS-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <<script>
+        <script>
   const swiper = new Swiper(".mySwiper", {
     loop: true,
     autoplay: {
