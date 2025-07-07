@@ -1,4 +1,3 @@
-Follow the white rabbit
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -141,7 +140,7 @@ Follow the white rabbit
 
                 <div class="row gx-4 justify-content-center">
                  
-                <div class="col-md-10 col-lg-8 d-flex first-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
+                <div class="col-md-10 col-lg-8 col-xl-7 d-flex first-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
                     <a href="#" class="bg-black list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true">
                         <img src="assets/crafts/cat-logo.png" width="64px" class="rounded mb-3 mb-md-0 list-post-soon" alt="Clic Guru">
                         <div class="d-md-flex gap-2 w-100 justify-content-between">
@@ -149,12 +148,12 @@ Follow the white rabbit
                                 <h5 class="mb-1 text-white">Coming soon... <i class="bi bi-arrow-up-right-circle-fill me-1"></i></h5>
                                 <p class="mb-0 text-white-50 pb-3 pb-md-0">Cats and messaging.</p>
                             </div>
-                            <small class="text-white-50 text-nowrap">2024</small>
+                            <small class="text-white-50 text-nowrap">2025</small>
                         </div>
                     </a>
                 </div>
 
-                <div class="col-md-10 col-lg-8 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
+                <div class="col-md-10 col-lg-8 col-xl-7 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
                     <a href="https://readybrand.shop" class="bg-black list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
                         <img src="assets/crafts/ready-logo.png" width="64px" class="rounded mb-3 mb-md-0" alt="Clic Guru">
                         <div class="d-md-flex gap-2 w-100 justify-content-between">
@@ -167,7 +166,7 @@ Follow the white rabbit
                     </a>
                 </div>
 
-                <div class="col-md-10 col-lg-8 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
+                <div class="col-md-10 col-lg-8 col-xl-7 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
                     <a href="assets/crafts/clic-guru/index" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
                         <img src="assets/crafts/clic-logo.jpeg" width="64px" class="rounded mb-3 mb-md-0" alt="Clic Guru">
                         <div class="d-md-flex gap-2 w-100 justify-content-between">
@@ -181,7 +180,7 @@ Follow the white rabbit
                 </div>
 
 
-                <div class="col-md-10 col-lg-8 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
+                <div class="col-md-10 col-lg-8 col-xl-7 d-flex list-post list-group justify-content-center animate__animated animate__fadeIn animate__slower">
                     <a href="https://web.archive.org/web/20130815092348/http://nixio.blogspot.com/" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
                         <img src="assets/crafts/nixio.jpg" width="64px" class="rounded mb-3 mb-md-0" alt="Clic Guru">
                         <div class="d-md-flex gap-2 w-100 justify-content-between">
@@ -197,7 +196,7 @@ Follow the white rabbit
 
                     </div>
 
-              <div class="row gx-4 mt-4 justify-content-center">
+              <div class="row gx-4 mt-5 pt-5 justify-content-center">
                     
                                     <div class="col-md-10 col-lg-8 col-xl-6 px-4 px-sm-0">
 
@@ -420,6 +419,32 @@ Follow the white rabbit
             });
         });
     </script>
+
+            <!-- Menu fixed on scroll to top-->
+        <script>
+          const navbar = document.getElementById("smartNavbar");
+          let lastScrollTop = 0;
+
+          window.addEventListener("scroll", function () {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            // Mostrar/ocultar navbar según dirección
+            if (scrollTop > lastScrollTop) {
+              navbar.style.top = "-100px"; // scroll hacia abajo → ocultar
+            } else {
+              navbar.style.top = "4px";   // scroll hacia arriba → mostrar
+            }
+
+            // Agregar/quitar fondo al hacer scroll > 20px
+            if (scrollTop > 20) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          });
+        </script>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
