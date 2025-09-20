@@ -359,7 +359,6 @@ p.text-interval {
                 box-shadow .4s ease-in-out;
 }
 
-
 .button-primary:hover {
     background-color: #f29640;
     border: 1px solid #cd7018;
@@ -375,8 +374,115 @@ p.text-interval {
 
     -webkit-box-shadow: #e2934a 0px 1px 2px 1px inset;
     -moz-box-shadow: #e2934a 0px 1px 2px 1px inset;
+}
 
-       
+.button-primary-sticky {
+  position: relative;
+  background-color: #ef801a;
+  color: white;
+  border: 1px solid rgb(0, 95, 198);
+  border-radius: 8px;
+  box-shadow: rgb(140, 194, 255) 0px 1px 0px 1px inset;
+  cursor: pointer;
+  overflow: hidden;
+  align-content: center;
+  padding: .8rem 3rem;
+
+  /* --- Centrado en pantalla + oculto hasta 50% scroll --- */
+  position: fixed;                /* “sticky” en viewport */
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.98);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+}
+
+@media (max-width: 991.98px) {
+  .button-primary-sticky { padding: .6rem 3rem; }
+}
+
+.button-primary-sticky::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 95%;
+  width: 36px;
+  height: 36px;
+  background-image: url('../assets/profile.webp');
+  background-size: cover;
+  border-radius: 99px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(120%) translateY(-48%) scale(0.9);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.5s;
+  pointer-events: none;
+}
+
+/* Hover / tap iguales al original */
+.button-primary-sticky:hover::before,
+.button-primary-sticky.tap-activo::before {
+  transform: translateX(0%) translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+.button-primary-sticky .button-label {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.button-primary-sticky:hover .button-label,
+.button-primary-sticky.tap-activo .button-label {
+  transform: translateX(-20px);
+}
+
+/* Segunda tanda de reglas originales replicadas */
+.button-primary-sticky {
+  background-color: #ef801a;
+  border: 1px solid #b36823;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: #f29640 0px 1px 0px 1px inset;
+  transition:
+    color .4s ease-in-out,
+    background-color .4s ease-in-out,
+    border-color .4s ease-in-out,
+    border .4s ease-in-out,
+    box-shadow .4s ease-in-out;
+}
+
+.button-primary-sticky:hover {
+  background-color: #f29640;
+  border: 1px solid #cd7018;
+  color: #000;
+  text-decoration: none;
+  box-shadow: #e2934a 0px 1px 1px 1px inset;
+  transition:
+    color .4s ease-in-out,
+    background-color .4s ease-in-out,
+    border-color .4s ease-in-out,
+    border .4s ease-in-out,
+    box-shadow .4s ease-in-out;
+  -webkit-box-shadow: #e2934a 0px 1px 2px 1px inset;
+  -moz-box-shadow:   #e2934a 0px 1px 2px 1px inset;
+}
+
+/* Estado visible a partir del 50% del scroll */
+.button-primary-sticky.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
   .chip-tooltip .tooltip-inner {
