@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 strong {
-    font-weight: 900;
+    font-weight: 600 !important;
 }
 
 body {
@@ -21,6 +21,11 @@ body {
 
 h1 {
     font-size: 1.8rem !important;
+}
+
+li.tasks {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
 }
 
 /*! Menu style */
@@ -82,7 +87,7 @@ h1 {
 .stat-card{
   border: 0;
   border-radius: var(--card-radius);
-  background: #040404;
+  background: #212121;
   box-shadow: var(--card-shadow);
   padding: 1.25rem 1.5rem;
   height: 100%;
@@ -269,37 +274,52 @@ header p {
     line-height: 1.6;
 }
 
-.button-primary-sticky {
-  position: relative;
-  background-color: #ef801a;
-  color: white;
-  border: 1px solid rgb(0, 95, 198);
-  border-radius: 8px;
-  box-shadow: rgb(140, 194, 255) 0px 1px 0px 1px inset;
-  cursor: pointer;
-  overflow: hidden;
-  align-content: center;
-  padding: .8rem 3rem;
-}
-
 .button-primary {
   position: relative;
   background-color: #ef801a;
-  color: white;
-  border: 1px solid rgb(0, 95, 198);
+  
+  border: 1px solid #d87314;
   border-radius: 8px;
-  box-shadow: rgb(140, 194, 255) 0px 1px 0px 1px inset;
   cursor: pointer;
   overflow: hidden;
   align-content: center;
   padding: .8rem 3rem;
+  box-shadow: #f29640 0px 1px 0px 1px inset;
+
+  -webkit-box-shadow: #f29640 0px 1px 0px 1px inset;
+  -moz-box-shadow: #f29640 0px 1px 0px 1px inset;
+
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  
+  transition: color .4s ease-in-out,
+  background-color .4s ease-in-out,
+  border-color .4s ease-in-out,
+  border .4s ease-in-out,
+  box-shadow .4s ease-in-out;
 }
 
-@media (max-width: 991.98px) {
-    .button-primary {
-      padding: .6rem 3rem;
-    }
+.button-primary:hover {
+  background-color: #f29640;
+  border: 1px solid #cd7018;
+  color: #000;
+  text-decoration: none;
+  box-shadow: #e2934a 0px 1px 1px 1px inset;
+  -webkit-box-shadow: #e2934a 0px 1px 2px 1px inset;
+  -moz-box-shadow: #e2934a 0px 1px 2px 1px inset;
+
+  transition: color .4s ease-in-out,
+              background-color .4s ease-in-out,
+              border-color .4s ease-in-out,
+              border .4s ease-in-out,
+              box-shadow .4s ease-in-out;   
 }
+
 
 .button-primary::before {
   content: "";
@@ -340,56 +360,26 @@ p.text-interval {
   margin: 16rem 0px;
 }
 
-.button-primary {
-    background-color: #ef801a;
-    border: 1px solid #b36823;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    box-shadow: #f29640 0px 1px 0px 1px inset;
-
-    transition: color .4s ease-in-out,
-                background-color .4s ease-in-out,
-                border-color .4s ease-in-out,
-                border .4s ease-in-out,
-                box-shadow .4s ease-in-out;
-}
-
-.button-primary:hover {
-    background-color: #f29640;
-    border: 1px solid #cd7018;
-    color: #000;
-    text-decoration: none;
-    box-shadow: #e2934a 0px 1px 1px 1px inset;
-
-    transition: color .4s ease-in-out,
-                background-color .4s ease-in-out,
-                border-color .4s ease-in-out,
-                border .4s ease-in-out,
-                box-shadow .4s ease-in-out;   
-
-    -webkit-box-shadow: #e2934a 0px 1px 2px 1px inset;
-    -moz-box-shadow: #e2934a 0px 1px 2px 1px inset;
-}
-
 .button-primary-sticky {
   position: relative;
-  background-color: #ef801a;
-  color: white;
-  border: 1px solid rgb(0, 95, 198);
-  border-radius: 8px;
-  box-shadow: rgb(140, 194, 255) 0px 1px 0px 1px inset;
-  cursor: pointer;
   overflow: hidden;
-  align-content: center;
+  background-color: #ef801a;
+  border: 1px solid #d87314;
+  border-radius: 8px;
+  box-shadow: #f29640 0px 1px 0px 1px inset;
+  -webkit-box-shadow: #f29640 0px 1px 0px 1px inset;
+  -moz-box-shadow: #f29640 0px 1px 0px 1px inset;
   padding: .8rem 3rem;
+  cursor: pointer;
+  
+  color: #000;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
 
-  /* --- Centrado en pantalla + oculto hasta 50% scroll --- */
-  position: fixed;                /* “sticky” en viewport */
+
+
+  position: fixed;
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%) scale(.98);
@@ -401,15 +391,19 @@ p.text-interval {
     transform .25s ease;
 }
 
-@media (max-width: 991.98px) {
-  .button-primary-sticky { padding: .6rem 3rem; }
+@media (max-width: 767.98px) {
+  .button-primary-sticky {
+    width: 100%;
+    padding: .8rem 3rem;
+  }
 }
+
 
 .button-primary-sticky::before {
   content: "";
   position: absolute;
-  right: 16px;
-  top: 95%;
+  right: 18px;
+  top: 50%;
   width: 36px;
   height: 36px;
   background-image: url('../assets/profile.webp');
@@ -442,19 +436,19 @@ p.text-interval {
   transform: translateX(-20px);
 }
 
-/* Segunda tanda de reglas originales replicadas */
+
 .button-primary-sticky {
-  background-color: #ef801a;
-  border: 1px solid #b36823;
+  top: 120%;                   
+  left: 50%;
+  transform: translate(-50%, 0) scale(.8);
+  opacity: 0;
   color: #000;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  box-shadow: #f29640 0px 1px 0px 1px inset;
+  pointer-events: none;
+  will-change: top, transform, opacity;
   transition:
+  top .55s cubic-bezier(0.34, 1.56, 0.64, 1), 
+  transform .55s cubic-bezier(0.34, 1.56, 0.64, 1),  
+  opacity .5s cubic-bezier(0.34, 1.56, 0.64, 1), 
     color .4s ease-in-out,
     background-color .4s ease-in-out,
     border-color .4s ease-in-out,
@@ -478,11 +472,20 @@ p.text-interval {
   -moz-box-shadow:   #e2934a 0px 1px 2px 1px inset;
 }
 
-/* Estado visible a partir del 50% del scroll */
 .button-primary-sticky.is-visible {
+  top: 95%;
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+  transition:
+    top .55s cubic-bezier(0.34, 1.56, 0.64, 1), 
+    transform .55s cubic-bezier(0.34, 1.56, 0.64, 1),  
+    opacity .4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+    color .4s ease-in-out,
+    background-color .4s ease-in-out,
+    border-color .4s ease-in-out,
+    border .4s ease-in-out,
+    box-shadow .4s ease-in-out;
 }
 
   .chip-tooltip .tooltip-inner {
