@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" hreflang="en"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>LABITCONF 22 | Nacho Cismondi | Digital experience designer</title>
+        <meta name="description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM." />
+        <meta name="author" content="Nacho Cismondi" />
+        <meta name="copyright" content="Copyright owner"/>
+        <meta name="keywords" content="ignacio cismondi, cismondi, argentine designer, #ef801a, design, portfolio, designer, digital"/>
+        <meta name="robots" content="follow"/>
+        <link rel="canonical" href="https://nachocismondi.com" />
+
+        <!--
+        * Main HTML
+        * By nachocismondi.com. Powered by Boostrap 5.0
+        * Cismondi Holdings -->
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://nachocismondi.com/labitconf">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="LABITCONF 22 | Nacho Cismondi | Digital experience designer">
+        <meta property="og:description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM.">
+        <meta property="og:image" content="https://nachocismondi.com/assets/social-preview.webp">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="nachocismondi.com">
+        <meta property="twitter:url" content="https://nachocismondi.com/labitconf">
+        <meta name="twitter:title" content="LABITCONF 22 | Nacho Cismondi | Digital experience designer">
+        <meta name="twitter:description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM.">
+        <meta name="twitter:image" content="https://nachocismondi.com/assets/social-preview.webp">
+
+        <!-- Whatsapp Meta Tags -->
+        <meta property="og:title" content="LABITCONF 22 | Nacho Cismondi | Digital experience designer"/>
+        <meta property="og:description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM."/>
+        <meta property="og:url" content="https://nachocismondi.com/labitconf"/>
+        <meta property="og:image"content="https://nachocismondi.com/assets/social-preview.webp"/>
+
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />       
+
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+        
+        <!-- Main CSS-->
+        <link href="css/style.css" rel="stylesheet" />
+
+        <!-- Bootstrap CSS-->
+        <link href="css/boostrap-styles.css" rel="stylesheet" />
+        
+        <!-- Swiper carousel CSS-->
+        <link href="css/swiper-bundle.min.css" rel="stylesheet" />
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- CSS Animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- Toltips  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+
+    
+  </style>
+
+    </head>
+
+    <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
+
+    </body>
+
+
+    <!-- Popper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <!-- Swiper Carrousel JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+const swiper = new Swiper(".mySwiper", {
+loop: true,
+autoplay: {
+  delay: 2800,
+  disableOnInteraction: false
+},
+navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev"
+},
+effect: "fade",
+fadeEffect: { crossFade: true },
+speed: 80,
+grabCursor: true,
+slidesPerView: 1,
+
+on: {
+  slideChangeTransitionEnd: function () {
+    // Pausar y resetear todos los videos
+    document.querySelectorAll(".slide-video").forEach(video => {
+      video.pause();
+      video.currentTime = 0;
+    });
+
+    // Obtener el slide visible (activo) - aunque sea duplicado
+    const activeSlide = this.slides[this.activeIndex];
+    const video = activeSlide.querySelector(".slide-video");
+
+    if (video) {
+      video.play().catch(() => {});
+    }
+  }
+}
+});
+</script>
+
+
+
+<!-- Button primary delay to recreate hover-->
+    <script>
+      document.querySelectorAll('.button-primary').forEach(boton => {
+        let tapTimeout;
+
+        boton.addEventListener('touchstart', () => {
+          boton.classList.add('tap-activo');
+          clearTimeout(tapTimeout);
+          tapTimeout = setTimeout(() => {
+            boton.classList.remove('tap-activo');
+          }, 1000); // activo durante 1s
+        });
+
+        boton.addEventListener('touchend', () => {
+          clearTimeout(tapTimeout);
+          tapTimeout = setTimeout(() => {
+            boton.classList.remove('tap-activo');
+          }, 1000);
+        });
+      });
+    </script>
+
+<script>
+// Initialize all tooltips in manual mode
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
+new bootstrap.Tooltip(el, { trigger: 'manual' })
+);
+
+// Click handler: copy email + show tooltip
+document.getElementById('copy-btn').addEventListener('click', function(e) {
+e.preventDefault();
+const email = 'nachocismondi@gmail.com';
+const tip = bootstrap.Tooltip.getInstance(this);
+navigator.clipboard.writeText(email)
+.then(() => { tip.show(); setTimeout(() => tip.hide(), 3000); })
+.catch(console.error);
+
+});
+</script>
+
+
+    <!-- Menu fixed on scroll to top-->
+    <script>
+      const navbar = document.getElementById("smartNavbar");
+      let lastScrollTop = 0;
+
+      window.addEventListener("scroll", function () {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        // Mostrar/ocultar navbar según dirección
+        if (scrollTop > lastScrollTop) {
+          navbar.style.top = "-100px"; // scroll hacia abajo → ocultar
+        } else {
+          navbar.style.top = "4px";   // scroll hacia arriba → mostrar
+        }
+
+        // Agregar/quitar fondo al hacer scroll > 20px
+        if (scrollTop > 20) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+    </script>
+
+
+
+</html>
