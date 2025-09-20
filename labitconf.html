@@ -108,6 +108,17 @@
   </div>
 </div>
 
+<a id="copy-btn"
+   class="button-primary-sticky me-sm-3"
+   href="#"
+   data-bs-toggle="tooltip"
+   data-bs-placement="top"
+   data-bs-custom-class="chip-tooltip"
+   title="Copied email to clipboard"
+   alt="Copy my email to clipboard">
+  <span class="button-label">Write me</span>
+</a>
+
 <!-- Work section-->
 <section class="work bg-black mt-5" id="work">
 
@@ -346,7 +357,9 @@
 </div>
 
 <div class="col-12">
-  <img src="work/labitconf/video-evento.gif" alt="Mockup 1" class="img-fluid rounded " loading="lazy">
+  <video autoplay muted loop width="100%">
+    <source src="work/labitconf/video-evento.webm" type="video/webm" alt="Project close"/>
+  </video>
 </div>
 
 
@@ -523,7 +536,7 @@
 
 <!-- Button primary delay to recreate hover-->
         <script>
-          document.querySelectorAll('.button-primary').forEach(boton => {
+          document.querySelectorAll('.button-primary-sticky').forEach(boton => {
             let tapTimeout;
 
             boton.addEventListener('touchstart', () => {
@@ -542,6 +555,29 @@
             });
           });
         </script>
+
+
+<!-- Button primary delay to recreate hover-->
+<script>
+  document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+    let tapTimeout;
+
+    boton.addEventListener('touchstart', () => {
+      boton.classList.add('tap-activo');
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        boton.classList.remove('tap-activo');
+      }, 1000); // activo durante 1s
+    });
+
+    boton.addEventListener('touchend', () => {
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        boton.classList.remove('tap-activo');
+      }, 1000);
+    });
+  });
+</script>
 
 <script>
 // Initialize all tooltips in manual mode
@@ -588,6 +624,34 @@ document.getElementById('copy-btn').addEventListener('click', function(e) {
           });
         </script>
 
-
+<script>
+  (function () {
+    const btn = document.getElementById('copy-btn');
+  
+    function toggleByScroll() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+      const winHeight = window.innerHeight;
+      const maxScrollable = docHeight - winHeight;
+      const progress = maxScrollable > 0 ? (scrollTop / maxScrollable) : 0;
+  
+      if (progress >= 0.5) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    }
+  
+    // Inicial y en scroll/resize
+    toggleByScroll();
+    window.addEventListener('scroll', toggleByScroll, { passive: true });
+    window.addEventListener('resize', toggleByScroll);
+  })();
+  </script>
+  
 
 </html>
