@@ -78,8 +78,8 @@ li.tasks {
 }
 
 :root{
-  --card-radius: 1.25rem;      /* ~20px */
-  --brand-accent: #39a99c;     /* soft orange like the mock */
+  --card-radius: 1.25rem;
+  --brand-accent: #39a99c;
   --card-shadow: 0 2px 10px rgba(0,0,0,.06);
   --card-shadow-hover: 0 6px 18px rgba(0,0,0,.10);
 }
@@ -111,6 +111,7 @@ li.tasks {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition: box-shadow .2s ease, transform .2s ease;
 }
 /* subtle shadow underneath */
 .sticky::after{
@@ -134,6 +135,11 @@ li.tasks {
   font-weight: 700;
 }
 
+.sticky:hover{
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
 /* body text */
 .sticky p {
   margin: 0;
@@ -147,7 +153,6 @@ li.tasks {
   display: inline-grid;
   place-items: center;
   border-radius: 999px;
-  color: var(--brand-accent);
   font-size: 1.3rem;
   /* icon sits on white; shadowless like the sample */
 }
@@ -357,7 +362,11 @@ header p {
 }
 
 p.text-interval {
-  margin: 16rem 0px;
+  margin: 12rem 0px;
+}
+
+p.text-interval-top {
+  margin: 12rem 0px 4rem 0px;
 }
 
 .button-primary-sticky {
