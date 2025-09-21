@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8" hreflang="en"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <title>LABITCONF 22 | Nacho Cismondi | Digital experience designer</title>
-        <meta name="description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM." />
+        <title>Descentralizar 22 | Nacho Cismondi | Digital experience designer</title>
+        <meta name="description" content="Design of the identity and website of a talks event about cryptocurrencies." />
         <meta name="author" content="Nacho Cismondi" />
         <meta name="copyright" content="Copyright owner"/>
         <meta name="keywords" content="ignacio cismondi, cismondi, argentine designer, #ef801a, design, portfolio, designer, digital"/>
@@ -17,24 +17,24 @@
         * Cismondi Holdings -->
 
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://nachocismondi.com/labitconf">
+        <meta property="og:url" content="https://nachocismondi.com/descentralizar">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="LABITCONF 22 | Nacho Cismondi | Digital experience designer">
-        <meta property="og:description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM.">
+        <meta property="og:title" content="Descentralizar | Nacho Cismondi | Digital experience designer">
+        <meta property="og:description" content="Design of the identity and website of a talks event about cryptocurrencies.">
         <meta property="og:image" content="https://nachocismondi.com/assets/social-preview.webp">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="nachocismondi.com">
-        <meta property="twitter:url" content="https://nachocismondi.com/labitconf">
-        <meta name="twitter:title" content="LABITCONF 22 | Nacho Cismondi | Digital experience designer">
+        <meta property="twitter:url" content="https://nachocismondi.com/descentralizar">
+        <meta name="twitter:title" content="Design of the identity and website of a talks event about cryptocurrencies.">
         <meta name="twitter:description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM.">
         <meta name="twitter:image" content="https://nachocismondi.com/assets/social-preview.webp">
 
         <!-- Whatsapp Meta Tags -->
-        <meta property="og:title" content="LABITCONF 22 | Nacho Cismondi | Digital experience designer"/>
-        <meta property="og:description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM."/>
-        <meta property="og:url" content="https://nachocismondi.com/labitconf"/>
+        <meta property="og:title" content="Descentralizar | Nacho Cismondi | Digital experience designer"/>
+        <meta property="og:description" content="Design of the identity and website of a talks event about cryptocurrencies."/>
+        <meta property="og:url" content="https://nachocismondi.com/descentralizar"/>
         <meta property="og:image"content="https://nachocismondi.com/assets/social-preview.webp"/>
 
 
@@ -64,6 +64,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+        <!-- GLightbox (CDN) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/css/glightbox.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js"></script>
+
+
   <style>
 
     
@@ -73,123 +78,738 @@
 
     <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
 
+
+<!-- Menú responsive flotante -->
+<nav id="smartNavbar" class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+  <div class="container justify-content-center position-relative">    
+    <!-- Toggle (solo visible en mobile) -->
+    <button class="navbar-toggler position-absolute animate__animated animate__fadeIn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Lista principal centrada -->
+    <ul class="navbar-nav align-items-center animate__animated animate__fadeIn">
+      <!-- Logo GIF -->
+      <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
+      <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         <li class="nav-item"><a class="nav-link" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="height: 80vw;">
+  <div class="offcanvas-header justify-content-center">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column gap-3">
+    <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
+    <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <a class="nav-link text-white" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a>
+  </div>
+</div>
+
+<a id="copy-btn"
+   class="button-primary-sticky me-sm-3"
+   href="#"
+   data-bs-toggle="tooltip"
+   data-bs-placement="top"
+   data-bs-custom-class="chip-tooltip"
+   title="Copied email to clipboard"
+   alt="Copy my email to clipboard">
+  <span class="button-label">Write me</span>
+</a>
+
+<!-- Work section-->
+<section class="work bg-black mt-5" id="work">
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+                    <div class="col-md-12 col-lg-10 col-xl-8 px-sm-0">
+                    
+                    <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%">
+                      <source src="work/descentralizar/descentralizar-hero.webm" type="video/webm" alt="Project preview"/>
+                    </video>
+
+    <!-- Title & project info -->
+        <div class="row justify-content-center mt-3 mt-sm-4">
+      <div class="col-12 col-md-8 animate__animated animate__fadeIn">
+        <span class="chip-secondary badge rounded-pill mt-3 me-1">Branding</span><span class="chip-secondary badge rounded-pill mt-3">Web design</span>
+        <p class="mt-3 fs-5">The largest conference in Argentina, traveling across the country, sharing knowledge about cryptoeconomics.</p>
+      </div>
+      <div class="col-md-4 animate__animated animate__fadeIn">
+        <dl class="row">
+            <dt class="col-12 text-uppercase small text-secondary">Year</dt>
+            <dd class="col-12 text-white">2021 - 2024</dd>
+            <dt class="col-12 mt-2 text-uppercase small text-secondary">Channels</dt>
+            <dd class="col-12 text-white">Website, Twitter, Instagram, YouTube</dd>
+
+        </dl>
+      </div>
+    </div>
+
+    <!-- Overview & My Role -->
+        <div class="row gx-4 justify-content-center">
+
+      <div class="col-md-8 animate__animated animate__fadeIn">
+        <h5 class="text-uppercase small text-secondary">My Role</h5>
+          <p class="mt-2 fs-5">I delivered responsive <strong>web design</strong>, built the <strong>branding</strong>, and created <strong>social media posts</strong> that elevated visibility and engagement.</p>
+      </div>
+
+      <div class="col-md-4 mt-3 animate__animated animate__fadeIn">
+
+  <h5 class="text-uppercase small text-secondary mb-2">Collaborators</h5>
+<div class="d-flex align-items-center flex-wrap   gap-2">
+<a class="p team-member-link" href="https://www.linkedin.com/in/mariana-aguirre-94958856/" target="_blank">
+<span class="badge d-flex align-items-center p-1 pe-2 text-emphasis-emphasis rounded-pill chip-team">
+  <div class="position-relative me-2 team-photo-wrapper">
+    <img class="rounded-circle team-photo" width="24" height="24" src="work/labitconf/team-marian.webp" alt="">
+    <div class="overlay">
+      <i class="bi bi-link-45deg"></i>
+    </div>
+  </div>
+  Mariana Aguirre
+</span>
+</a>
+
+<a class="p team-member-link" href="https://www.linkedin.com/in/lis-altamirano-b44b7536/" target="_blank">
+<span class="badge d-flex align-items-center p-1 pe-2 text-emphasis-emphasis rounded-pill chip-team">
+  <div class="position-relative me-2 team-photo-wrapper">
+    <img class="rounded-circle team-photo" width="24" height="24" src="work/descentralizar/team-liz.webp" alt="">
+    <div class="overlay">
+      <i class="bi bi-link-45deg"></i>
+    </div>
+  </div>
+  Lis Altamirano
+</span>
+</a>
+</div>
+  </div>
+    </div>
+                    </div>  
+         </div>
+
+
+
+     </div>
+</section>
+
+<section class="container text-white">
+    <div class="row justify-content-center">
+      <hr class="border-secondary my-5">
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_1.webp" class="glightbox" data-gallery="g1">
+        <img src="work/descentralizar/descentralizar_1.webp" alt="Mockup 1" class="img-fluid rounded" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-md-12 col-lg-10 col-xl-8 container py-5">
+        <div class="row stats-row">
+          <p class="fs-4 pb-5">The NGO Bitcoin Argentina contacted me to propose designing the identity of a conference related to the crypto ecosystem. The event is free and its mission is to share knowledge about the cryptoeconomy.
+          </p>
+          <p class="fs-4">The objective was to create the entire digital campaign to communicate the event. Social media posts, paid ads, website and event visuals. I share with you some numbers that we achieved in 2021 edition:</p>
+    
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <span class="stat-icon" style="color: #d477ff"><i class="bi bi-share-fill"></i></span>
+              <div class="stat-value">+3k</div>
+              <div class="stat-label">interactions</div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <span class="stat-icon" style="color: #d477ff"><i class="bi bi-person-badge"></i></span>
+              <div class="stat-value">11k</div>
+              <div class="stat-label">registrations</div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <span class="stat-icon" style="color: #d477ff"><i class="bi bi-chat-text-fill"></i></span>
+              <div class="stat-value">45</div>
+              <div class="stat-label">speakers</div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <span class="stat-icon" style="color: #d477ff"><i class="bi bi-badge-ad-fill"></i></span>
+              <div class="stat-value">+24</div>
+              <div class="stat-label">sponsors</div>
+            </div>
+          </div>
+    
+        </div>
+        </div>
+
+    <div class="col-12">
+      <a href="work/descentralizar/descentralizar_2.webp" class="glightbox" data-gallery="g1">
+        <img src="work/descentralizar/descentralizar_2.webp" alt="Mockup 2" class="img-fluid rounded" loading="lazy">
+        </a>
+    </div>
+
+
+
+    <div class="col-12 col-md-8">
+        <p class="fs-4 text-interval-top"><svg xmlns='http://www.w3.org/2000/svg'  width='80' height='82' viewport='0 0 100 100' style='fill:black;font-size:3rem;'><text y='50%'>⏩️</text></svg></br>3 years after my redesign, the organization maintained the identity and the event is getting bigger and bigger.</p>
+      </div>
+
+        <div class="col-12 mb-5">     
+<style>.tweet-card{ --tc-bg:#161b22; /* fondo tarjeta */ --tc-border:#2b3440; /* borde */ --tc-text:#e6edf3; /* texto principal */ --tc-muted:#9aa7b2; /* texto secundario */ --tc-link:#8ab4ff; /* links (follow, @) */ --tc-chip:#0d1117; /* fondo chips/botón */ background:var(--tc-bg); color:var(--tc-text); border:1px solid var(--tc-border); border-radius:20px; box-shadow:0 8px 24px rgba(0,0,0,.35);height: fit-content; } .tweet-inner{ padding:1rem 1rem 0; } @media(min-width:768px){ .tweet-inner{ padding:1.25rem 1.25rem 0; } } /* Header */ .tweet-header{ align-items:center; gap:.75rem; } .tweet-avatar{ width:44px;height:44px;border-radius:50%; background:#243041; color:#cfe3ff; font-weight:700; display:flex;align-items:center;justify-content:center; user-select:none; } .tweet-name{ font-weight:700; line-height:1; } .tweet-handle{ color:var(--tc-muted); } .tweet-dot{ color:var(--tc-muted); } .tweet-follow{ color:var(--tc-link); font-weight:600; text-decoration:none; } .tweet-close{ margin-left:auto; color:#d1d7de; text-decoration:none; font-size:1.4rem; line-height:1; } /* Texto */ .tweet-text{ font-size:1.05rem; margin: .5rem 0 1rem; } .tweet-text a{ color:var(--tc-link); text-decoration:none; } .tweet-text a:hover{ text-decoration:underline; } /* Imagen */ .tweet-media{ border-radius:18px; overflow:hidden; border:1px solid var(--tc-border); } .tweet-media img{ display:block; width:100%; height:auto; } /* Meta + acciones */ .tweet-meta{ color:var(--tc-muted); border-top:1px solid var(--tc-border); margin-top:1rem; padding:.75rem 1rem; } .tweet-actions{ display:flex; align-items:center; gap:1.25rem; padding: .25rem 1rem 1rem; } .tweet-action{ display:inline-flex; align-items:center; gap:.35rem; color:var(--tc-muted); text-decoration:none; font-weight:500; } .tweet-action svg{ width:20px; height:20px; } /* Botón leer respuestas */ .tweet-replies{ display:block; margin:0 auto 1rem; width:fit-content; color:var(--tc-text); text-decoration:none; font-weight:600; border:1px solid var(--tc-border); background:var(--tc-chip); padding:.65rem 1.1rem; border-radius:999px; } /* Helpers */ .rounded-18{ border-radius:18px; } </style>
+<div class="container my-4">
+    <div class="row justify-content-center">
+   <div class="tweet-card col-12 col-md-6 col-lg-4">
+      <div class="tweet-inner">
+         <!-- Header --> 
+         <div class="d-flex tweet-header justify-content-between">
+            <div class="d-flex align-items-center">
+                <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1757252569405984768/dUiFPXTU_200x200.jpg" width="48px"> 
+                <div class="flex-row ps-2">
+                <div class="tweet-name">Manu Ferrari</div>
+                <div class="small"> <a href="https://x.com/manuferraritano" target="_blank" class="tweet-handle">@manuelferraritano</a> </div>
+                </div>
+             </div>
+             <div class="d-flex flex-column ">
+                <svg viewBox="0 0 24 24" aria-hidden="true" width="24px" fill="#FFFFFF" class="r-vlxjld r-4qtqp9 r-yyyyoo r-1ve99a9 r-19fsva8 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-23tnvd">
+                   <g>
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                   </g>
+                </svg>
+             </div>
+            </div>
+            <!-- Texto --> 
+            <p class="tweet-text">Que bueno estuvo <strong>#DescentralizAR</strong></br><a href="https://x.com/bitcoinar" rel="noopener" target="_blank">@BitcoinAR</a> <strong>#Bitcoin</strong></p>
+            <div class="tweet-media mb-2">
+                <img src="https://pbs.twimg.com/ext_tw_video_thumb/1577306646648438788/pu/img/q6ZoVYZfjdHhH-UF.jpg" alt="Escenario con personas desertando.">
+            </div>
+            
+        </div>
+
+
+      <!-- Meta --> 
+      <div class="tweet-meta d-flex align-items-center justify-content-between">
+         <div class="small">11:44 AM · Oct 4, 2022</div>
+      </div>
+      <!-- Acciones --> 
+      <div class="tweet-actions">
+         <a class="tweet-action">
+            <!-- heart --> 
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+            <span>16</span> 
+         </a>
+         <a class="tweet-action">
+            <!-- reply --> 
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
+         </a>
+      </div>
+      <div class="px-3 pb-3"> <a class="tweet-replies" href="https://x.com/manuferraritano/status/1577308657519366155" role="button" target="_blank">View in X →</a> </div>
+   </div>
+
+   <div class="tweet-card col-12 col-md-6 col-lg-4">
+    <div class="tweet-inner">
+       <!-- Header --> 
+       <div class="d-flex tweet-header justify-content-between">
+          <div class="d-flex align-items-center">
+              <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1194596410508939264/5B6hUxIG_normal.jpg" width="48px"> 
+              <div class="flex-row ps-2">
+              <div class="tweet-name">Fernando</div>
+              <div class="small"> <a href="https://x.com/fersecchi" target="_blank" class="tweet-handle">@fersecchi</a> </div>
+              </div>
+           </div>
+           <div class="d-flex flex-column ">
+              <svg viewBox="0 0 24 24" aria-hidden="true" width="24px" fill="#FFFFFF" class="r-vlxjld r-4qtqp9 r-yyyyoo r-1ve99a9 r-19fsva8 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-23tnvd">
+                 <g>
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                 </g>
+              </svg>
+           </div>
+          </div>
+          <!-- Texto --> 
+          <p class="tweet-text">Ayer fue un día de desafío y superación. Primera vez q me subo a un escenario a hostear un evento de la magnitud como <strong>#descentralizar</strong>. Gracias al equipo de <a href="https://x.com/bitcoinar" rel="noopener" target="_blank">@BitcoinAR</a> or confiar en mí y apoyarme <strong>#Bitcoin</strong></p>
+          <div class="tweet-media mb-2">
+              <img src="work/descentralizar/tweet.webp" alt="Escenario con personas desertando.">
+          </div>
+          
+      </div>
+
+
+    <!-- Meta --> 
+    <div class="tweet-meta d-flex align-items-center justify-content-between">
+       <div class="small">11:00 AM · Oct 1, 2022</div>
+    </div>
+    <!-- Acciones --> 
+    <div class="tweet-actions">
+       <a class="tweet-action">
+          <!-- heart --> 
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+          <span>76</span> 
+       </a>
+       <a class="tweet-action">
+          <!-- reply --> 
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
+       </a>
+    </div>
+    <div class="px-3 pb-3"> <a class="tweet-replies" href="https://x.com/fersecchi/status/1576210466493562880" role="button" target="_blank">View in X →</a> </div>
+ </div>
+
+
+   <div class="tweet-card col-12 col-md-6 col-lg-4">
+    <div class="tweet-inner">
+       <!-- Header --> 
+       <div class="d-flex tweet-header justify-content-between">
+          <div class="d-flex align-items-center">
+             <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1540776998535999489/FP04Jh6W_200x200.jpg" width="48px"> 
+             <div class="flex-row ps-2">
+             <div class="tweet-name">Nico ₿</div>
+             <div class="small"> <a href="https://x.com/bourbonni" target="_blank" class="tweet-handle">@bourbonni</a> </div>
+             </div>
+          </div>
+          <div class="d-flex flex-column ">
+             <svg viewBox="0 0 24 24" aria-hidden="true" width="24px" fill="#FFFFFF" class="r-vlxjld r-4qtqp9 r-yyyyoo r-1ve99a9 r-19fsva8 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-23tnvd">
+                <g>
+                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </g>
+             </svg>
+          </div>
+       </div>
+       <!-- Texto --> 
+       <p class="tweet-text">Acá <a href="https://x.com/RodolfoBits" rel="noopener" target="_blank">@RodolfoBits</a> dando inicio a <strong>#descentralizar</strong></br>Rodo lleva más de una década hablando de #bitcoin y contribuyendo en este espacio. Le debemos un tributo :)</p>
+    
+       <div class="tweet-media mb-2">
+          <img src="https://pbs.twimg.com/media/F5gTB3eWwAAigdV?format=jpg" alt="Escenario con personas desertando.">
+      </div>
+      </div>
+
+
+    <!-- Meta --> 
+    <div class="tweet-meta d-flex align-items-center justify-content-between">
+       <div class="small">9:51 AM · Sep 8, 2023</div>
+    </div>
+    <!-- Acciones --> 
+    <div class="tweet-actions">
+       <a class="tweet-action">
+          <!-- heart --> 
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+          <span>31</span> 
+       </a>
+       <a class="tweet-action">
+          <!-- reply --> 
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
+       </a>
+    </div>
+    <div class="px-3 pb-3"> <a class="tweet-replies" href="https://x.com/bourbonni/status/1700129798469677414" role="button" target="_blank">View in X →</a> </div>
+ </div>
+</div>
+</div>
+</div>
+      
+
+    <div class="col-12">
+      <a href="work/descentralizar/descentralizar_3.webp" class="glightbox" data-gallery="g1">
+        <img src="work/descentralizar/descentralizar_3.webp" alt="Mockup 3" class="img-fluid rounded" loading="lazy">
+        </a>
+    </div>
+
+    <div class="col-12">
+      <a href="work/labitconf/descentralizar_4.webm" class="glightbox" data-gallery="g1"></a>
+      <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%">
+        <source src="work/descentralizar/descentralizar_4.webm" type="video/webm" alt="Project preview" loading="lazy"/>
+      </video>
+        </a>
+    </div>
+
+    <div class="col-12 col-md-8">
+        <p class="fs-4 text-interval-top">The process begins by analyzing the state of the brand and making necessary visual adjustments. Next, we establish the foundational concepts and the grid.</p>
+    </div>
+
+
+
+    <div class="col-12">
+
+        <div class="container mb-5 pb-5">
+            <div class="row g-2 justify-content-center text-center">
+
+                <div class="col-8 col-sm-6 col-lg-3" style="transform: rotate(-2deg);">
+                <div class="sticky">
+                    <div class="label">KEY CONCEPTS</div>
+                    <p>Decentralized, Multiple, Partitioned, Transparency, Horizontality</p>
+                </div>
+                </div>
+
+                <div class="col-8 col-sm-6 col-lg-3" style="transform: rotate(0.5deg);">
+                    <div class="sticky">
+                        <div class="label">GRIDS</div>
+                        <p>Having a visible grid will help us communicate the concepts and ensure consistency</p>
+                    </div>
+                    </div>
+
+                    <div class="col-8 col-sm-6 col-lg-3" style="transform: rotate(3deg);">
+                        <div class="sticky">
+                            <div class="label">VISUAL RFERENCES</div>
+                            <p>Glassmorphism, Gradients, Glitch, Crop, Snake case</p>
+                        </div>
+                        </div>
+            </div>
+            </div>
+            
+    </div>
+
+    <div class="col-12">
+        <a href="work/descentralizar/descentralizar_5.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_5.webp" alt="Mockup 5" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_7.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_7.webp" alt="Mockup 6" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_8.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_8.webp" alt="Mockup 7" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_10.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_10.webp" alt="Mockup 8" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+    
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_9.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_9.webp" alt="Mockup 9" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+    <div class="col-12">
+      <a href="work/descentralizar/descentralizar_6.webp" class="glightbox" data-gallery="g1">
+        <img src="work/descentralizar/descentralizar_6.webp" alt="Mockup 10" class="img-fluid rounded " loading="lazy">
+      </a>
+    </div>
+
+    <div class="col-12">
+        <a href="work/descentralizar/descentralizar_11.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_11.webp" alt="Mockup 11" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_12.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_12.webp" alt="Mockup 12" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_13.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_13.webp" alt="Mockup 12" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_15.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_15.webp" alt="Mockup 12" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12">
+        <a href="work/descentralizar/descentralizar_14.webp" class="glightbox" data-gallery="g1">
+          <img src="work/descentralizar/descentralizar_14.webp" alt="Mockup 12" class="img-fluid rounded " loading="lazy">
+        </a>
+      </div>
+
+    </div>
+    </div>
+
+  </section>
+
+
+    <!-- Contact section -->
+    <section class="contact my-5 py-5" id="contact">
+
+    <div class="container contact-cta rounded-3 my-5">
+        <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
+
+            <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
+                <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
+                <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white text-opacity-75" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> or complete the form <i class="bi bi-arrow-down-circle-fill d-lg-none"></i><i class="bi bi-arrow-right-circle-fill d-none d-lg-block"></i></div>
+            </div>
+
+            <div class="col-12 col-md-10 col-lg-6">
+
+                <!-- Contact form -->
+                <div id="form">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdk0TJmrfs6SefQYICHgYsI2LImj8aGRIzG4vFV6QFvSnAVIQ/formResponse" method="post" target="hiddenConfirm" onsubmit="formSubmit()">
+
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control bg-dark text-white border-secondary" name="entry.1815432459" id="floatingInput" placeholder="Best Client" required>
+                            <label class="text-white text-opacity-75" for="entry.1815432459 floatingInput email">Your name?</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="email" class="form-control bg-dark text-white border-secondary" name="entry.467343636" id="floatingInput" placeholder="best@client.com" required>
+                            <label class="text-white text-opacity-75" for="entry.467343636 floatingInput email">What's your email?</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <textarea class="form-control bg-dark text-white border-secondary" name="entry.546330365" style="height: 100px" id="floatingInput" placeholder="Do whatever" required></textarea>
+                            <label class="text-white text-opacity-75" for="entry.546330365 floatingInput">Tell me about your project...</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <select class="form-select bg-dark text-white border-secondary" id="floatingSelect" aria-label="Budget" name="entry.562823855" required>
+                                <option selected disabled value="">Select an approximate budget option</option>
+                                <option name="$500+-+$1,500+USD">$500 - $1,500 USD</option>
+                                <option name="$1,500+-+$2,500+USD">$1,500 - $2,500 USD</option>
+                                <option name="$2,500+-+$3,500+USD">$2,500 - $3,500 USD</option>
+                                <option name="%2B+$3,500+USD">+ $3,500 USD</option>
+                            </select>
+                            <label class="text-white text-opacity-75" for="entry.562823855 floatingSelect">What's your budget?</label>
+                        </div>
+
+                        <button type="submit" class="button-secondary btn-lg px-5">Send</button>
+
+                    </form>
+                </div>
+
+                <iframe name="hiddenConfirm" style="display: none;">
+                </iframe>
+
+                <!-- Submitted message confirmation -->
+                <div id="completion-msg" class="col-12 text-center mb-5 pb-5" style="display: none; transition: all .1s ease;">
+                    <i class="bi bi-check-circle text-success mb-3 h2"></i>
+                    <h5 class="text-white mb-1">Request sent</h5>
+                    <p class="text-white text-opacity-75 mb-5 pb-5 mb-5 pb-5">Thanks for your interest. I will answer your request as soon as possible.</p>
+                </div>
+
+                <!-- Script to hide form after submitted -->
+                <script type="text/javascript">
+                    var submitted=false
+                    function formSubmit(){
+                        document.getElementById("form").style.display = "none";  // make form invisible
+                        document.getElementById("completion-msg").style.display = "block"; // Optional if you want to give a completion feedback!
+                    }
+                </script>
+            </div>
+                    <div class="white-rabbit-text">Follow the white rabbit</div>
+
+        </div>
+    </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between py-3 mb-4 border-top">
+
+                <div class="col-md-10 d-flex align-items-center">
+                  <a href="/" class="mb-3 me-3 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <img src="assets/logo.svg" height="48px" alt="Nacho Cismondi Logo">
+                  </a>
+                  <span class="mb-3 mb-md-0 text-white-50 align-items-center"><a href="https://creativecommons.org/licenses/by/3.0/" targer="blank" class="text-white-50">© CC 3.0</a> | Web made with <i class="bi bi-heart-fill"></i> and Boostrap 5. <script>document.write(new Date().getFullYear());</script>
+                  </span>
+                </div>
+
+                <div class="d-flex align-items-center pt-3">
+                <ul class="social-icons list-unstyled d-flex gap-4">
+                    <li><a href="https://twitter.com/nachocismondi" target="blank"><i class="bi bi-twitter-x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/nachocismondi" target="blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="https://dribbble.com/nachocismondi" target="blank"><i class="bi bi-dribbble"></i></a></li>
+                    <li><a href="https://www.behance.net/nachocismondi" target="blank"><i class="bi bi-behance"></i></a></li>
+                </ul>
+                </div>
+        </footer>
+    </div>
+
     </body>
 
 
-    <!-- Popper JS-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <!-- Popper JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
-    <!-- Swiper Carrousel JS-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-const swiper = new Swiper(".mySwiper", {
-loop: true,
-autoplay: {
-  delay: 2800,
-  disableOnInteraction: false
-},
-navigation: {
-  nextEl: ".swiper-button-next",
-  prevEl: ".swiper-button-prev"
-},
-effect: "fade",
-fadeEffect: { crossFade: true },
-speed: 80,
-grabCursor: true,
-slidesPerView: 1,
+        <!-- Swiper Carrousel JS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2800,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    speed: 80,
+    grabCursor: true,
+    slidesPerView: 1,
 
-on: {
-  slideChangeTransitionEnd: function () {
-    // Pausar y resetear todos los videos
-    document.querySelectorAll(".slide-video").forEach(video => {
-      video.pause();
-      video.currentTime = 0;
-    });
+    on: {
+      slideChangeTransitionEnd: function () {
+        // Pausar y resetear todos los videos
+        document.querySelectorAll(".slide-video").forEach(video => {
+          video.pause();
+          video.currentTime = 0;
+        });
 
-    // Obtener el slide visible (activo) - aunque sea duplicado
-    const activeSlide = this.slides[this.activeIndex];
-    const video = activeSlide.querySelector(".slide-video");
+        // Obtener el slide visible (activo) - aunque sea duplicado
+        const activeSlide = this.slides[this.activeIndex];
+        const video = activeSlide.querySelector(".slide-video");
 
-    if (video) {
-      video.play().catch(() => {});
+        if (video) {
+          video.play().catch(() => {});
+        }
+      }
     }
-  }
-}
-});
+  });
 </script>
 
 
 
 <!-- Button primary delay to recreate hover-->
-    <script>
-      document.querySelectorAll('.button-primary').forEach(boton => {
-        let tapTimeout;
+        <script>
+          document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+            let tapTimeout;
 
-        boton.addEventListener('touchstart', () => {
-          boton.classList.add('tap-activo');
-          clearTimeout(tapTimeout);
-          tapTimeout = setTimeout(() => {
-            boton.classList.remove('tap-activo');
-          }, 1000); // activo durante 1s
-        });
+            boton.addEventListener('touchstart', () => {
+              boton.classList.add('tap-activo');
+              clearTimeout(tapTimeout);
+              tapTimeout = setTimeout(() => {
+                boton.classList.remove('tap-activo');
+              }, 1000); // activo durante 1s
+            });
 
-        boton.addEventListener('touchend', () => {
-          clearTimeout(tapTimeout);
-          tapTimeout = setTimeout(() => {
-            boton.classList.remove('tap-activo');
-          }, 1000);
-        });
-      });
-    </script>
+            boton.addEventListener('touchend', () => {
+              clearTimeout(tapTimeout);
+              tapTimeout = setTimeout(() => {
+                boton.classList.remove('tap-activo');
+              }, 1000);
+            });
+          });
+        </script>
+
+
+<!-- Button primary delay to recreate hover-->
+<script>
+  document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+    let tapTimeout;
+
+    boton.addEventListener('touchstart', () => {
+      boton.classList.add('tap-activo');
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        boton.classList.remove('tap-activo');
+      }, 1000); // activo durante 1s
+    });
+
+    boton.addEventListener('touchend', () => {
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        boton.classList.remove('tap-activo');
+      }, 1000);
+    });
+  });
+</script>
 
 <script>
 // Initialize all tooltips in manual mode
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
-new bootstrap.Tooltip(el, { trigger: 'manual' })
+  new bootstrap.Tooltip(el, { trigger: 'manual' })
 );
 
 // Click handler: copy email + show tooltip
 document.getElementById('copy-btn').addEventListener('click', function(e) {
-e.preventDefault();
-const email = 'nachocismondi@gmail.com';
-const tip = bootstrap.Tooltip.getInstance(this);
-navigator.clipboard.writeText(email)
-.then(() => { tip.show(); setTimeout(() => tip.hide(), 3000); })
-.catch(console.error);
+  e.preventDefault();
+  const email = 'nachocismondi@gmail.com';
+  const tip = bootstrap.Tooltip.getInstance(this);
+  navigator.clipboard.writeText(email)
+    .then(() => { tip.show(); setTimeout(() => tip.hide(), 3000); })
+    .catch(console.error);
 
 });
 </script>
 
 
-    <!-- Menu fixed on scroll to top-->
-    <script>
-      const navbar = document.getElementById("smartNavbar");
-      let lastScrollTop = 0;
+        <!-- Menu fixed on scroll to top-->
+        <script>
+          const navbar = document.getElementById("smartNavbar");
+          let lastScrollTop = 0;
 
-      window.addEventListener("scroll", function () {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          window.addEventListener("scroll", function () {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        // Mostrar/ocultar navbar según dirección
-        if (scrollTop > lastScrollTop) {
-          navbar.style.top = "-100px"; // scroll hacia abajo → ocultar
-        } else {
-          navbar.style.top = "4px";   // scroll hacia arriba → mostrar
-        }
+            // Mostrar/ocultar navbar según dirección
+            if (scrollTop > lastScrollTop) {
+              navbar.style.top = "-100px"; // scroll hacia abajo → ocultar
+            } else {
+              navbar.style.top = "4px";   // scroll hacia arriba → mostrar
+            }
 
-        // Agregar/quitar fondo al hacer scroll > 20px
-        if (scrollTop > 20) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
+            // Agregar/quitar fondo al hacer scroll > 20px
+            if (scrollTop > 20) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      });
-    </script>
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          });
+        </script>
 
-
+<script>
+  (function () {
+    const btn = document.getElementById('copy-btn');
+  
+    function toggleByScroll() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+      const winHeight = window.innerHeight;
+      const maxScrollable = docHeight - winHeight;
+      const progress = maxScrollable > 0 ? (scrollTop / maxScrollable) : 0;
+  
+      if (progress >= 0.5) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    }
+  
+    // Inicial y en scroll/resize
+    toggleByScroll();
+    window.addEventListener('scroll', toggleByScroll, { passive: true });
+    window.addEventListener('resize', toggleByScroll);
+  })();
+  </script>
+  
+  <script>
+    // Inicialización mínima
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+      // opciones útiles:
+      // touchNavigation: true,
+      // loop: true,
+      // zoomable: true
+    });
+  </script>
 
 </html>
