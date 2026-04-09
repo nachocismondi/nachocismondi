@@ -72,18 +72,23 @@
             person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
             })
         </script>
-        
-        <!-- datafa.st script -->
-        <script
-          defer
-          data-website-id="68dc27712346a100218b39e6"
-          data-domain="nachocismondi.com"
-          src="https://datafa.st/js/script.js">
-        </script>
+
 
   <style>
+    .designer-canvas-shell {
+      background: #0a0a0c;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      padding: 10px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 20px 45px rgba(0, 0, 0, 0.45);
+    }
 
-    
+    .designer-canvas-shell svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+    }
   </style>
 
     </head>
@@ -201,7 +206,7 @@
                     <source src="assets/slide-clients-xs.webm" type="video/webm" />
                 </video>
 
-                <div class="caption">Fudo Stories | Customer wins and testimonials</div>
+                <div class="caption">Customer testimonials website | <a href="success-stories" target="blank">View project</a></div>
             </div>
 
 
@@ -482,6 +487,19 @@
                         <p class="mb-4 text-white">I write ideas to capture stories that are 5 minutes (or less) read. Technology, internet, and design in Spanish.</p>
 
             <div class="list-post list-group justify-content-center">
+                <a href="https://blog.nachocismondi.com/las-hojas-mueven-al-viento.html" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
+                <img src="blog/hojas-image-main.webp" width="64px" class="rounded mb-3 mb-md-0" alt="Post image">
+                    <div class="d-md-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h5 class="mb-1 text-white">Las hojas mueven al viento</h5>
+                            <p class="mb-0 text-white-50 pb-3 pb-md-0">La supuesta lógica y el pensamiento lineal nos confunden. Pensamos totalmente lo contrario a cómo funcionan las cosas, tanto en la vida como en la tecnología.</p>
+                        </div>
+                            <small class="text-white-50 text-nowrap">Mar. 2026</small>
+                    </div>
+                </a>
+            </div>
+                        
+            <div class="list-post list-group justify-content-center">
                 <a href="https://blog.nachocismondi.com/latinoamerica-esta-asi-por-tu-culpa" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
                 <img src="blog/latam-image-main.webp" width="64px" class="rounded mb-3 mb-md-0" alt="Post image">
                     <div class="d-md-flex gap-2 w-100 justify-content-between">
@@ -508,20 +526,6 @@
                 </a>
             </div>
 
-
-            <div class="list-post list-group justify-content-center">
-                <a href="https://blog.nachocismondi.com/venderle-hielo-a-un-esquimal" class="bg-black list-group-item list-group-item d-md-flex gap-4 py-4 rounded-3 my-2 border-dark" aria-current="true" target="blank">
-                <img src="blog/hielo-image-main.webp" width="64px" class="rounded mb-3 mb-md-0" alt="Post image">
-                    <div class="d-md-flex gap-2 w-100 justify-content-between">
-                        <div>
-                            <h5 class="mb-1 text-white">Fascinación por venderle hielo a un esquimal</h5>
-                            <p class="mb-0 text-white-50 pb-3 pb-md-0">Soy consciente que es solo una frase, pero las palabras importan ¿Qué hay detrás?</p>
-                        </div>
-                            <small class="text-white-50 text-nowrap">Oct. 2020</small>
-                    </div>
-                </a>
-            </div>
-
         </div>
     </div>
 </div>
@@ -541,64 +545,96 @@
 
             <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
                 <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
-                <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white text-opacity-75" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> or complete the form <i class="bi bi-arrow-down-circle-fill d-lg-none"></i><i class="bi bi-arrow-right-circle-fill d-none d-lg-block"></i></div>
+                <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white text-opacity-75" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> and explore this live design canvas <i class="bi bi-arrow-down-circle-fill d-lg-none"></i><i class="bi bi-arrow-right-circle-fill d-none d-lg-block"></i></div>
             </div>
 
             <div class="col-12 col-md-10 col-lg-6">
 
-                <!-- Contact form -->
-                <div id="form">
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdk0TJmrfs6SefQYICHgYsI2LImj8aGRIzG4vFV6QFvSnAVIQ/formResponse" method="post" target="hiddenConfirm" onsubmit="formSubmit()">
+                <!-- Contact motion canvas -->
+                <div class="designer-canvas-shell" aria-label="Animated design artboard preview">
+                    <svg viewBox="0 0 560 420" role="img" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#07080a"></stop>
+                                <stop offset="100%" stop-color="#040507"></stop>
+                            </linearGradient>
+                            <linearGradient id="boardFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1a1c20"></stop>
+                                <stop offset="100%" stop-color="#14161a"></stop>
+                            </linearGradient>
+                            <linearGradient id="cursorGloss" x1="32" y1="63.999" x2="32" y2="2.49996" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0"></stop>
+                                <stop offset="0.95" stop-color="white" stop-opacity="0"></stop>
+                                <stop offset="1" stop-color="white"></stop>
+                            </linearGradient>
+                            <linearGradient id="tagOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f58c1b"></stop>
+                                <stop offset="100%" stop-color="#bf650f"></stop>
+                            </linearGradient>
+                            <linearGradient id="tagPink" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ff52e9"></stop>
+                                <stop offset="100%" stop-color="#bf0aa9"></stop>
+                            </linearGradient>
+                            <filter id="boardShadow" x="-30%" y="-30%" width="170%" height="170%">
+                                <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#000000" flood-opacity="0.48"></feDropShadow>
+                            </filter>
+                        </defs>
 
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control bg-dark text-white border-secondary" name="entry.1815432459" id="floatingInput" placeholder="Best Client" required>
-                            <label class="text-white text-opacity-75" for="entry.1815432459 floatingInput email">Your name?</label>
-                        </div>
+                        <rect width="560" height="420" rx="20" fill="url(#canvasBg)"></rect>
 
-                        <div class="form-floating mb-2">
-                            <input type="email" class="form-control bg-dark text-white border-secondary" name="entry.467343636" id="floatingInput" placeholder="best@client.com" required>
-                            <label class="text-white text-opacity-75" for="entry.467343636 floatingInput email">What's your email?</label>
-                        </div>
+                        <g stroke="#9096a0" stroke-opacity="0.3" stroke-width="1.5">
+                            <line x1="252" y1="0" x2="252" y2="420"></line>
+                            <line x1="0" y1="210" x2="560" y2="210"></line>
+                        </g>
 
-                        <div class="form-floating mb-2">
-                            <textarea class="form-control bg-dark text-white border-secondary" name="entry.546330365" style="height: 100px" id="floatingInput" placeholder="Do whatever" required></textarea>
-                            <label class="text-white text-opacity-75" for="entry.546330365 floatingInput">Tell me about your project...</label>
-                        </div>
+                        <g filter="url(#boardShadow)">
+                            <rect x="35" y="0" width="300" height="210" rx="8" fill="url(#boardFill)" stroke="#4b5058" stroke-width="2"></rect>
+                            <rect x="35" y="0" width="300" height="210" rx="8" fill="#2d1700" opacity="0" stroke="#d77719" stroke-width="2">
+                                <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.2;0.35;0.7;1" values="0;0;1;1;0"></animate>
+                            </rect>
+                        </g>
 
-                        <div class="form-floating mb-2">
-                            <select class="form-select bg-dark text-white border-secondary" id="floatingSelect" aria-label="Budget" name="entry.562823855" required>
-                                <option selected disabled value="">Select an approximate budget option</option>
-                                <option name="$500+-+$1,500+USD">$500 - $1,500 USD</option>
-                                <option name="$1,500+-+$2,500+USD">$1,500 - $2,500 USD</option>
-                                <option name="$2,500+-+$3,500+USD">$2,500 - $3,500 USD</option>
-                                <option name="%2B+$3,500+USD">+ $3,500 USD</option>
-                            </select>
-                            <label class="text-white text-opacity-75" for="entry.562823855 floatingSelect">What's your budget?</label>
-                        </div>
+                        <g filter="url(#boardShadow)">
+                            <rect x="364" y="95" width="220" height="325" rx="10" fill="url(#boardFill)" stroke="#4b5058" stroke-width="2"></rect>
+                            <text x="364" y="88" fill="#adb2ba" font-size="16" font-family="'Inter', sans-serif" font-weight="600">your-app-main</text>
+                            <rect x="396" y="130" width="192" height="52" rx="26" fill="#3f4146"></rect>
+                            <rect x="396" y="204" width="192" height="194" rx="30" fill="#3a3c41"></rect>
+                        </g>
 
-                        <button type="submit" class="button-secondary btn-lg px-5">Send</button>
+                        <g filter="url(#boardShadow)">
+                            <rect x="-8" y="242" width="260" height="178" rx="10" fill="url(#boardFill)" stroke="#4b5058" stroke-width="2"></rect>
+                            <text x="-18" y="210" fill="#adb2ba" font-size="16" font-family="'Inter', sans-serif" font-weight="600">dashboard-desktop</text>
+                        </g>
 
-                    </form>
+                        <g>
+                            <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite"
+                                values="0 0; 0 0; 16 2; 16 2; 16 2"></animateTransform>
+                            <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.2;0.35;0.7;1" values="0;0;1;1;1"></animate>
+                            <g transform="translate(244 116) scale(0.56)">
+                                <path d="M3.03711 1.7168C3.32243 1.65964 3.61738 1.67743 3.89258 1.76758L4.00879 1.81055L61.2725 25.3887C61.5792 25.5149 61.8418 25.729 62.0273 26.0039C62.2129 26.2789 62.3131 26.6029 62.3154 26.9346C62.3177 27.266 62.2225 27.5908 62.041 27.8682C61.8594 28.1456 61.5998 28.3636 61.2949 28.4941H61.2939L40.1924 37.5381H40.1914C38.9998 38.0491 38.0501 38.9988 37.5391 40.1904V40.1914L28.4951 61.293V61.2939C28.3645 61.5988 28.1466 61.8584 27.8691 62.04C27.5918 62.2215 27.267 62.3167 26.9355 62.3145C26.6038 62.3121 26.2798 62.2119 26.0049 62.0264C25.7644 61.8641 25.5707 61.6429 25.4414 61.3848L25.3896 61.2715L1.81152 4.01074C1.68479 3.70342 1.65181 3.36507 1.7168 3.03906C1.78186 2.71298 1.94173 2.41295 2.17676 2.17773C2.41173 1.94259 2.71118 1.78215 3.03711 1.7168Z" fill="#EF801A"></path>
+                                <path d="M3.03711 1.7168C3.32243 1.65964 3.61738 1.67743 3.89258 1.76758L4.00879 1.81055L61.2725 25.3887C61.5792 25.5149 61.8418 25.729 62.0273 26.0039C62.2129 26.2789 62.3131 26.6029 62.3154 26.9346C62.3177 27.266 62.2225 27.5908 62.041 27.8682C61.8594 28.1456 61.5998 28.3636 61.2949 28.4941H61.2939L40.1924 37.5381H40.1914C38.9998 38.0491 38.0501 38.9988 37.5391 40.1904V40.1914L28.4951 61.293V61.2939C28.3645 61.5988 28.1466 61.8584 27.8691 62.04C27.5918 62.2215 27.267 62.3167 26.9355 62.3145C26.6038 62.3121 26.2798 62.2119 26.0049 62.0264C25.7644 61.8641 25.5707 61.6429 25.4414 61.3848L25.3896 61.2715L1.81152 4.01074C1.68479 3.70342 1.65181 3.36507 1.7168 3.03906C1.78186 2.71298 1.94173 2.41295 2.17676 2.17773C2.41173 1.94259 2.71118 1.78215 3.03711 1.7168Z" fill="url(#cursorGloss)" fill-opacity="0.2"></path>
+                                <path d="M3.03711 1.7168C3.32243 1.65964 3.61738 1.67743 3.89258 1.76758L4.00879 1.81055L61.2725 25.3887C61.5792 25.5149 61.8418 25.729 62.0273 26.0039C62.2129 26.2789 62.3131 26.6029 62.3154 26.9346C62.3177 27.266 62.2225 27.5908 62.041 27.8682C61.8594 28.1456 61.5998 28.3636 61.2949 28.4941H61.2939L40.1924 37.5381H40.1914C38.9998 38.0491 38.0501 38.9988 37.5391 40.1904V40.1914L28.4951 61.293V61.2939C28.3645 61.5988 28.1466 61.8584 27.8691 62.04C27.5918 62.2215 27.267 62.3167 26.9355 62.3145C26.6038 62.3121 26.2798 62.2119 26.0049 62.0264C25.7644 61.8641 25.5707 61.6429 25.4414 61.3848L25.3896 61.2715L1.81152 4.01074C1.68479 3.70342 1.65181 3.36507 1.7168 3.03906C1.78186 2.71298 1.94173 2.41295 2.17676 2.17773C2.41173 1.94259 2.71118 1.78215 3.03711 1.7168Z" stroke="#934B0A" stroke-width="3.36826"></path>
+                            </g>
+                            <g transform="translate(280 165)">
+                                <rect width="96" height="44" rx="4" fill="url(#tagOrange)"></rect>
+                                <text x="48" y="30" text-anchor="middle" fill="#ffffff" font-size="28" font-family="'Inter', sans-serif" font-weight="700">nacho</text>
+                            </g>
+                        </g>
+
+                        <g>
+                            <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.48;0.55;1" values="0;0;1;1"></animate>
+                            <g transform="translate(288 218) scale(0.56)">
+                                <path d="M3.03711 1.7168C3.32243 1.65964 3.61738 1.67743 3.89258 1.76758L4.00879 1.81055L61.2725 25.3887C61.5792 25.5149 61.8418 25.729 62.0273 26.0039C62.2129 26.2789 62.3131 26.6029 62.3154 26.9346C62.3177 27.266 62.2225 27.5908 62.041 27.8682C61.8594 28.1456 61.5998 28.3636 61.2949 28.4941H61.2939L40.1924 37.5381H40.1914C38.9998 38.0491 38.0501 38.9988 37.5391 40.1904V40.1914L28.4951 61.293V61.2939C28.3645 61.5988 28.1466 61.8584 27.8691 62.04C27.5918 62.2215 27.267 62.3167 26.9355 62.3145C26.6038 62.3121 26.2798 62.2119 26.0049 62.0264C25.7644 61.8641 25.5707 61.6429 25.4414 61.3848L25.3896 61.2715L1.81152 4.01074C1.68479 3.70342 1.65181 3.36507 1.7168 3.03906C1.78186 2.71298 1.94173 2.41295 2.17676 2.17773C2.41173 1.94259 2.71118 1.78215 3.03711 1.7168Z" fill="#EE4EE0"></path>
+                                <path d="M3.03711 1.7168C3.32243 1.65964 3.61738 1.67743 3.89258 1.76758L4.00879 1.81055L61.2725 25.3887C61.5792 25.5149 61.8418 25.729 62.0273 26.0039C62.2129 26.2789 62.3131 26.6029 62.3154 26.9346C62.3177 27.266 62.2225 27.5908 62.041 27.8682C61.8594 28.1456 61.5998 28.3636 61.2949 28.4941H61.2939L40.1924 37.5381H40.1914C38.9998 38.0491 38.0501 38.9988 37.5391 40.1904V40.1914L28.4951 61.293V61.2939C28.3645 61.5988 28.1466 61.8584 27.8691 62.04C27.5918 62.2215 27.267 62.3167 26.9355 62.3145C26.6038 62.3121 26.2798 62.2119 26.0049 62.0264C25.7644 61.8641 25.5707 61.6429 25.4414 61.3848L25.3896 61.2715L1.81152 4.01074C1.68479 3.70342 1.65181 3.36507 1.7168 3.03906C1.78186 2.71298 1.94173 2.41295 2.17676 2.17773C2.41173 1.94259 2.71118 1.78215 3.03711 1.7168Z" fill="#ffffff" fill-opacity="0.14"></path>
+                                <path d="M3.03711 1.7168C3.32243 1.65964 3.61738 1.67743 3.89258 1.76758L4.00879 1.81055L61.2725 25.3887C61.5792 25.5149 61.8418 25.729 62.0273 26.0039C62.2129 26.2789 62.3131 26.6029 62.3154 26.9346C62.3177 27.266 62.2225 27.5908 62.041 27.8682C61.8594 28.1456 61.5998 28.3636 61.2949 28.4941H61.2939L40.1924 37.5381H40.1914C38.9998 38.0491 38.0501 38.9988 37.5391 40.1904V40.1914L28.4951 61.293V61.2939C28.3645 61.5988 28.1466 61.8584 27.8691 62.04C27.5918 62.2215 27.267 62.3167 26.9355 62.3145C26.6038 62.3121 26.2798 62.2119 26.0049 62.0264C25.7644 61.8641 25.5707 61.6429 25.4414 61.3848L25.3896 61.2715L1.81152 4.01074C1.68479 3.70342 1.65181 3.36507 1.7168 3.03906C1.78186 2.71298 1.94173 2.41295 2.17676 2.17773C2.41173 1.94259 2.71118 1.78215 3.03711 1.7168Z" stroke="#AB21A4" stroke-width="3.36826"></path>
+                            </g>
+                            <g transform="translate(320 255)">
+                                <rect width="66" height="44" rx="4" fill="url(#tagPink)"></rect>
+                                <text x="33" y="30" text-anchor="middle" fill="#ffffff" font-size="28" font-family="'Inter', sans-serif" font-weight="700">you</text>
+                            </g>
+                        </g>
+                    </svg>
                 </div>
-
-                <iframe name="hiddenConfirm" style="display: none;">
-                </iframe>
-
-                <!-- Submitted message confirmation -->
-                <div id="completion-msg" class="col-12 text-center mb-5 pb-5" style="display: none; transition: all .1s ease;">
-                    <i class="bi bi-check-circle text-success mb-3 h2"></i>
-                    <h5 class="text-white mb-1">Request sent</h5>
-                    <p class="text-white text-opacity-75 mb-5 pb-5 mb-5 pb-5">Thanks for your interest. I will answer your request as soon as possible.</p>
-                </div>
-
-                <!-- Script to hide form after submitted -->
-                <script type="text/javascript">
-                    var submitted=false
-                    function formSubmit(){
-                        document.getElementById("form").style.display = "none";  // make form invisible
-                        document.getElementById("completion-msg").style.display = "block"; // Optional if you want to give a completion feedback!
-                    }
-                </script>
             </div>
                     <div class="white-rabbit-text">Follow the white rabbit</div>
 
