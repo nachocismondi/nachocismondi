@@ -132,7 +132,7 @@
 
                     <div class="col-md-12 col-lg-10 col-xl-8 px-sm-0">
                     
-                    <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%">
+                    <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%" class="rounded">
                       <source src="work/labitconf/hero_labitconf.webm" type="video/webm" alt="Project preview"/>
                     </video>
 
@@ -418,76 +418,147 @@
     <!-- Contact section -->
     <section class="contact my-5 py-5" id="contact">
 
-    <div class="container contact-cta rounded-3 my-5">
-        <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
-
-            <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
-                <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
-                <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white text-opacity-75" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> or complete the form <i class="bi bi-arrow-down-circle-fill d-lg-none"></i><i class="bi bi-arrow-right-circle-fill d-none d-lg-block"></i></div>
-            </div>
-
-            <div class="col-12 col-md-10 col-lg-6">
-
-                <!-- Contact form -->
-                <div id="form">
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdk0TJmrfs6SefQYICHgYsI2LImj8aGRIzG4vFV6QFvSnAVIQ/formResponse" method="post" target="hiddenConfirm" onsubmit="formSubmit()">
-
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control bg-dark text-white border-secondary" name="entry.1815432459" id="floatingInput" placeholder="Best Client" required>
-                            <label class="text-white text-opacity-75" for="entry.1815432459 floatingInput email">Your name?</label>
-                        </div>
-
-                        <div class="form-floating mb-2">
-                            <input type="email" class="form-control bg-dark text-white border-secondary" name="entry.467343636" id="floatingInput" placeholder="best@client.com" required>
-                            <label class="text-white text-opacity-75" for="entry.467343636 floatingInput email">What's your email?</label>
-                        </div>
-
-                        <div class="form-floating mb-2">
-                            <textarea class="form-control bg-dark text-white border-secondary" name="entry.546330365" style="height: 100px" id="floatingInput" placeholder="Do whatever" required></textarea>
-                            <label class="text-white text-opacity-75" for="entry.546330365 floatingInput">Tell me about your project...</label>
-                        </div>
-
-                        <div class="form-floating mb-2">
-                            <select class="form-select bg-dark text-white border-secondary" id="floatingSelect" aria-label="Budget" name="entry.562823855" required>
-                                <option selected disabled value="">Select an approximate budget option</option>
-                                <option name="$500+-+$1,500+USD">$500 - $1,500 USD</option>
-                                <option name="$1,500+-+$2,500+USD">$1,500 - $2,500 USD</option>
-                                <option name="$2,500+-+$3,500+USD">$2,500 - $3,500 USD</option>
-                                <option name="%2B+$3,500+USD">+ $3,500 USD</option>
-                            </select>
-                            <label class="text-white text-opacity-75" for="entry.562823855 floatingSelect">What's your budget?</label>
-                        </div>
-
-                        <button type="submit" class="button-secondary btn-lg px-5">Send</button>
-
-                    </form>
+      <div class="container contact-cta rounded-3 my-5">
+          <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
+  
+              <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
+                
+                  <div class="h1 fw-bold text-white">We create something</br> amazing side by side</div>
+                  <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white" id="copy-btn-contact" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="chip-tooltip" title="Copied email to clipboard" alt="Copy my email to clipboard">nachocismondi@gmail.com</a></div>
+                  <a id="copy-btn-contact"
+                    class="button-primary-contact mt-3"
+                    href="#"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    data-bs-custom-class="chip-tooltip"
+                    title="Copied email to clipboard"
+                    alt="Copy my email to clipboard"
+                    onclick="copyEmailHandler.call(this, event)">
+                    <span class="button-label">Write to Nacho</span>
+                  </a>
+       
                 </div>
-
-                <iframe name="hiddenConfirm" style="display: none;">
-                </iframe>
-
-                <!-- Submitted message confirmation -->
-                <div id="completion-msg" class="col-12 text-center mb-5 pb-5" style="display: none; transition: all .1s ease;">
-                    <i class="bi bi-check-circle text-success mb-3 h2"></i>
-                    <h5 class="text-white mb-1">Request sent</h5>
-                    <p class="text-white text-opacity-75 mb-5 pb-5 mb-5 pb-5">Thanks for your interest. I will answer your request as soon as possible.</p>
-                </div>
-
-                <!-- Script to hide form after submitted -->
-                <script type="text/javascript">
-                    var submitted=false
-                    function formSubmit(){
-                        document.getElementById("form").style.display = "none";  // make form invisible
-                        document.getElementById("completion-msg").style.display = "block"; // Optional if you want to give a completion feedback!
-                    }
-                </script>
-            </div>
-                    <div class="white-rabbit-text">Follow the white rabbit</div>
-
-        </div>
-    </div>
-
-    </section>
+  
+              <div class="col-12 col-lg-6">
+  
+                  <!-- Contact form -->
+                  <div class="figma-contact-widget">
+                    <div class="outer" id="outer">
+                      <div class="cursor-you" id="cursorYou" style="left:-100px;top:-100px;opacity:0">
+                        <svg class="csvg" viewBox="0 0 20 20">
+                          <defs>
+                            <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#f06aff"/>
+                              <stop offset="100%" stop-color="#c020e0"/>
+                            </linearGradient>
+                          </defs>
+                          <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
+                        </svg>
+                        <span class="lbl lbl-you">you</span>
+                      </div>
+                      <div class="cursor-nacho" id="cursorNacho" style="left:220px;top:200px">
+                        <svg class="csvg" viewBox="0 0 20 20">
+                          <defs>
+                            <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#ffaa70"/>
+                              <stop offset="100%" stop-color="#ea580c"/>
+                            </linearGradient>
+                          </defs>
+                          <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gn)"/>
+                        </svg>
+                        <span class="lbl lbl-nacho">Nacho</span>
+                      </div>
+  
+                      <div class="canvas-area">
+                        <div class="canvas-bg"></div>
+  
+                        <div class="frame-label" id="lblLogin" style="left:-80px;top:6px">Login</div>
+                        <div class="frame-label" id="lblHome"  style="left:176px;top:6px">Home</div>
+                        <div class="frame-label" id="lblProfile" style="left:400px;top:116px;opacity:0">Profile</div>
+  
+                        <div class="sel" id="selLogin"  style="left:-80px;top:20px;width:200px;height:360px;"></div>
+                        <div class="sel" id="selHome"   style="left:176px;top:20px;width:200px;height:360px;"></div>
+                        <div class="sel" id="selProfile" style="left:400px;top:130px;width:170px;height:170px;"></div>
+  
+                        <!-- Login -->
+                        <div class="ab-login" id="abLogin" style="left:-80px;top:20px;">
+                          <div class="ab1-top">
+                            <div class="ab1-logo"></div>
+                            <div class="ab1-bar1"></div>
+                            <div class="ab1-bar2"></div>
+                          </div>
+                          <div class="ab1-body">
+                            <div class="ab1-field lit"></div>
+                            <div class="ab1-field"></div>
+                            <div class="ab1-cta"></div>
+                            <div class="ab1-divrow"><div class="ab1-divline"></div><div class="ab1-divdot"></div><div class="ab1-divline"></div></div>
+                            <div class="ab1-ghost"></div>
+                          </div>
+                        </div>
+  
+                        <!-- Home -->
+                        <div class="ab-home" id="abHome" style="left:176px;top:20px;">
+                          <div class="ab2-topbar">
+                            <div class="ab2-avatar"></div>
+                            <div class="ab2-bargroup">
+                              <div class="ab2-minibar" style="width:55%"></div>
+                              <div class="ab2-minibar" style="width:35%"></div>
+                            </div>
+                            <div class="ab2-notif"></div>
+                          </div>
+                          <div class="ab2-body">
+                            <div class="ab2-hero"><div class="ab2-hero-glow"></div></div>
+                            <div class="ab2-card">
+                              <div class="ab2-card-sq"></div>
+                              <div class="ab2-card-lines">
+                                <div class="ab2-card-line" style="width:80%"></div>
+                                <div class="ab2-card-line" style="width:50%"></div>
+                              </div>
+                              <div class="ab2-pill"></div>
+                            </div>
+                            <div class="ab2-card">
+                              <div class="ab2-card-sq" style="background:#222;border-color:#2a2a2a"></div>
+                              <div class="ab2-card-lines">
+                                <div class="ab2-card-line" style="width:70%"></div>
+                                <div class="ab2-card-line" style="width:40%"></div>
+                              </div>
+                              <div class="ab2-pill"></div>
+                            </div>
+                            <div class="ab2-card">
+                              <div class="ab2-card-sq"></div>
+                              <div class="ab2-card-lines">
+                                <div class="ab2-card-line" style="width:85%"></div>
+                                <div class="ab2-card-line" style="width:45%"></div>
+                              </div>
+                              <div class="ab2-pill"></div>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <!-- Profile -->
+                        <div class="ab-profile" id="abProfile" style="left:400px;top:130px;transform:scale(0.82);opacity:0;">
+                          <img src="work/success-stories/figma-profile.webp" alt="Profile">
+                        </div>
+  
+                        <!-- Stickies -->
+                        <div class="sticky" id="st2" style="left:152px;top:270px;background:#0f2318;color:#4caf82;">
+                          <div class="sticky-title">Interaction</div>
+                          <div class="sticky-body">Add swipe to dismiss</div>
+                        </div>
+                        <div class="sticky" id="st3" style="left:456px;top:18px;background:#0f1526;color:#6b8cff;">
+                          <div class="sticky-title">Nav</div>
+                          <div class="sticky-body">Missing tab bar</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+                      <div class="white-rabbit-text">Follow the white rabbit</div>
+  
+          </div>
+      </div>
+  
+      </section>
 
 
     <!-- Footer -->

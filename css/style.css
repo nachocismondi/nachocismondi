@@ -487,14 +487,91 @@ p.text-interval-top {
   opacity: 1;
   pointer-events: auto;
   transition:
-    top .55s cubic-bezier(0.34, 1.56, 0.64, 1), 
-    transform .55s cubic-bezier(0.34, 1.56, 0.64, 1),  
-    opacity .4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+    top .55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform .55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity .4s cubic-bezier(0.34, 1.56, 0.64, 1),
     color .4s ease-in-out,
     background-color .4s ease-in-out,
     border-color .4s ease-in-out,
     border .4s ease-in-out,
     box-shadow .4s ease-in-out;
+}
+
+/* Inline contact section button (same visual as sticky, but normal flow) */
+.button-primary-contact {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: #ef801a;
+  border: 1px solid #d87314;
+  border-radius: 8px;
+  box-shadow: #f29640 0px 1px 0px 1px inset;
+  -webkit-box-shadow: #f29640 0px 1px 0px 1px inset;
+  -moz-box-shadow: #f29640 0px 1px 0px 1px inset;
+  padding: .8rem 3rem;
+  cursor: pointer;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    color .4s ease-in-out,
+    background-color .4s ease-in-out,
+    border-color .4s ease-in-out,
+    border .4s ease-in-out,
+    box-shadow .4s ease-in-out;
+}
+
+.button-primary-contact::before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  background-image: url('../assets/profile.webp');
+  background-size: cover;
+  border-radius: 99px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(120%) translateY(-48%) scale(0.9);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.5s;
+  pointer-events: none;
+}
+
+.button-primary-contact:hover::before,
+.button-primary-contact.tap-activo::before {
+  transform: translateX(0%) translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+.button-primary-contact .button-label {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.button-primary-contact:hover .button-label,
+.button-primary-contact.tap-activo .button-label {
+  transform: translateX(-20px);
+}
+
+.button-primary-contact:hover {
+  background-color: #f29640;
+  border: 1px solid #cd7018;
+  color: #000;
+  text-decoration: none;
+  box-shadow: #e2934a 0px 1px 1px 1px inset;
+  -webkit-box-shadow: #e2934a 0px 1px 2px 1px inset;
+  -moz-box-shadow:   #e2934a 0px 1px 2px 1px inset;
+}
+
+@media (max-width: 767.98px) {
+  .button-primary-contact {
+    width: 100%;
+    padding: .8rem 3rem;
+  }
 }
 
   .chip-tooltip .tooltip-inner {
@@ -1133,11 +1210,12 @@ padding: 20px;
 }
 
 .contact-cta {
-background: rgb(3,1,0);
-background: linear-gradient(180deg, rgba(3,1,0,1) 1%, rgba(145,77,14,.8) 100%);
-box-shadow: 0px 16px 32px 0px rgba(245, 156, 76, .2);
--webkit-box-shadow: 0px 16px 32px 0px rgba(245, 156, 76, .2);
--moz-box-shadow: 0px 16px 32px 0px rgba(245, 156, 76, .2);
+  background: rgb(3, 1, 0);
+  border: 1px solid #0f0f0f;
+  background: linear-gradient(180deg, #080808 1%, #111111 100%);
+  box-shadow: 0px 16px 32px 0px rgba(245, 156, 76, 0.2);
+  -webkit-box-shadow: 0px 16px 32px 0px rgba(83, 48, 15, 0.2);
+  -moz-box-shadow: 0px 16px 32px 0px rgba(245, 156, 76, 0.2);
 }
 
 
@@ -1152,3 +1230,208 @@ label.text-white::after {
 
 
 /*! Masonry */
+
+/*! Figma contact widget */
+.figma-contact-widget,
+.figma-contact-widget * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.figma-contact-widget {
+  font-family: var(--font-sans,system-ui,sans-serif);
+}
+
+.figma-contact-widget .outer {
+  border-radius: 32px;
+  overflow: hidden;
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  cursor: none;
+  user-select: none;
+  border: 1.5px solid #111111;
+}
+
+.figma-contact-widget .canvas-area {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.figma-contact-widget .canvas-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle,#2a2a2a 1px,transparent 1px);
+  background-size: 22px 22px;
+}
+
+.figma-contact-widget .frame-label {
+  position: absolute;
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+  transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1),opacity 0.3s ease;
+}
+
+.figma-contact-widget .sel {
+  position: absolute;
+  border: 2px solid #8A4A0F;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s,left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1);
+  z-index: 30;
+}
+
+.figma-contact-widget .sel.visible { opacity: 1; }
+
+.figma-contact-widget .sel::before,
+.figma-contact-widget .sel::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #8A4A0F;
+  border: 1.5px solid #fff;
+  border-radius: 1px;
+}
+
+.figma-contact-widget .sel::before { top: -4px; left: -4px; }
+.figma-contact-widget .sel::after { bottom: -4px; right: -4px; }
+
+/* Login */
+.figma-contact-widget .ab-login {
+  position: absolute;
+  width: 200px;
+  height: 360px;
+  background: #1e1e1e;
+  border-radius: 20px;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.9);
+  overflow: hidden;
+  z-index: 10;
+  transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1);
+}
+
+.figma-contact-widget .ab1-top {
+  height: 110px;
+  background: #252525;
+  border-bottom: 1px solid #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.figma-contact-widget .ab1-logo { width: 32px; height: 32px; border-radius: 9px; background: #2d2d2d; border: 1px solid #3a3a3a; }
+.figma-contact-widget .ab1-bar1 { width: 72px; height: 6px; border-radius: 3px; background: #2e2e2e; }
+.figma-contact-widget .ab1-bar2 { width: 48px; height: 4px; border-radius: 2px; background: #282828; }
+
+.figma-contact-widget .ab1-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.figma-contact-widget .ab1-field { height: 26px; border-radius: 7px; background: #252525; border: 1px solid #2e2e2e; width: 100%; }
+.figma-contact-widget .ab1-field.lit { border-color: #6b8cff33; }
+.figma-contact-widget .ab1-cta { height: 28px; border-radius: 7px; background: #2d2d2d; border: 1px solid #3a3a3a; }
+.figma-contact-widget .ab1-divrow { display: flex; align-items: center; gap: 6px; }
+.figma-contact-widget .ab1-divline { flex: 1; height: 1px; background: #282828; }
+.figma-contact-widget .ab1-divdot { width: 4px; height: 4px; border-radius: 50%; background: #303030; }
+.figma-contact-widget .ab1-ghost { height: 26px; border-radius: 7px; background: #222; border: 1px solid #282828; width: 100%; }
+
+/* Home */
+.figma-contact-widget .ab-home {
+  position: absolute;
+  width: 200px;
+  height: 360px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.9);
+  overflow: hidden;
+  z-index: 10;
+  transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1);
+}
+
+.figma-contact-widget .ab2-topbar { height: 44px; background: #1e1e1e; border-bottom: 1px solid #272727; display: flex; align-items: center; padding: 0 12px; justify-content: space-between; }
+.figma-contact-widget .ab2-avatar { width: 22px; height: 22px; border-radius: 50%; background: #2d2d2d; border: 1px solid #353535; }
+.figma-contact-widget .ab2-bargroup { flex: 1; margin: 0 9px; display: flex; flex-direction: column; gap: 4px; }
+.figma-contact-widget .ab2-minibar { height: 3px; border-radius: 2px; background: #272727; }
+.figma-contact-widget .ab2-notif { width: 20px; height: 20px; border-radius: 50%; background: #232323; border: 1px solid #303030; }
+
+.figma-contact-widget .ab2-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.figma-contact-widget .ab2-hero { height: 90px; border-radius: 12px; background: #252525; border: 1px solid #2e2e2e; position: relative; overflow: hidden; }
+.figma-contact-widget .ab2-hero-glow { position: absolute; top: -24px; right: -24px; width: 90px; height: 90px; border-radius: 50%; background: #6b8cff0d; }
+.figma-contact-widget .ab2-card { height: 42px; border-radius: 9px; background: #1e1e1e; border: 1px solid #272727; display: flex; align-items: center; padding: 0 10px; gap: 8px; }
+.figma-contact-widget .ab2-card-sq { width: 26px; height: 26px; border-radius: 7px; background: #252525; border: 1px solid #2e2e2e; flex-shrink: 0; }
+.figma-contact-widget .ab2-card-lines { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+.figma-contact-widget .ab2-card-line { height: 3px; border-radius: 2px; background: #2a2a2a; }
+.figma-contact-widget .ab2-pill { width: 30px; height: 14px; border-radius: 4px; background: #6b8cff15; border: 1px solid #6b8cff25; flex-shrink: 0; }
+
+/* Profile */
+.figma-contact-widget .ab-profile {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 20px;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.9);
+  overflow: hidden;
+  z-index: 10;
+  transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1),
+              transform 0.45s cubic-bezier(0.34,1.56,0.64,1),opacity 0.3s ease;
+}
+
+.figma-contact-widget .ab-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.figma-contact-widget .sticky {
+  position: absolute;
+  z-index: 15;
+  border-radius: 5px;
+  padding: 8px 10px;
+  width: 76px;
+  max-width: 76px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+  transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1),transform 0.2s ease,box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.figma-contact-widget .sticky:hover { transform: scale(1.08) rotate(-1deg); box-shadow: 0 6px 24px rgba(0,0,0,0.5); }
+.figma-contact-widget .sticky-title { font-size: 8px; font-weight: 700; margin-bottom: 3px; line-height: 1.2; }
+.figma-contact-widget .sticky-body { font-size: 7px; line-height: 1.45; opacity: 0.72; }
+
+.figma-contact-widget .cursor-you,
+.figma-contact-widget .cursor-nacho {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  z-index: 200;
+}
+
+.figma-contact-widget .cursor-nacho { transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1); }
+.figma-contact-widget .cursor-you { transition: opacity 0.2s ease; }
+.figma-contact-widget .csvg { width: 36px; height: 36px; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6)); }
+.figma-contact-widget .lbl { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; white-space: nowrap; margin-top: 4px; letter-spacing: -0.2px; }
+.figma-contact-widget .lbl-you { background: linear-gradient(135deg,#e040fb,#c020e0); color: #fff; }
+.figma-contact-widget .lbl-nacho { background: linear-gradient(135deg,#ff7d3b,#ea580c); color: #fff; }

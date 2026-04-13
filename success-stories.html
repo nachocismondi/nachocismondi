@@ -276,8 +276,8 @@
         </div>
 
         <div class="col-12 col-md-10">
-          <a href="work/success-stories/02_stories.webm" class="glightbox" data-gallery="g1">
-            <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%" style="border-radius: 16px;">
+          <a href="work/success-stories/compo_ajustada.mp4" class="glightbox" data-gallery="g1">
+            <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%">
               <source src="work/success-stories//02_stories.webm" type="video/webm" alt="Video header success stories"/>
             </video>
             </a>
@@ -400,65 +400,136 @@
         <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
 
             <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
-                <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
-                <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white text-opacity-75" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> or complete the form <i class="bi bi-arrow-down-circle-fill d-lg-none"></i><i class="bi bi-arrow-right-circle-fill d-none d-lg-block"></i></div>
-            </div>
+              
+                <div class="h1 fw-bold text-white">We create something</br> amazing side by side</div>
+                <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white" id="copy-btn-contact" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="chip-tooltip" title="Copied email to clipboard" alt="Copy my email to clipboard">nachocismondi@gmail.com</a></div>
+                <a id="copy-btn-contact"
+                  class="button-primary-contact mt-3"
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-custom-class="chip-tooltip"
+                  title="Copied email to clipboard"
+                  alt="Copy my email to clipboard"
+                  onclick="copyEmailHandler.call(this, event)">
+                  <span class="button-label">Write to Nacho</span>
+                </a>
+     
+              </div>
 
-            <div class="col-12 col-md-10 col-lg-6">
+            <div class="col-12 col-lg-6">
 
                 <!-- Contact form -->
-                <div id="form">
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdk0TJmrfs6SefQYICHgYsI2LImj8aGRIzG4vFV6QFvSnAVIQ/formResponse" method="post" target="hiddenConfirm" onsubmit="formSubmit()">
+                <div class="figma-contact-widget">
+                  <div class="outer" id="outer">
+                    <div class="cursor-you" id="cursorYou" style="left:-100px;top:-100px;opacity:0">
+                      <svg class="csvg" viewBox="0 0 20 20">
+                        <defs>
+                          <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f06aff"/>
+                            <stop offset="100%" stop-color="#c020e0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
+                      </svg>
+                      <span class="lbl lbl-you">you</span>
+                    </div>
+                    <div class="cursor-nacho" id="cursorNacho" style="left:220px;top:200px">
+                      <svg class="csvg" viewBox="0 0 20 20">
+                        <defs>
+                          <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffaa70"/>
+                            <stop offset="100%" stop-color="#ea580c"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gn)"/>
+                      </svg>
+                      <span class="lbl lbl-nacho">Nacho</span>
+                    </div>
 
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control bg-dark text-white border-secondary" name="entry.1815432459" id="floatingInput" placeholder="Best Client" required>
-                            <label class="text-white text-opacity-75" for="entry.1815432459 floatingInput email">Your name?</label>
+                    <div class="canvas-area">
+                      <div class="canvas-bg"></div>
+
+                      <div class="frame-label" id="lblLogin" style="left:-80px;top:6px">Login</div>
+                      <div class="frame-label" id="lblHome"  style="left:176px;top:6px">Home</div>
+                      <div class="frame-label" id="lblProfile" style="left:400px;top:116px;opacity:0">Profile</div>
+
+                      <div class="sel" id="selLogin"  style="left:-80px;top:20px;width:200px;height:360px;"></div>
+                      <div class="sel" id="selHome"   style="left:176px;top:20px;width:200px;height:360px;"></div>
+                      <div class="sel" id="selProfile" style="left:400px;top:130px;width:170px;height:170px;"></div>
+
+                      <!-- Login -->
+                      <div class="ab-login" id="abLogin" style="left:-80px;top:20px;">
+                        <div class="ab1-top">
+                          <div class="ab1-logo"></div>
+                          <div class="ab1-bar1"></div>
+                          <div class="ab1-bar2"></div>
                         </div>
-
-                        <div class="form-floating mb-2">
-                            <input type="email" class="form-control bg-dark text-white border-secondary" name="entry.467343636" id="floatingInput" placeholder="best@client.com" required>
-                            <label class="text-white text-opacity-75" for="entry.467343636 floatingInput email">What's your email?</label>
+                        <div class="ab1-body">
+                          <div class="ab1-field lit"></div>
+                          <div class="ab1-field"></div>
+                          <div class="ab1-cta"></div>
+                          <div class="ab1-divrow"><div class="ab1-divline"></div><div class="ab1-divdot"></div><div class="ab1-divline"></div></div>
+                          <div class="ab1-ghost"></div>
                         </div>
+                      </div>
 
-                        <div class="form-floating mb-2">
-                            <textarea class="form-control bg-dark text-white border-secondary" name="entry.546330365" style="height: 100px" id="floatingInput" placeholder="Do whatever" required></textarea>
-                            <label class="text-white text-opacity-75" for="entry.546330365 floatingInput">Tell me about your project...</label>
+                      <!-- Home -->
+                      <div class="ab-home" id="abHome" style="left:176px;top:20px;">
+                        <div class="ab2-topbar">
+                          <div class="ab2-avatar"></div>
+                          <div class="ab2-bargroup">
+                            <div class="ab2-minibar" style="width:55%"></div>
+                            <div class="ab2-minibar" style="width:35%"></div>
+                          </div>
+                          <div class="ab2-notif"></div>
                         </div>
-
-                        <div class="form-floating mb-2">
-                            <select class="form-select bg-dark text-white border-secondary" id="floatingSelect" aria-label="Budget" name="entry.562823855" required>
-                                <option selected disabled value="">Select an approximate budget option</option>
-                                <option name="$500+-+$1,500+USD">$500 - $1,500 USD</option>
-                                <option name="$1,500+-+$2,500+USD">$1,500 - $2,500 USD</option>
-                                <option name="$2,500+-+$3,500+USD">$2,500 - $3,500 USD</option>
-                                <option name="%2B+$3,500+USD">+ $3,500 USD</option>
-                            </select>
-                            <label class="text-white text-opacity-75" for="entry.562823855 floatingSelect">What's your budget?</label>
+                        <div class="ab2-body">
+                          <div class="ab2-hero"><div class="ab2-hero-glow"></div></div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:80%"></div>
+                              <div class="ab2-card-line" style="width:50%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq" style="background:#222;border-color:#2a2a2a"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:70%"></div>
+                              <div class="ab2-card-line" style="width:40%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:85%"></div>
+                              <div class="ab2-card-line" style="width:45%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
                         </div>
+                      </div>
 
-                        <button type="submit" class="button-secondary btn-lg px-5">Send</button>
+                      <!-- Profile -->
+                      <div class="ab-profile" id="abProfile" style="left:400px;top:130px;transform:scale(0.82);opacity:0;">
+                        <img src="work/success-stories/figma-profile.webp" alt="Profile">
+                      </div>
 
-                    </form>
+                      <!-- Stickies -->
+                      <div class="sticky" id="st2" style="left:152px;top:270px;background:#0f2318;color:#4caf82;">
+                        <div class="sticky-title">Interaction</div>
+                        <div class="sticky-body">Add swipe to dismiss</div>
+                      </div>
+                      <div class="sticky" id="st3" style="left:456px;top:18px;background:#0f1526;color:#6b8cff;">
+                        <div class="sticky-title">Nav</div>
+                        <div class="sticky-body">Missing tab bar</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                <iframe name="hiddenConfirm" style="display: none;">
-                </iframe>
-
-                <!-- Submitted message confirmation -->
-                <div id="completion-msg" class="col-12 text-center mb-5 pb-5" style="display: none; transition: all .1s ease;">
-                    <i class="bi bi-check-circle text-success mb-3 h2"></i>
-                    <h5 class="text-white mb-1">Request sent</h5>
-                    <p class="text-white text-opacity-75 mb-5 pb-5 mb-5 pb-5">Thanks for your interest. I will answer your request as soon as possible.</p>
-                </div>
-
-                <!-- Script to hide form after submitted -->
-                <script type="text/javascript">
-                    var submitted=false
-                    function formSubmit(){
-                        document.getElementById("form").style.display = "none";  // make form invisible
-                        document.getElementById("completion-msg").style.display = "block"; // Optional if you want to give a completion feedback!
-                    }
-                </script>
             </div>
                     <div class="white-rabbit-text">Follow the white rabbit</div>
 
@@ -543,7 +614,7 @@
 
 <!-- Button primary delay to recreate hover-->
         <script>
-          document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+          document.querySelectorAll('.button-primary-sticky, .button-primary-contact').forEach(boton => {
             let tapTimeout;
 
             boton.addEventListener('touchstart', () => {
@@ -566,7 +637,7 @@
 
 <!-- Button primary delay to recreate hover-->
 <script>
-  document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+  document.querySelectorAll('.button-primary-sticky, .button-primary-contact').forEach(boton => {
     let tapTimeout;
 
     boton.addEventListener('touchstart', () => {
@@ -593,15 +664,16 @@ document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
 );
 
 // Click handler: copy email + show tooltip
-document.getElementById('copy-btn').addEventListener('click', function(e) {
+function copyEmailHandler(e) {
   e.preventDefault();
   const email = 'nachocismondi@gmail.com';
   const tip = bootstrap.Tooltip.getInstance(this);
   navigator.clipboard.writeText(email)
     .then(() => { tip.show(); setTimeout(() => tip.hide(), 3000); })
     .catch(console.error);
-
-});
+}
+document.getElementById('copy-btn').addEventListener('click', copyEmailHandler);
+document.getElementById('copy-btn-contact').addEventListener('click', copyEmailHandler);
 </script>
 
 
@@ -634,8 +706,10 @@ document.getElementById('copy-btn').addEventListener('click', function(e) {
 <script>
   (function () {
     const btn = document.getElementById('copy-btn');
-  
+    let contactVisible = false;
+
     function toggleByScroll() {
+      if (contactVisible) { btn.classList.remove('is-visible'); return; }
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const docHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -645,14 +719,23 @@ document.getElementById('copy-btn').addEventListener('click', function(e) {
       const winHeight = window.innerHeight;
       const maxScrollable = docHeight - winHeight;
       const progress = maxScrollable > 0 ? (scrollTop / maxScrollable) : 0;
-  
+
       if (progress >= 0.5) {
         btn.classList.add('is-visible');
       } else {
         btn.classList.remove('is-visible');
       }
     }
-  
+
+    // Hide sticky when contact section enters the viewport
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      new IntersectionObserver(function(entries) {
+        contactVisible = entries[0].isIntersecting;
+        toggleByScroll();
+      }, { threshold: 0.05 }).observe(contactSection);
+    }
+
     // Inicial y en scroll/resize
     toggleByScroll();
     window.addEventListener('scroll', toggleByScroll, { passive: true });
@@ -669,6 +752,107 @@ document.getElementById('copy-btn').addEventListener('click', function(e) {
       // loop: true,
       // zoomable: true
     });
+  </script>
+
+  <script>
+  (function () {
+    const you        = document.getElementById('cursorYou');
+    const nacho      = document.getElementById('cursorNacho');
+    const outer      = document.getElementById('outer');
+    const abLogin    = document.getElementById('abLogin');
+    const abHome     = document.getElementById('abHome');
+    const abProfile  = document.getElementById('abProfile');
+    const selLogin   = document.getElementById('selLogin');
+    const selHome    = document.getElementById('selHome');
+    const selProfile = document.getElementById('selProfile');
+    const lblLogin   = document.getElementById('lblLogin');
+    const lblHome    = document.getElementById('lblHome');
+    const lblProfile = document.getElementById('lblProfile');
+    const st2        = document.getElementById('st2');
+    const st3        = document.getElementById('st3');
+
+    if (!you || !nacho || !outer || !abLogin || !abHome || !abProfile ||
+        !selLogin || !selHome || !selProfile ||
+        !lblLogin || !lblHome || !lblProfile || !st2 || !st3) {
+      return;
+    }
+
+    const isMobile = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+
+    if (!isMobile) {
+      outer.addEventListener('mousemove', function (e) {
+        const r = outer.getBoundingClientRect();
+        you.style.left = (e.clientX - r.left) + 'px';
+        you.style.top  = (e.clientY - r.top) + 'px';
+        you.style.opacity = '1';
+      });
+      outer.addEventListener('mouseleave', function () {
+        you.style.opacity = '0';
+      });
+    }
+
+    function setPx(el, l, t) { el.style.left = l + 'px'; el.style.top = t + 'px'; }
+
+    function moveAB(el, sel, lbl, l, t, lblOff) {
+      [el, sel].forEach(function (x) { x.style.left = l + 'px'; x.style.top = t + 'px'; });
+      lbl.style.left = l + 'px';
+      lbl.style.top  = (t + lblOff) + 'px';
+    }
+
+    function show(el) { el.classList.add('visible'); }
+    function hide(el) { el.classList.remove('visible'); }
+
+    const phases = [
+      { d:900,  fn:function () { setPx(nacho,80,100); } },
+      { d:600,  fn:function () { setPx(nacho,56,76);  show(selLogin); } },
+      { d:1000, fn:function () { setPx(nacho,64,86);  moveAB(abLogin,selLogin,lblLogin,-92,28,-14); } },
+      { d:800,  fn:function () { setPx(nacho,58,80);  moveAB(abLogin,selLogin,lblLogin,-80,20,-14); } },
+      { d:600,  fn:function () { hide(selLogin); } },
+
+      { d:1000, fn:function () { setPx(nacho,240,80); } },
+      { d:600,  fn:function () { setPx(nacho,220,62); show(selHome); } },
+      { d:1000, fn:function () { setPx(nacho,228,72); moveAB(abHome,selHome,lblHome,168,14,-14); } },
+      { d:800,  fn:function () { setPx(nacho,222,66); moveAB(abHome,selHome,lblHome,176,20,-14); } },
+      { d:600,  fn:function () { hide(selHome); } },
+
+      { d:900,  fn:function () { setPx(nacho,160,278); } },
+      { d:500,  fn:function () { st2.style.top='258px'; } },
+      { d:700,  fn:function () { st2.style.top='270px'; } },
+
+      { d:1000, fn:function () { setPx(nacho,430,152); } },
+      { d:450,  fn:function () { setPx(nacho,418,138); } },
+      { d:220,  fn:function () {
+          abProfile.style.transform = 'scale(1)';
+          abProfile.style.opacity   = '1';
+          lblProfile.style.opacity  = '1';
+          show(selProfile);
+          setPx(nacho,412,132);
+      } },
+      { d:900,  fn:function () { setPx(nacho,422,146); moveAB(abProfile,selProfile,lblProfile,392,124,-14); } },
+      { d:800,  fn:function () { setPx(nacho,416,140); moveAB(abProfile,selProfile,lblProfile,400,130,-14); } },
+      { d:600,  fn:function () { hide(selProfile); } },
+
+      { d:900,  fn:function () { setPx(nacho,460,26); } },
+      { d:500,  fn:function () { st3.style.top='10px'; } },
+      { d:700,  fn:function () { st3.style.top='18px'; } },
+
+      { d:1200, fn:function () { setPx(nacho,220,200); } }
+    ];
+
+    let phase = 0;
+    function run() {
+      const p = phases[phase % phases.length];
+      p.fn();
+      setTimeout(function () { phase++; run(); }, p.d);
+    }
+
+    setTimeout(run, 500);
+
+    if (isMobile) {
+      you.style.opacity = '1';
+      setPx(you, 30, 340);
+    }
+  })();
   </script>
 
 </html>
