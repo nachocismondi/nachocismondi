@@ -69,11 +69,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js"></script>
 
 
-  <style>
-
-    
-  </style>
-
     </head>
 
     <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
@@ -272,16 +267,16 @@
         <p class="fs-4 text-interval-top"><svg xmlns='http://www.w3.org/2000/svg'  width='80' height='82' viewport='0 0 100 100' style='fill:black;font-size:3rem;'><text y='50%'>⏩️</text></svg></br>3 years after my redesign, the organization maintained the identity and the event is getting bigger and bigger.</p>
       </div>
       
-        <div class="col-12 mb-5">     
-<style>.tweet-card{ --tc-bg:#161b22; /* fondo tarjeta */ --tc-border:#2b3440; /* borde */ --tc-text:#e6edf3; /* texto principal */ --tc-muted:#9aa7b2; /* texto secundario */ --tc-link:#8ab4ff; /* links (follow, @) */ --tc-chip:#0d1117; /* fondo chips/botón */ background:var(--tc-bg); color:var(--tc-text); border:1px solid var(--tc-border); border-radius:20px; box-shadow:0 8px 24px rgba(0,0,0,.35);height: fit-content; } .tweet-inner{ padding:1rem 1rem 0; } @media(min-width:768px){ .tweet-inner{ padding:1.25rem 1.25rem 0; } } /* Header */ .tweet-header{ align-items:center; gap:.75rem; } .tweet-avatar{ width:44px;height:44px;border-radius:50%; background:#243041; color:#cfe3ff; font-weight:700; display:flex;align-items:center;justify-content:center; user-select:none; } .tweet-name{ font-weight:700; line-height:1; } .tweet-handle{ color:var(--tc-muted); } .tweet-dot{ color:var(--tc-muted); } .tweet-follow{ color:var(--tc-link); font-weight:600; text-decoration:none; } .tweet-close{ margin-left:auto; color:#d1d7de; text-decoration:none; font-size:1.4rem; line-height:1; } /* Texto */ .tweet-text{ font-size:1.05rem; margin: .5rem 0 1rem; } .tweet-text a{ color:var(--tc-link); text-decoration:none; } .tweet-text a:hover{ text-decoration:underline; } /* Imagen */ .tweet-media{ border-radius:18px; overflow:hidden; border:1px solid var(--tc-border); } .tweet-media img{ display:block; width:100%; height:auto; } /* Meta + acciones */ .tweet-meta{ color:var(--tc-muted); border-top:1px solid var(--tc-border); margin-top:1rem; padding:.75rem 1rem; } .tweet-actions{ display:flex; align-items:center; gap:1.25rem; padding: .25rem 1rem 1rem; } .tweet-action{ display:inline-flex; align-items:center; gap:.35rem; color:var(--tc-muted); text-decoration:none; font-weight:500; } .tweet-action svg{ width:20px; height:20px; } /* Botón leer respuestas */ .tweet-replies{ display:block; margin:0 auto 1rem; width:fit-content; color:var(--tc-text); text-decoration:none; font-weight:600; border:1px solid var(--tc-border); background:var(--tc-chip); padding:.65rem 1.1rem; border-radius:999px; } /* Helpers */ .rounded-18{ border-radius:18px; } </style>
-<div class="container my-4">
-    <div class="row justify-content-center">
-   <div class="tweet-card col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="tweet-carousel-root">
+            <div class="tweet-carousel-track-wrapper" id="tweetTrackWrapper">
+              <div class="tweet-carousel-track" id="tweetTrack">
+                <div class="tweet-card">
       <div class="tweet-inner">
          <!-- Header --> 
          <div class="d-flex tweet-header justify-content-between">
             <div class="d-flex align-items-center">
-                <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1757252569405984768/dUiFPXTU_200x200.jpg" width="48px"> 
+                <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/2030237000591142913/n1cqFdTg_400x400.jpg" width="48px"> 
                 <div class="flex-row ps-2">
                 <div class="tweet-name">Manu Ferrari</div>
                 <div class="small"> <a href="https://x.com/manuferraritano" target="_blank" class="tweet-handle">@manuelferraritano</a> </div>
@@ -304,26 +299,28 @@
         </div>
 
 
-      <!-- Meta --> 
-      <div class="tweet-meta d-flex align-items-center justify-content-between">
-         <div class="small">11:44 AM · Oct 4, 2022</div>
+      <!-- Meta -->
+      <div class="tweet-meta">
+        <div class="tweet-meta-row">
+          <div class="small">11:44 AM · Oct 4, 2022</div>
+          <div class="tweet-actions">
+            <a class="tweet-action">
+              <!-- heart -->
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+              <span>16</span>
+            </a>
+            <a class="tweet-action">
+              <!-- reply -->
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
+            </a>
+          </div>
+        </div>
+        <a class="tweet-replies" href="https://x.com/manuferraritano/status/1577308657519366155" role="button" target="_blank">View in X →</a>
       </div>
-      <!-- Acciones --> 
-      <div class="tweet-actions">
-         <a class="tweet-action">
-            <!-- heart --> 
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
-            <span>16</span> 
-         </a>
-         <a class="tweet-action">
-            <!-- reply --> 
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
-         </a>
-      </div>
-      <div class="px-3 pb-3"> <a class="tweet-replies" href="https://x.com/manuferraritano/status/1577308657519366155" role="button" target="_blank">View in X →</a> </div>
+
    </div>
 
-   <div class="tweet-card col-12 col-md-6 col-lg-4">
+   <div class="tweet-card">
     <div class="tweet-inner">
        <!-- Header --> 
        <div class="d-flex tweet-header justify-content-between">
@@ -351,27 +348,28 @@
       </div>
 
 
-    <!-- Meta --> 
-    <div class="tweet-meta d-flex align-items-center justify-content-between">
-       <div class="small">11:00 AM · Oct 1, 2022</div>
+    <!-- Meta -->
+    <div class="tweet-meta">
+      <div class="tweet-meta-row">
+        <div class="small">11:00 AM · Oct 1, 2022</div>
+        <div class="tweet-actions">
+          <a class="tweet-action">
+            <!-- heart -->
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+            <span>76</span>
+          </a>
+          <a class="tweet-action">
+            <!-- reply -->
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
+          </a>
+        </div>
+      </div>
+      <a class="tweet-replies" href="https://x.com/fersecchi/status/1576210466493562880" role="button" target="_blank">View in X →</a>
     </div>
-    <!-- Acciones --> 
-    <div class="tweet-actions">
-       <a class="tweet-action">
-          <!-- heart --> 
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
-          <span>76</span> 
-       </a>
-       <a class="tweet-action">
-          <!-- reply --> 
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
-       </a>
-    </div>
-    <div class="px-3 pb-3"> <a class="tweet-replies" href="https://x.com/fersecchi/status/1576210466493562880" role="button" target="_blank">View in X →</a> </div>
  </div>
 
 
-   <div class="tweet-card col-12 col-md-6 col-lg-4">
+   <div class="tweet-card">
     <div class="tweet-inner">
        <!-- Header --> 
        <div class="d-flex tweet-header justify-content-between">
@@ -399,27 +397,121 @@
       </div>
 
 
-    <!-- Meta --> 
-    <div class="tweet-meta d-flex align-items-center justify-content-between">
-       <div class="small">9:51 AM · Sep 8, 2023</div>
+    <!-- Meta -->
+    <div class="tweet-meta">
+      <div class="tweet-meta-row">
+        <div class="small">9:51 AM · Sep 8, 2023</div>
+        <div class="tweet-actions">
+          <a class="tweet-action">
+            <!-- heart -->
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+            <span>31</span>
+          </a>
+          <a class="tweet-action">
+            <!-- reply -->
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
+          </a>
+        </div>
+      </div>
+      <a class="tweet-replies" href="https://x.com/bourbonni/status/1700129798469677414" role="button" target="_blank">View in X →</a>
     </div>
-    <!-- Acciones --> 
-    <div class="tweet-actions">
-       <a class="tweet-action">
-          <!-- heart --> 
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-vkub15 r-4qtqp9 r-1sreavd r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
-          <span>31</span> 
-       </a>
-       <a class="tweet-action">
-          <!-- reply --> 
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="#9aa7b2" class="r-1cvl2hr r-4qtqp9 r-4r3dic r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg>
-       </a>
-    </div>
-    <div class="px-3 pb-3"> <a class="tweet-replies" href="https://x.com/bourbonni/status/1700129798469677414" role="button" target="_blank">View in X →</a> </div>
+
  </div>
-</div>
-</div>
-</div>
+              </div>
+            </div>
+
+            <div class="tweet-carousel-controls">
+              <button class="tweet-nav-btn" id="tweetPrev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+              <div class="tweet-dots" id="tweetDots"></div>
+              <button class="tweet-nav-btn" id="tweetNext" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              const root = document.querySelector('.tweet-carousel-root');
+              if (!root) return;
+
+              const wrapper = root.querySelector('#tweetTrackWrapper');
+              const track = root.querySelector('#tweetTrack');
+              const cards = Array.from(track.querySelectorAll('.tweet-card'));
+              const prevBtn = root.querySelector('#tweetPrev');
+              const nextBtn = root.querySelector('#tweetNext');
+              const dotsEl = root.querySelector('#tweetDots');
+              const n = cards.length;
+              if (!wrapper || !track || !prevBtn || !nextBtn || !dotsEl || n < 2) return;
+
+              let current = n > 1 ? 1 : 0;
+              let startX = 0;
+              let autoTimer;
+
+              function setHeight() {
+                const max = cards.reduce(function (m, card) { return Math.max(m, card.offsetHeight); }, 0);
+                wrapper.style.height = (max + 8) + 'px';
+              }
+
+              function render() {
+                const trackGap = parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap || '0') || 0;
+                const cardWidth = cards[0].offsetWidth;
+                const step = cardWidth + trackGap;
+                const offset = (wrapper.clientWidth - cardWidth) / 2;
+                track.style.transform = 'translateX(' + (offset - current * step) + 'px)';
+                cards.forEach(function (card, i) {
+                  card.classList.toggle('is-active', i === current);
+                });
+                Array.from(dotsEl.children).forEach(function (dot, i) {
+                  dot.classList.toggle('active', i === current);
+                });
+                prevBtn.disabled = current === 0;
+                nextBtn.disabled = current === n - 1;
+              }
+
+              function goTo(idx) {
+                if (idx < 0) idx = 0;
+                if (idx > n - 1) idx = n - 1;
+                current = idx;
+                render();
+              }
+
+              function startAuto() {
+                clearInterval(autoTimer);
+                autoTimer = setInterval(function () {
+                  goTo(current < n - 1 ? current + 1 : 0);
+                }, 6000);
+              }
+
+              dotsEl.innerHTML = '';
+              cards.forEach(function (_, i) {
+                const dot = document.createElement('button');
+                dot.className = 'tweet-dot' + (i === current ? ' active' : '');
+                dot.setAttribute('aria-label', 'Ir al tweet ' + (i + 1));
+                dot.addEventListener('click', function () { goTo(i); startAuto(); });
+                dotsEl.appendChild(dot);
+              });
+
+              prevBtn.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+              nextBtn.addEventListener('click', function () { goTo(current + 1); startAuto(); });
+
+              wrapper.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+              wrapper.addEventListener('touchend', function (e) {
+                const dx = e.changedTouches[0].clientX - startX;
+                if (Math.abs(dx) > 40) { goTo(current + (dx < 0 ? 1 : -1)); startAuto(); }
+              }, { passive: true });
+
+              wrapper.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+              wrapper.addEventListener('mouseleave', startAuto);
+
+              window.addEventListener('resize', function () { setHeight(); render(); });
+              root.querySelectorAll('img').forEach(function (img) {
+                img.addEventListener('load', function () { setHeight(); render(); }, { passive: true });
+              });
+
+              setHeight();
+              render();
+              startAuto();
+            })();
+          </script>
+        </div>
     
 
     <div class="col-12 col-md-8">
