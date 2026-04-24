@@ -1003,6 +1003,69 @@ a.cursor-slider:hover {
     margin-bottom: 10rem;
 }
 
+.achievement-stack-carousel {
+  position: relative;
+  width: min(100%, 280px);
+  height: 116px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.achievement-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #5b5b5b26;
+  background: rgb(11 11 11 / 84%);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  transition: transform 0.45s cubic-bezier(.2,.7,.2,1), opacity 0.45s ease;
+}
+
+.achievement-slide p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: #f2f2f2;
+  text-align: left;
+}
+
+.achievement-slide.is-active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.achievement-slide.is-next {
+  transform: translateY(10px) scale(0.965);
+  opacity: 0.78;
+  z-index: 2;
+}
+
+.achievement-slide.is-third {
+  transform: translateY(20px) scale(0.93);
+  opacity: 0.55;
+  z-index: 1;
+}
+
+.achievement-slide.is-hidden {
+  opacity: 0;
+  transform: translateY(24px) scale(0.9);
+  z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .achievement-stack-carousel {
+    width: 100%;
+    height: 108px;
+  }
+}
+
 .services { 
     margin-top: 8rem;
  }
@@ -1115,22 +1178,29 @@ a.cursor-slider:hover {
     overflow: hidden;
   }
 
-  .image-container img {
+  .image-container img,
+  .image-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  /* On small screens, switch to a taller (portrait) crop */
+  /* Desktop: show horizontal video, hide mobile */
+  .image-container .video-desktop { display: block; }
+  .image-container .video-mobile  { display: none; }
+
+  /* On small screens, switch to portrait ratio and mobile video */
   @media (max-width: 767px) {
     .image-container {
-      aspect-ratio: 3.2/4;
+      aspect-ratio: 3.2/3.6;
     }
-    .image-container img {
-      /* Crop from top-left corner */
+    .image-container img,
+    .image-container video {
       object-position: 50% 0%;
     }
+    .image-container .video-desktop { display: none; }
+    .image-container .video-mobile  { display: block; }
   }
 
 .social-icons a {
@@ -1435,3 +1505,241 @@ label.text-white::after {
 .figma-contact-widget .lbl { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; white-space: nowrap; margin-top: 4px; letter-spacing: -0.2px; }
 .figma-contact-widget .lbl-you { background: linear-gradient(135deg,#e040fb,#c020e0); color: #fff; }
 .figma-contact-widget .lbl-nacho { background: linear-gradient(135deg,#ff7d3b,#ea580c); color: #fff; }
+
+/*! Tweet carousel v2 */
+.tweet-carousel-root {
+  padding: 2rem 0 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.tweet-carousel-track-wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.tweet-carousel-track-wrapper::before,
+.tweet-carousel-track-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tweet-carousel-track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #000 0%, transparent 90%);
+}
+
+.tweet-carousel-track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #000 0%, transparent 90%);
+}
+
+.tweet-carousel-track {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  transition: transform .5s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+
+.tweet-carousel-root .tweet-card {
+  --tc-bg:#161b22;
+  --tc-border:#2b3440;
+  --tc-text:#e6edf3;
+  --tc-muted:#9aa7b2;
+  --tc-link:#8ab4ff;
+  --tc-chip:#0d1117;
+  position: relative;
+  left: auto;
+  top: auto;
+  z-index: 1;
+  flex: 0 0 calc(100% - 160px);
+  background: var(--tc-bg);
+  color: var(--tc-text);
+  border: 1px solid var(--tc-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  height: fit-content;
+  user-select: none;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.tweet-carousel-root .tweet-card.is-active {
+  filter: none;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tweet-carousel-root .tweet-card:not(.is-active) {
+  filter: blur(2px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.tweet-carousel-root .tweet-card.state-center {
+  transform: translateX(-50%);
+  opacity: 1;
+  filter: blur(0px);
+  z-index: 10;
+  cursor: default;
+}
+
+.tweet-carousel-root .tweet-card.state-right-1 {
+  transform: translateX(-50%);
+  opacity: 0;
+  filter: blur(0px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tweet-carousel-root .tweet-card.state-left-1 {
+  transform: translateX(-50%);
+  opacity: 0;
+  filter: blur(0px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tweet-carousel-root .tweet-card.state-hidden-right {
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tweet-carousel-root .tweet-card.state-hidden-left {
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tweet-carousel-root .tweet-inner { padding: 1rem 1rem 0; }
+@media(min-width:768px){
+  .tweet-carousel-root .tweet-inner { padding: 1.25rem 1.25rem 0; }
+}
+
+.tweet-carousel-root .tweet-header { align-items: center; gap: .75rem; }
+.tweet-carousel-root .tweet-name { font-weight: 700; line-height: 1; }
+.tweet-carousel-root .tweet-handle { color: var(--tc-muted); text-decoration: none; }
+.tweet-carousel-root .tweet-handle:hover { text-decoration: underline; }
+
+.tweet-carousel-root .tweet-text { font-size: 1.05rem; margin: .5rem 0 1rem; }
+.tweet-carousel-root .tweet-text a { color: var(--tc-link); text-decoration: none; }
+.tweet-carousel-root .tweet-text a:hover { text-decoration: underline; }
+
+.tweet-carousel-root .tweet-media { border-radius: 18px; overflow: hidden; border: 1px solid var(--tc-border); height: 15rem;}
+.tweet-carousel-root .tweet-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.tweet-carousel-root .tweet-meta {
+  color: var(--tc-muted);
+  border-top: 1px solid var(--tc-border);
+  margin-top: 1rem;
+  padding: .75rem 1rem .75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.tweet-carousel-root .tweet-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tweet-carousel-root .tweet-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.tweet-carousel-root .tweet-action {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  color: var(--tc-muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tweet-carousel-root .tweet-action svg { width: 20px; height: 20px; }
+
+.tweet-carousel-root .tweet-replies {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--tc-text);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--tc-border);
+  background: var(--tc-chip);
+  padding: .65rem 1.1rem;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.tweet-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.6rem;
+}
+
+.tweet-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0.5px solid #2b3440;
+  background: #161b22;
+  color: #e6edf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.15s ease;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.tweet-nav-btn:hover { background: #1a212b; }
+.tweet-nav-btn:active { transform: scale(0.93); }
+.tweet-nav-btn:disabled { opacity: .35; cursor: not-allowed; pointer-events: none; }
+
+.tweet-dots { display: flex; gap: 6px; align-items: center; }
+
+.tweet-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  background: #2b3440;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.tweet-dot.active {
+  background: #e6edf3;
+  transform: scale(1.25);
+}
+
+@media (max-width: 767.98px) {
+  .tweet-carousel-root .tweet-card {
+    flex: 0 0 calc(100% - 80px);
+  }
+
+  .tweet-carousel-track-wrapper::before,
+  .tweet-carousel-track-wrapper::after {
+    width: 40px;
+  }
+}
