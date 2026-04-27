@@ -1006,7 +1006,7 @@ a.cursor-slider:hover {
 .achievement-stack-carousel {
   position: relative;
   width: min(100%, 280px);
-  height: 116px;
+  height: 130px;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -1015,7 +1015,8 @@ a.cursor-slider:hover {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   padding: 14px 16px;
   border-radius: 14px;
@@ -1025,6 +1026,23 @@ a.cursor-slider:hover {
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
   transition: transform 0.45s cubic-bezier(.2,.7,.2,1), opacity 0.45s ease;
+}
+
+.achievement-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7280;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.achievement-label .bi {
+  font-size: 0.75rem;
+  line-height: 1;
 }
 
 .achievement-slide p {
@@ -1062,7 +1080,7 @@ a.cursor-slider:hover {
 @media (max-width: 767px) {
   .achievement-stack-carousel {
     width: 100%;
-    height: 108px;
+    height: 122px;
   }
 }
 
@@ -1116,7 +1134,7 @@ a.cursor-slider:hover {
 
 .card-portfolio-two:hover {
     background-color: #202225;
-    border: 1px solid rgba(116, 34, 23, .2);
+    border: 1px solid rgba(158, 64, 24, 0.2);
     transform: translate(0, -10px);
     transition: background-color .3s ease-in-out,
         box-shadow .3s ease-in-out,
@@ -1174,7 +1192,7 @@ a.cursor-slider:hover {
 
 .image-container {
     width: 100%;
-    aspect-ratio: 23/15;
+    aspect-ratio: 46/27;
     overflow: hidden;
   }
 
@@ -1279,13 +1297,21 @@ font-weight: bold;
 padding: 20px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  #contact,
+  #contact a,
+  #contact button,
+  #contact [role="button"] { cursor: none; }
+}
+
 .contact-cta {
-  background: rgb(3, 1, 0);
-  border: 1px solid #0f0f0f;
-  background: linear-gradient(180deg, #080808 1%, #111111 100%);
-  box-shadow: 0px 16px 32px 0px rgba(245, 156, 76, 0.2);
-  -webkit-box-shadow: 0px 16px 32px 0px rgba(83, 48, 15, 0.2);
-  -moz-box-shadow: 0px 16px 32px 0px rgba(245, 156, 76, 0.2);
+  background-color: #1e1e22;
+  border: 1px solid #2a2a2b;
+  overflow: hidden;
+  transition: background-color .3s ease-in-out,
+      box-shadow .8s ease-in-out,
+      transform .8s ease-in-out,
+      border .8s ease-in-out;
 }
 
 
@@ -1311,17 +1337,18 @@ label.text-white::after {
 
 .figma-contact-widget {
   font-family: var(--font-sans,system-ui,sans-serif);
+  height: 100%;
+  min-height: 380px;
 }
 
 .figma-contact-widget .outer {
-  border-radius: 32px;
+  border-radius: 0;
   overflow: hidden;
-  max-width: 560px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
   position: relative;
   cursor: none;
   user-select: none;
-  border: 1.5px solid #111111;
 }
 
 .figma-contact-widget .canvas-area {
@@ -1383,7 +1410,7 @@ label.text-white::after {
   height: 360px;
   background: #1e1e1e;
   border-radius: 20px;
-  box-shadow: 0 16px 56px rgba(0,0,0,0.9);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.45);
   overflow: hidden;
   z-index: 10;
   transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1);
@@ -1426,7 +1453,7 @@ label.text-white::after {
   height: 360px;
   background: #1a1a1a;
   border-radius: 20px;
-  box-shadow: 0 16px 56px rgba(0,0,0,0.9);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.45);
   overflow: hidden;
   z-index: 10;
   transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1);
@@ -1459,7 +1486,7 @@ label.text-white::after {
   width: 170px;
   height: 170px;
   border-radius: 20px;
-  box-shadow: 0 16px 56px rgba(0,0,0,0.9);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.45);
   overflow: hidden;
   z-index: 10;
   transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1),
@@ -1480,6 +1507,8 @@ label.text-white::after {
   padding: 8px 10px;
   width: 76px;
   max-width: 76px;
+  min-height: unset;
+  height: auto;
   box-shadow: 0 3px 14px rgba(0,0,0,0.4);
   transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1),transform 0.2s ease,box-shadow 0.2s ease;
   cursor: default;
@@ -1489,7 +1518,6 @@ label.text-white::after {
 .figma-contact-widget .sticky-title { font-size: 8px; font-weight: 700; margin-bottom: 3px; line-height: 1.2; }
 .figma-contact-widget .sticky-body { font-size: 7px; line-height: 1.45; opacity: 0.72; }
 
-.figma-contact-widget .cursor-you,
 .figma-contact-widget .cursor-nacho {
   position: absolute;
   pointer-events: none;
@@ -1500,7 +1528,54 @@ label.text-white::after {
 }
 
 .figma-contact-widget .cursor-nacho { transition: left 1s cubic-bezier(.4,0,.2,1),top 1s cubic-bezier(.4,0,.2,1); }
-.figma-contact-widget .cursor-you { transition: opacity 0.2s ease; }
+
+#cursorYou {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  z-index: 9999;
+  transition: opacity 0.2s ease;
+  will-change: transform;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #cursorYou { display: none; }
+}
+
+#cursorYouMobile {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  z-index: 200;
+  transition: opacity 0.3s ease;
+}
+
+#cursorYou .csvg,
+#cursorYouMobile .csvg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+}
+
+#cursorYou .lbl,
+#cursorYouMobile .lbl {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+  margin-top: 4px;
+  letter-spacing: -0.2px;
+  background: linear-gradient(135deg, #e040fb, #c020e0);
+  color: #fff;
+}
 .figma-contact-widget .csvg { width: 36px; height: 36px; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6)); }
 .figma-contact-widget .lbl { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; white-space: nowrap; margin-top: 4px; letter-spacing: -0.2px; }
 .figma-contact-widget .lbl-you { background: linear-gradient(135deg,#e040fb,#c020e0); color: #fff; }
