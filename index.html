@@ -95,6 +95,18 @@
 
     <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
 
+    <div id="cursorYou" style="opacity:0">
+      <svg class="csvg" viewBox="0 0 20 20">
+        <defs>
+          <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f06aff"/>
+            <stop offset="100%" stop-color="#c020e0"/>
+          </linearGradient>
+        </defs>
+        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
+      </svg>
+      <span class="lbl lbl-you">you</span>
+    </div>
 
 <!-- Menú responsive flotante -->
 <nav id="smartNavbar" class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
@@ -256,11 +268,11 @@
       <p class="text-white-50">Experience with companies, governments and NGOs:</p>
     </div>
     <!-- Logos Wrapper: full width on xs, max 10 cols on md+ -->
-    <div class="col-md-10">
-      <div class="row justify-content-center">
-        <!-- Logo 1 -->
+    <div class="col-md-12">
+      <div class="row justify-content-cente align-items-center">
+        
         <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
-          <img src="assets/logo-fudo.svg" alt="Logo 1" class="img-fluid">
+          <img src="assets/logo-fudo.svg" alt="Logo 2" class="img-fluid">
         </div>
         <!-- Logo 2 -->
         <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
@@ -274,6 +286,7 @@
         <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
           <img src="assets/logo-temaiken.svg" alt="Logo 3" class="img-fluid">
         </div>
+
       </div>
     </div>
   </div>
@@ -391,7 +404,7 @@
                 </div>
                 </a>
 
-                <a href="success-stories">
+                <a href="https://www.behance.net/gallery/94388553/Jungla-Branding-Web" target="blank">
                   <div class="card-portfolio-two row p-3 align-items-center rounded-4 my-3">
                       
                      <div class="col-12 p-0 rounded-3 image-container">
@@ -418,7 +431,7 @@
                 <div class="card-portfolio-three row p-3 align-items-center rounded-4 my-3">
                     
                    <div class="col-12 p-0 rounded-3 image-container">
-                        <img class="rounded-3 img-fluid" src="assets/emeliuz.webp" alt="Project preview">
+                    <img class="rounded-3 img-fluid" src="assets/emeliuz.webp" alt="Project preview">
                     </div>
 
                     <div class="col-12 pt-3">
@@ -542,10 +555,10 @@
         <!-- Contact section -->
         <section class="contact my-5 py-5" id="contact">
 
-          <div class="container contact-cta rounded-3 my-5">
-              <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
-      
-                  <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
+          <div class="container contact-cta rounded-3 my-0">
+              <div class="row g-0 py-0">
+
+                  <div class="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-center px-4 px-sm-4 px-md-5 py-5">
                     
                       <div class="h1 fw-bold text-white">We create something</br> amazing side by side</div>
                       <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white" id="copy-btn-contact" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="chip-tooltip" title="Copied email to clipboard" alt="Copy my email to clipboard">nachocismondi@gmail.com</a></div>
@@ -560,27 +573,16 @@
                         onclick="copyEmailHandler.call(this, event)">
                         <span class="button-label">Write to Nacho</span>
                       </a>
-           
+                      <div class="white-rabbit-text mt-3">Follow the white rabbit</div>
+
                     </div>
       
-                  <div class="col-12 col-lg-6">
-      
+                  <div class="col-12 col-lg-6 p-0">
+
                       <!-- Contact form -->
                       <div class="figma-contact-widget">
                         <div class="outer" id="outer">
-                          <div class="cursor-you" id="cursorYou" style="left:-100px;top:-100px;opacity:0">
-                            <svg class="csvg" viewBox="0 0 20 20">
-                              <defs>
-                                <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
-                                  <stop offset="0%" stop-color="#f06aff"/>
-                                  <stop offset="100%" stop-color="#c020e0"/>
-                                </linearGradient>
-                              </defs>
-                              <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
-                            </svg>
-                            <span class="lbl lbl-you">you</span>
-                          </div>
-                          <div class="cursor-nacho" id="cursorNacho" style="left:220px;top:200px">
+                          <div class="cursor-nacho" id="cursorNacho" style="left:380px;top:200px">
                             <svg class="csvg" viewBox="0 0 20 20">
                               <defs>
                                 <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -595,17 +597,30 @@
       
                           <div class="canvas-area">
                             <div class="canvas-bg"></div>
+
+                            <div id="cursorYouMobile" style="left:30px;top:340px;opacity:0">
+                              <svg class="csvg" viewBox="0 0 20 20">
+                                <defs>
+                                  <linearGradient id="gy2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#f06aff"/>
+                                    <stop offset="100%" stop-color="#c020e0"/>
+                                  </linearGradient>
+                                </defs>
+                                <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy2)"/>
+                              </svg>
+                              <span class="lbl lbl-you">you</span>
+                            </div>
       
-                            <div class="frame-label" id="lblLogin" style="left:-80px;top:6px">Login</div>
-                            <div class="frame-label" id="lblHome"  style="left:176px;top:6px">Home</div>
-                            <div class="frame-label" id="lblProfile" style="left:400px;top:116px;opacity:0">Profile</div>
-      
-                            <div class="sel" id="selLogin"  style="left:-80px;top:20px;width:200px;height:360px;"></div>
-                            <div class="sel" id="selHome"   style="left:176px;top:20px;width:200px;height:360px;"></div>
-                            <div class="sel" id="selProfile" style="left:400px;top:130px;width:170px;height:170px;"></div>
-      
+                            <div class="frame-label" id="lblLogin" style="left:80px;top:6px">Login</div>
+                            <div class="frame-label" id="lblHome"  style="left:336px;top:6px">Home</div>
+                            <div class="frame-label" id="lblProfile" style="left:560px;top:116px;opacity:0">Profile</div>
+
+                            <div class="sel" id="selLogin"  style="left:80px;top:20px;width:200px;height:360px;"></div>
+                            <div class="sel" id="selHome"   style="left:336px;top:20px;width:200px;height:360px;"></div>
+                            <div class="sel" id="selProfile" style="left:560px;top:130px;width:170px;height:170px;"></div>
+
                             <!-- Login -->
-                            <div class="ab-login" id="abLogin" style="left:-80px;top:20px;">
+                            <div class="ab-login" id="abLogin" style="left:80px;top:20px;">
                               <div class="ab1-top">
                                 <div class="ab1-logo"></div>
                                 <div class="ab1-bar1"></div>
@@ -621,7 +636,7 @@
                             </div>
       
                             <!-- Home -->
-                            <div class="ab-home" id="abHome" style="left:176px;top:20px;">
+                            <div class="ab-home" id="abHome" style="left:336px;top:20px;">
                               <div class="ab2-topbar">
                                 <div class="ab2-avatar"></div>
                                 <div class="ab2-bargroup">
@@ -660,16 +675,16 @@
                             </div>
       
                             <!-- Profile -->
-                            <div class="ab-profile" id="abProfile" style="left:400px;top:130px;transform:scale(0.82);opacity:0;">
+                            <div class="ab-profile" id="abProfile" style="left:560px;top:130px;transform:scale(0.82);opacity:0;">
                               <img src="assets/figma-profile.webp" alt="Profile">
                             </div>
       
                             <!-- Stickies -->
-                            <div class="sticky" id="st2" style="left:152px;top:270px;background:#0f2318;color:#4caf82;">
+                            <div class="sticky" id="st2" style="left:312px;top:270px;background:#0f2318;color:#4caf82;">
                               <div class="sticky-title">Interaction</div>
                               <div class="sticky-body">Add swipe to dismiss</div>
                             </div>
-                            <div class="sticky" id="st3" style="left:456px;top:18px;background:#0f1526;color:#6b8cff;">
+                            <div class="sticky" id="st3" style="left:616px;top:18px;background:#0f1526;color:#6b8cff;">
                               <div class="sticky-title">Nav</div>
                               <div class="sticky-body">Missing tab bar</div>
                             </div>
@@ -677,7 +692,6 @@
                         </div>
                       </div>
                   </div>
-                          <div class="white-rabbit-text">Follow the white rabbit</div>
       
               </div>
           </div>
@@ -756,6 +770,57 @@
   });
 </script>
 
+<script>
+  (function () {
+    const carousel = document.getElementById('achievementStack');
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll('.achievement-slide'));
+    if (slides.length === 0) return;
+
+    let current = 0;
+    let timer = null;
+
+    function paint() {
+      slides.forEach(function (slide, i) {
+        slide.classList.remove('is-active', 'is-next', 'is-third', 'is-hidden');
+        const pos = (i - current + slides.length) % slides.length;
+
+        if (pos === 0) slide.classList.add('is-active');
+        else if (pos === 1) slide.classList.add('is-next');
+        else if (pos === 2) slide.classList.add('is-third');
+        else slide.classList.add('is-hidden');
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      paint();
+    }
+
+    function restartAutoplay() {
+      clearInterval(timer);
+      timer = setInterval(nextSlide, 3000);
+    }
+
+    carousel.addEventListener('click', function () {
+      nextSlide();
+      restartAutoplay();
+    });
+
+    carousel.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+        restartAutoplay();
+      }
+    });
+
+    paint();
+    restartAutoplay();
+  })();
+</script>
+
 
 
 <!-- Button primary delay to recreate hover-->
@@ -823,15 +888,14 @@ document.getElementById('copy-btn-contact').addEventListener('click', copyEmailH
     }
 
     const isMobile = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+    const contact = document.getElementById('contact');
 
-    if (!isMobile) {
-      outer.addEventListener('mousemove', function (e) {
-        const r = outer.getBoundingClientRect();
-        you.style.left = (e.clientX - r.left) + 'px';
-        you.style.top  = (e.clientY - r.top) + 'px';
+    if (!isMobile && contact) {
+      contact.addEventListener('mousemove', function (e) {
+        you.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
         you.style.opacity = '1';
       });
-      outer.addEventListener('mouseleave', function () {
+      contact.addEventListener('mouseleave', function () {
         you.style.opacity = '0';
       });
     }
@@ -847,41 +911,43 @@ document.getElementById('copy-btn-contact').addEventListener('click', copyEmailH
     function show(el) { el.classList.add('visible'); }
     function hide(el) { el.classList.remove('visible'); }
 
+    const ox = window.innerWidth >= 768 ? 160 : 0;
+
     const phases = [
-      { d:900,  fn:function () { setPx(nacho,80,100); } },
-      { d:600,  fn:function () { setPx(nacho,56,76);  show(selLogin); } },
-      { d:1000, fn:function () { setPx(nacho,64,86);  moveAB(abLogin,selLogin,lblLogin,-92,28,-14); } },
-      { d:800,  fn:function () { setPx(nacho,58,80);  moveAB(abLogin,selLogin,lblLogin,-80,20,-14); } },
+      { d:900,  fn:function () { setPx(nacho,ox+80,100); } },
+      { d:600,  fn:function () { setPx(nacho,ox+56,76);  show(selLogin); } },
+      { d:1000, fn:function () { setPx(nacho,ox+64,86);  moveAB(abLogin,selLogin,lblLogin,ox+-92,28,-14); } },
+      { d:800,  fn:function () { setPx(nacho,ox+58,80);  moveAB(abLogin,selLogin,lblLogin,ox+-80,20,-14); } },
       { d:600,  fn:function () { hide(selLogin); } },
 
-      { d:1000, fn:function () { setPx(nacho,240,80); } },
-      { d:600,  fn:function () { setPx(nacho,220,62); show(selHome); } },
-      { d:1000, fn:function () { setPx(nacho,228,72); moveAB(abHome,selHome,lblHome,168,14,-14); } },
-      { d:800,  fn:function () { setPx(nacho,222,66); moveAB(abHome,selHome,lblHome,176,20,-14); } },
+      { d:1000, fn:function () { setPx(nacho,ox+240,80); } },
+      { d:600,  fn:function () { setPx(nacho,ox+220,62); show(selHome); } },
+      { d:1000, fn:function () { setPx(nacho,ox+228,72); moveAB(abHome,selHome,lblHome,ox+168,14,-14); } },
+      { d:800,  fn:function () { setPx(nacho,ox+222,66); moveAB(abHome,selHome,lblHome,ox+176,20,-14); } },
       { d:600,  fn:function () { hide(selHome); } },
 
-      { d:900,  fn:function () { setPx(nacho,160,278); } },
+      { d:900,  fn:function () { setPx(nacho,ox+160,278); } },
       { d:500,  fn:function () { st2.style.top='258px'; } },
       { d:700,  fn:function () { st2.style.top='270px'; } },
 
-      { d:1000, fn:function () { setPx(nacho,430,152); } },
-      { d:450,  fn:function () { setPx(nacho,418,138); } },
+      { d:1000, fn:function () { setPx(nacho,ox+430,152); } },
+      { d:450,  fn:function () { setPx(nacho,ox+418,138); } },
       { d:220,  fn:function () {
           abProfile.style.transform = 'scale(1)';
           abProfile.style.opacity   = '1';
           lblProfile.style.opacity  = '1';
           show(selProfile);
-          setPx(nacho,412,132);
+          setPx(nacho,ox+412,132);
       } },
-      { d:900,  fn:function () { setPx(nacho,422,146); moveAB(abProfile,selProfile,lblProfile,392,124,-14); } },
-      { d:800,  fn:function () { setPx(nacho,416,140); moveAB(abProfile,selProfile,lblProfile,400,130,-14); } },
+      { d:900,  fn:function () { setPx(nacho,ox+422,146); moveAB(abProfile,selProfile,lblProfile,ox+392,124,-14); } },
+      { d:800,  fn:function () { setPx(nacho,ox+416,140); moveAB(abProfile,selProfile,lblProfile,ox+400,130,-14); } },
       { d:600,  fn:function () { hide(selProfile); } },
 
-      { d:900,  fn:function () { setPx(nacho,460,26); } },
+      { d:900,  fn:function () { setPx(nacho,ox+460,26); } },
       { d:500,  fn:function () { st3.style.top='10px'; } },
       { d:700,  fn:function () { st3.style.top='18px'; } },
 
-      { d:1200, fn:function () { setPx(nacho,220,200); } }
+      { d:1200, fn:function () { setPx(nacho,ox+220,200); } }
     ];
 
     let phase = 0;
@@ -894,8 +960,8 @@ document.getElementById('copy-btn-contact').addEventListener('click', copyEmailH
     setTimeout(run, 500);
 
     if (isMobile) {
-      you.style.opacity = '1';
-      setPx(you, 30, 340);
+      const youMobile = document.getElementById('cursorYouMobile');
+      if (youMobile) youMobile.style.opacity = '1';
     }
   })();
   </script>
