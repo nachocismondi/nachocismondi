@@ -99,9 +99,35 @@ li.tasks {
   transform: translateY(-2px);
 }
 
+.personal-card{
+  border: 0;
+  border-radius: var(--card-radius);
+  background: linear-gradient(0deg, #181818, #000000);
+  box-shadow: var(--card-shadow);
+  padding: 1.25rem 1.5rem;
+  height: 100%;
+  transition: box-shadow .2s ease, transform .2s ease, background 5s cubic-bezier(0.39,0.58,0.57,1);
+  border: solid 1px #1a1007;
+  align-content: center;
+}
+.personal-card:hover{
+  background: linear-gradient(0deg, #202020, #130901);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+  transition: box-shadow .2s ease, transform .2s ease, background 5s cubic-bezier(0.39,0.58,0.57,1);
+}
+
+.personal-value{
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw, 1.5rem); /* scales nicely */
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: .25rem;
+}
+
  /* --- Sticky Note --- */
  .sticky {
-  background: linear-gradient(145deg, #FCE889, #F9E26F);
+  background: linear-gradient(0deg, #171717, #0c0c0c);
   color: #000;              /* text color */
   border-radius: .2rem;
   padding: 2.1rem 1.25rem 3rem;
