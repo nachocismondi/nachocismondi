@@ -9,7 +9,7 @@
         <meta name="copyright" content="Copyright owner"/>
         <meta name="keywords" content="ignacio cismondi, cismondi, argentine designer, #ef801a, design, portfolio, designer, digital"/>
         <meta name="robots" content="follow"/>
-        <link rel="canonical" href="https://nachocismondi.com" />
+        <link rel="canonical" href="https://nachocismondi.com/descentralizar" />
 
         <!--
         * Main HTML
@@ -25,8 +25,8 @@
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta property="twitter:domain" content="nachocismondi.com">
-        <meta property="twitter:url" content="https://nachocismondi.com/descentralizar">
+        <meta name="twitter:domain" content="nachocismondi.com">
+        <meta name="twitter:url" content="https://nachocismondi.com/descentralizar">
         <meta name="twitter:title" content="Descentralizar | Nacho Cismondi | Digital experience designer">
         <meta name="twitter:description" content="Design of the digital campaign for LABITCONF, the largest blockchain, bitcoin and cryptocurrency event in LATAM.">
         <meta name="twitter:image" content="https://nachocismondi.com/assets/social-preview.webp">
@@ -69,9 +69,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js"></script>
 
 
+            <script src="/js/posthog-init.js"></script>
+        <script src="/js/posthog-tracking.js"></script>
+
     </head>
 
     <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
+
+    <div id="cursorYou" style="opacity:0">
+      <svg class="csvg" viewBox="0 0 20 20">
+        <defs>
+          <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f06aff"/>
+            <stop offset="100%" stop-color="#c020e0"/>
+          </linearGradient>
+        </defs>
+        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
+      </svg>
+      <span class="lbl lbl-you">you</span>
+    </div>
 
 
 <!-- Menú responsive flotante -->
@@ -651,18 +667,6 @@
                 <!-- Figma canvas widget -->
                 <div class="figma-contact-widget">
                   <div class="outer" id="outer">
-                    <div class="cursor-you" id="cursorYou" style="left:-100px;top:-100px;opacity:0">
-                      <svg class="csvg" viewBox="0 0 20 20">
-                        <defs>
-                          <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#f06aff"/>
-                            <stop offset="100%" stop-color="#c020e0"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
-                      </svg>
-                      <span class="lbl lbl-you">you</span>
-                    </div>
                     <div class="cursor-nacho" id="cursorNacho" style="left:220px;top:200px">
                       <svg class="csvg" viewBox="0 0 20 20">
                         <defs>
@@ -969,6 +973,22 @@ document.getElementById('copy-btn').addEventListener('click', function(e) {
       // loop: true,
       // zoomable: true
     });
+  </script>
+
+  <script>
+    (function () {
+      const you = document.getElementById('cursorYou');
+      const contact = document.getElementById('contact');
+      if (!you || !contact) return;
+      if (window.matchMedia('(hover:none) and (pointer:coarse)').matches) return;
+      contact.addEventListener('mousemove', function (e) {
+        you.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        you.style.opacity = '1';
+      });
+      contact.addEventListener('mouseleave', function () {
+        you.style.opacity = '0';
+      });
+    })();
   </script>
 
 </html>
