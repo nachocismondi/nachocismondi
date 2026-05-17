@@ -938,8 +938,10 @@ document.getElementById('copy-btn').addEventListener('click', function(e) {
 <script>
   (function () {
     const btn = document.getElementById('copy-btn');
+    let contactVisible = false;
   
     function toggleByScroll() {
+      if (contactVisible) { btn.classList.remove('is-visible'); return; }
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const docHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -955,6 +957,15 @@ document.getElementById('copy-btn').addEventListener('click', function(e) {
       } else {
         btn.classList.remove('is-visible');
       }
+    }
+
+    // Hide sticky when contact section enters the viewport
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      new IntersectionObserver(function(entries) {
+        contactVisible = entries[0].isIntersecting;
+        toggleByScroll();
+      }, { threshold: 0.05 }).observe(contactSection);
     }
   
     // Inicial y en scroll/resize

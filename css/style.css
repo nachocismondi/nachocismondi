@@ -240,6 +240,54 @@ li.tasks {
     display: flex !important;
 }
 
+.pulse-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2em;
+  height: 1em;
+  gap: 0.02em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: pre;
+}
+
+.pulse-spinner .pulse-glyph {
+  display: inline-block;
+  color: #5cbd33;
+  opacity: 0.12;
+  transform: translateY(0) scale(0.965);
+  filter: blur(0.22px);
+  transition: opacity 120ms linear, transform 120ms linear, color 120ms linear, filter 120ms linear;
+}
+
+.pulse-spinner .pulse-glyph.is-light {
+  opacity: 0.34;
+  color: #e8fce1;
+  transform: translateY(-0.06px) scale(0.985);
+  filter: blur(0.1px);
+}
+
+.pulse-spinner .pulse-glyph.is-medium {
+  opacity: 0.74;
+  color: #2efc00;
+  transform: translateY(-0.16px) scale(1.01);
+  filter: blur(0.02px);
+}
+
+.pulse-spinner .pulse-glyph.is-heavy {
+  opacity: 1;
+  color: #2efc00;
+  transform: translateY(-0.24px) scale(1.04);
+  filter: blur(0);
+  text-shadow: 0 0 11px rgba(173, 255, 112, 0.75);
+}
+
+.chip-available-text { 
+  margin-top: 3px;
+}
+
 .chip-main {
     background: rgba(52, 52, 52, .6);
     border: 1px solid rgba(152, 152, 152, .15);
@@ -277,6 +325,59 @@ header h1 {
 header p {
     color: #f1f1f1;
     line-height: 1.6;
+}
+
+.fudo-tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.fudo-tooltip-bubble {
+  position: absolute;
+  left: 10%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%) translateY(-4px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.fudo-tooltip-bubble img {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.fudo-tooltip-wrap:hover .fudo-tooltip-bubble,
+.fudo-tooltip-wrap:focus-within .fudo-tooltip-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.soft-blur-char {
+  display: inline-block;
+  white-space: pre;
+  will-change: transform, filter, opacity;
+}
+
+.word-crossfade-word {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 .button-primary {
@@ -358,6 +459,108 @@ header p {
 
 .button-primary:hover .button-label,
 .button-primary.tap-activo .button-label {
+  transform: translateX(-20px);
+}
+
+/* Primary orange without avatar/image hover */
+.button-primary-no-image {
+  background-color: #ef801a;
+  border: 1px solid #d87314;
+  box-shadow: #f29640 0px 1px 0px 1px inset;
+  -webkit-box-shadow: #f29640 0px 1px 0px 1px inset;
+  -moz-box-shadow: #f29640 0px 1px 0px 1px inset;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: .8rem 3rem;
+  transition: color .4s ease-in-out,
+              background-color .4s ease-in-out,
+              border-color .4s ease-in-out,
+              border .4s ease-in-out,
+              box-shadow .4s ease-in-out;
+}
+
+.button-primary-no-image:hover {
+  background-color: #f29640;
+  border: 1px solid #cd7018;
+  color: #000;
+  text-decoration: none;
+  box-shadow: #e2934a 0px 1px 1px 1px inset;
+  -webkit-box-shadow: #e2934a 0px 1px 2px 1px inset;
+  -moz-box-shadow: #e2934a 0px 1px 2px 1px inset;
+}
+
+/* Gray variant with same avatar/image hover behavior as button-primary */
+.button-primary-gray-hover {
+  position: relative;
+  background-color: #1f1f1f;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  align-content: center;
+  padding: .8rem 3rem;
+  box-shadow: #2c2c2c 0px 1px 0px 1px inset;
+  -webkit-box-shadow: #2c2c2c 0px 1px 0px 1px inset;
+  -moz-box-shadow: #2c2c2c 0px 1px 0px 1px inset;
+  color: #ef801a;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color .4s ease-in-out,
+              background-color .4s ease-in-out,
+              border-color .4s ease-in-out,
+              border .4s ease-in-out,
+              box-shadow .4s ease-in-out;
+}
+
+.button-primary-gray-hover:hover {
+  background-color: #363636;
+  border: 1px solid #363636;
+  color: #f29640;
+  text-decoration: none;
+  box-shadow: #3f3f3f 0px 1px 1px 1px inset;
+  -webkit-box-shadow: #3f3f3f 0px 1px 2px 1px inset;
+  -moz-box-shadow: #3f3f3f 0px 1px 2px 1px inset;
+}
+
+.button-primary-gray-hover::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  background-image: url('../assets/profile.webp');
+  background-size: cover;
+  border-radius: 99px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(120%) translateY(-48%) scale(0.9);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s;
+  pointer-events: none;
+}
+
+.button-primary-gray-hover:hover::before,
+.button-primary-gray-hover.tap-activo::before {
+  transform: translateX(0%) translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+.button-primary-gray-hover .button-label {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.button-primary-gray-hover:hover .button-label,
+.button-primary-gray-hover.tap-activo .button-label {
   transform: translateX(-20px);
 }
 
@@ -665,6 +868,14 @@ p.text-interval-top {
   /*! Cursor emoji */
 a.cursor-slider:hover {
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='80' height='82' viewport='0 0 100 100' style='fill:black;font-size:3rem;'><text y='50%'>👀</text></svg>") 16 0,auto;
+}
+
+/* Native zoom cursor for media that opens with GLightbox */
+a.glightbox,
+a.glightbox img,
+a.glightbox video,
+a.glightbox picture {
+  cursor: zoom-in;
 }
 
 
@@ -1194,6 +1405,24 @@ a.cursor-slider:hover {
     width: 100%;
     aspect-ratio: 46/27;
     overflow: hidden;
+    position: relative;
+  }
+
+  .image-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.44) 0%,
+      rgba(0, 0, 0, 0.2) 38%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 
   .image-container img,
@@ -1208,6 +1437,25 @@ a.cursor-slider:hover {
   .image-container .video-desktop { display: block; }
   .image-container .video-mobile  { display: none; }
 
+  .portfolio-tags-overlay {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    z-index: 3;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    max-width: calc(100% - 28px);
+  }
+
+  .portfolio-tags-overlay .chip-secondary {
+    margin-bottom: 0 !important;
+    background: rgba(26, 26, 26, 0.82);
+    border-color: rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
   /* On small screens, switch to portrait ratio and mobile video */
   @media (max-width: 767px) {
     .image-container {
@@ -1219,6 +1467,13 @@ a.cursor-slider:hover {
     }
     .image-container .video-desktop { display: none; }
     .image-container .video-mobile  { display: block; }
+
+    .portfolio-tags-overlay {
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      gap: 6px;
+    }
   }
 
 .social-icons a {
@@ -1349,6 +1604,21 @@ label.text-white::after {
   position: relative;
   cursor: none;
   user-select: none;
+}
+
+.designer-canvas-shell {
+  background: #0a0a0c;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+.designer-canvas-shell svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
 }
 
 .figma-contact-widget .canvas-area {
