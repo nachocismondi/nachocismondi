@@ -74,7 +74,7 @@
             var isRoot = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
             var forceEnglish = new URLSearchParams(window.location.search).get('lang') === 'en';
             if (isSpanish && isRoot && !forceEnglish) {
-              window.location.replace('/index-es.html');
+              window.location.replace('es');
             }
           })();
         </script>
