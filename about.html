@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" hreflang="en"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>About Nacho Cismondi | Digital experience designer</title>
+        <meta name="description" content="My story, tech stack, vision." />
+        <meta name="author" content="Nacho Cismondi" />
+        <meta name="copyright" content="Copyright owner"/>
+        <meta name="keywords" content="ignacio cismondi, cismondi, argentine designer, #ef801a, design, portfolio, designer, digital"/>
+        <meta name="robots" content="follow"/>
+        <link rel="canonical" href="https://nachocismondi.com/about" />
+
+        <!--
+        * Main HTML
+        * By nachocismondi.com. Powered by Boostrap 5.0
+        * Cismondi Holdings -->
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://nachocismondi.com/about">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="About Nacho Cismondi | Digital experience designer">
+        <meta property="og:description" content="My story, tech stack, vision.">
+        <meta property="og:image" content="https://nachocismondi.com/assets/social-preview.webp">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:domain" content="nachocismondi.com">
+        <meta name="twitter:url" content="https://nachocismondi.com/about">
+        <meta name="twitter:title" content="About Nacho Cismondi | Digital experience designer">
+        <meta name="twitter:description" content="My story, tech stack, vision.">
+        <meta name="twitter:image" content="https://nachocismondi.com/assets/social-preview.webp">
+
+        <!-- Whatsapp Meta Tags -->
+        <meta property="og:title" content="About Nacho Cismondi | Digital experience designer"/>
+        <meta property="og:description" content="My story, tech stack, vision."/>
+        <meta property="og:url" content="https://nachocismondi.com/descentralizar"/>
+        <meta property="og:image"content="https://nachocismondi.com/assets/social-preview.webp"/>
+
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />       
+
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+        
+        <!-- Main CSS-->
+        <link href="css/style.css" rel="stylesheet" />
+
+        <!-- Bootstrap CSS-->
+        <link href="css/boostrap-styles.css" rel="stylesheet" />
+        
+        <!-- Swiper carousel CSS-->
+        <link href="css/swiper-bundle.min.css" rel="stylesheet" />
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- CSS Animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- Toltips  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- GLightbox (CDN) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/css/glightbox.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js"></script>
+
+
+            <script src="/js/posthog-init.js"></script>
+        <script src="/js/posthog-tracking.js"></script>
+
+        <style>
+          .me-marquee {
+            position: relative;
+            overflow: hidden;
+            border-radius: 14px;
+            width: 100%;
+            max-width: 100%;
+            padding: 26px 0;
+          }
+
+          .me-marquee::before,
+          .me-marquee::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            z-index: 2;
+            pointer-events: none;
+          }
+
+          .me-marquee::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+          }
+
+          .me-marquee::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+          }
+
+          .me-marquee-track {
+            display: flex;
+            gap: 22px;
+            width: max-content;
+            align-items: center;
+            animation: meMarqueeScroll 26s linear infinite;
+          }
+
+          .me-marquee-item {
+            flex: 0 0 auto;
+            width: clamp(145px, 17vw, 204px);
+            aspect-ratio: 4 / 5;
+            border-radius: 12px;
+            overflow: hidden;
+            transform-origin: center center;
+            --tilt: 0deg;
+            transform: rotate(var(--tilt));
+            transition: transform .38s ease;
+            position: relative;
+            z-index: 1;
+          }
+
+          .me-marquee-item:nth-child(odd) {
+            --tilt: -2.4deg;
+          }
+
+          .me-marquee-item:nth-child(even) {
+            --tilt: 2.4deg;
+          }
+
+          .me-marquee-item:hover {
+            transform: rotate(0deg) scale(1.02);
+            z-index: 4;
+          }
+
+          .me-marquee-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(1);
+          }
+
+          @keyframes meMarqueeScroll {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(calc(-50% - 11px));
+            }
+          }
+
+          @media (max-width: 767px) {
+            .me-marquee::before,
+            .me-marquee::after {
+              width: 34px;
+            }
+
+            .me-marquee {
+              padding: 18px 0;
+            }
+          }
+        </style>
+
+    </head>
+
+    <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
+
+    <div id="cursorYou" style="opacity:0">
+      <svg class="csvg" viewBox="0 0 20 20">
+        <defs>
+          <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f06aff"/>
+            <stop offset="100%" stop-color="#c020e0"/>
+          </linearGradient>
+        </defs>
+        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
+      </svg>
+      <span class="lbl lbl-you">you</span>
+    </div>
+
+
+<!-- Menú responsive flotante -->
+<nav id="smartNavbar" class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+  <div class="container justify-content-center position-relative">    
+    <!-- Toggle (solo visible en mobile) -->
+    <button class="navbar-toggler position-absolute animate__animated animate__fadeIn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Lista principal centrada -->
+    <ul class="navbar-nav align-items-center animate__animated animate__fadeIn">
+      <!-- Logo GIF -->
+      <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
+      <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         <li class="nav-item"><a class="nav-link" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="height: 80vw;">
+  <div class="offcanvas-header justify-content-center">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column gap-3">
+    <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
+    <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <a class="nav-link text-white" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="bg-black" id="craft">
+  <div class="container px-5">
+      <div class="row gx-4 justify-content-center">
+          
+        <div class="col-md-10 col-lg-8 col-xl-6 px-4 px-sm-0">
+          <div class="text-left mb-2">
+
+              <h1 class="mb-3 fw-bolder animate__animated animate__fadeIn animate__slower">About me</h1>
+              
+              <p class="mb-sm-2 mb-md-4 animate__animated animate__fadeIn animate__slower">Curious by nature and passionate about technology. I learn, design, and create things to make a real impact. Transforming ideas into experiences that improve people’s lives.</p>
+
+              <p class="mb-sm-2 mb-md-4 animate__animated animate__fadeIn animate__slower">I have the privilege of designing experiences for more than <b>+100.000 users</b> (B2B) across Latin America. In this role, I’ve learned how to add value to small and medium-sized entrepreneurs by developing a SaaS platform and payment gateway solutions.</p>
+
+          </div>
+          </div>
+
+      </div>
+  </div>
+
+  <section class="container text-white">
+    <div class="row justify-content-center">      
+      <div class="col-md-12 col-lg-10 col-xl-8 container mb-5">
+        <div class="row stats-row">
+          
+          <div class="col-12 col-md-4">
+            <div class="personal-card">
+              <span class="stat-icon" style="color: #f29640"><i class="bi bi-share-fill"></i></span>
+              <div class="personal-value">Experience</div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="personal-card">
+              <span class="stat-icon" style="color: #f29640"><i class="bi bi-person-badge"></i></span>
+              <div class="personal-value">Stack</div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="personal-card">
+              <span class="stat-icon" style="color: #f29640"><i class="bi bi-chat-text-fill"></i></span>
+              <div class="personal-value">Resume</div>
+            </div>
+          </div>
+    
+        </div>
+        </div>
+        </div>
+        </section>
+
+
+  <div class="row gx-4 justify-content-center">
+    <div class="col-12 col-lg-10">
+      <div class="me-marquee">
+        <div class="me-marquee-track">
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider01.jpeg" alt="Foto personal 1" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider02.jpeg" alt="Foto personal 2" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider03.jpeg" alt="Foto personal 3" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider04.jpeg" alt="Foto personal 4" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider05.jpeg" alt="Foto personal 5" loading="lazy">
+          </div>
+
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider01.jpeg" alt="Foto personal 1" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider02.jpeg" alt="Foto personal 2" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider03.jpeg" alt="Foto personal 3" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider04.jpeg" alt="Foto personal 4" loading="lazy">
+          </div>
+          <div class="me-marquee-item">
+            <img src="assets/me/me_slider05.jpeg" alt="Foto personal 5" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Contact section -->
+    <section class="contact my-5 py-5" id="contact">
+
+    <div class="container contact-cta rounded-3 my-5">
+        <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
+
+            <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
+
+                <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
+                <div class="h4 text-white text-opacity-75"><a class="text-white" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> <i class="bi bi-envelope-fill"></i></div>
+                <a id="copy-btn-contact"
+                class="button-primary-contact mt-3"
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="chip-tooltip"
+                title="Copied email to clipboard"
+                alt="Copy my email to clipboard"
+                onclick="copyEmailHandler.call(this, event)">
+               <span class="button-label">Write me</span>
+             </a>
+              </div>
+
+            <div class="col-12 col-lg-6">
+
+                <!-- Figma canvas widget -->
+                <div class="figma-contact-widget">
+                  <div class="outer" id="outer">
+                    <div class="cursor-nacho" id="cursorNacho" style="left:220px;top:200px">
+                      <svg class="csvg" viewBox="0 0 20 20">
+                        <defs>
+                          <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffaa70"/>
+                            <stop offset="100%" stop-color="#ea580c"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gn)"/>
+                      </svg>
+                      <span class="lbl lbl-nacho">Nacho</span>
+                    </div>
+
+                    <div class="canvas-area">
+                      <div class="canvas-bg"></div>
+
+                      <div class="frame-label" id="lblLogin" style="left:-80px;top:6px">Login</div>
+                      <div class="frame-label" id="lblHome"  style="left:176px;top:6px">Home</div>
+                      <div class="frame-label" id="lblProfile" style="left:400px;top:116px;opacity:0">Profile</div>
+
+                      <div class="sel" id="selLogin"  style="left:-80px;top:20px;width:200px;height:360px;"></div>
+                      <div class="sel" id="selHome"   style="left:176px;top:20px;width:200px;height:360px;"></div>
+                      <div class="sel" id="selProfile" style="left:400px;top:130px;width:170px;height:170px;"></div>
+
+                      <!-- Login -->
+                      <div class="ab-login" id="abLogin" style="left:-80px;top:20px;">
+                        <div class="ab1-top">
+                          <div class="ab1-logo"></div>
+                          <div class="ab1-bar1"></div>
+                          <div class="ab1-bar2"></div>
+                        </div>
+                        <div class="ab1-body">
+                          <div class="ab1-field lit"></div>
+                          <div class="ab1-field"></div>
+                          <div class="ab1-cta"></div>
+                          <div class="ab1-divrow"><div class="ab1-divline"></div><div class="ab1-divdot"></div><div class="ab1-divline"></div></div>
+                          <div class="ab1-ghost"></div>
+                        </div>
+                      </div>
+
+                      <!-- Home -->
+                      <div class="ab-home" id="abHome" style="left:176px;top:20px;">
+                        <div class="ab2-topbar">
+                          <div class="ab2-avatar"></div>
+                          <div class="ab2-bargroup">
+                            <div class="ab2-minibar" style="width:55%"></div>
+                            <div class="ab2-minibar" style="width:35%"></div>
+                          </div>
+                          <div class="ab2-notif"></div>
+                        </div>
+                        <div class="ab2-body">
+                          <div class="ab2-hero"><div class="ab2-hero-glow"></div></div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:80%"></div>
+                              <div class="ab2-card-line" style="width:50%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq" style="background:#222;border-color:#2a2a2a"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:70%"></div>
+                              <div class="ab2-card-line" style="width:40%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:85%"></div>
+                              <div class="ab2-card-line" style="width:45%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Profile -->
+                      <div class="ab-profile" id="abProfile" style="left:400px;top:130px;transform:scale(0.82);opacity:0;">
+                        <img src="assets/figma-profile.webp" alt="Profile">
+                      </div>
+
+                      <!-- Stickies -->
+                      <div class="sticky" id="st2" style="left:152px;top:270px;background:#0f2318;color:#4caf82;">
+                        <div class="sticky-title">Interaction</div>
+                        <div class="sticky-body">Add swipe to dismiss</div>
+                      </div>
+                      <div class="sticky" id="st3" style="left:456px;top:18px;background:#0f1526;color:#6b8cff;">
+                        <div class="sticky-title">Nav</div>
+                        <div class="sticky-body">Missing tab bar</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                    <div class="white-rabbit-text">Follow the white rabbit</div>
+
+        </div>
+    </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between py-3 mb-4 border-top">
+
+                <div class="col-md-10 d-flex align-items-center">
+                  <a href="/" class="mb-3 me-3 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <img src="assets/logo.svg" height="48px" alt="Nacho Cismondi Logo">
+                  </a>
+                  <span class="mb-3 mb-md-0 text-white-50 align-items-center"><a href="https://creativecommons.org/licenses/by/3.0/" targer="blank" class="text-white-50">© CC 3.0</a> | Web made with <i class="bi bi-heart-fill"></i> and Boostrap 5. <script>document.write(new Date().getFullYear());</script>
+                  </span>
+                </div>
+
+                <div class="d-flex align-items-center pt-3">
+                <ul class="social-icons list-unstyled d-flex gap-4">
+                    <li><a href="https://twitter.com/nachocismondi" target="blank"><i class="bi bi-twitter-x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/nachocismondi" target="blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="https://dribbble.com/nachocismondi" target="blank"><i class="bi bi-dribbble"></i></a></li>
+                    <li><a href="https://www.behance.net/nachocismondi" target="blank"><i class="bi bi-behance"></i></a></li>
+                </ul>
+                </div>
+        </footer>
+    </div>
+
+    </body>
+
+
+        <!-- Popper JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+        <!-- Swiper Carrousel JS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2800,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    speed: 80,
+    grabCursor: true,
+    slidesPerView: 1,
+
+    on: {
+      slideChangeTransitionEnd: function () {
+        // Pausar y resetear todos los videos
+        document.querySelectorAll(".slide-video").forEach(video => {
+          video.pause();
+          video.currentTime = 0;
+        });
+
+        // Obtener el slide visible (activo) - aunque sea duplicado
+        const activeSlide = this.slides[this.activeIndex];
+        const video = activeSlide.querySelector(".slide-video");
+
+        if (video) {
+          video.play().catch(() => {});
+        }
+      }
+    }
+  });
+</script>
+
+
+
+<!-- Button primary delay to recreate hover-->
+        <script>
+          document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+            let tapTimeout;
+
+            boton.addEventListener('touchstart', () => {
+              boton.classList.add('tap-activo');
+              clearTimeout(tapTimeout);
+              tapTimeout = setTimeout(() => {
+                boton.classList.remove('tap-activo');
+              }, 1000); // activo durante 1s
+            });
+
+            boton.addEventListener('touchend', () => {
+              clearTimeout(tapTimeout);
+              tapTimeout = setTimeout(() => {
+                boton.classList.remove('tap-activo');
+              }, 1000);
+            });
+          });
+        </script>
+
+
+<!-- Button primary delay to recreate hover-->
+<script>
+  document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+    let tapTimeout;
+
+    boton.addEventListener('touchstart', () => {
+      boton.classList.add('tap-activo');
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        boton.classList.remove('tap-activo');
+      }, 1000); // activo durante 1s
+    });
+
+    boton.addEventListener('touchend', () => {
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        boton.classList.remove('tap-activo');
+      }, 1000);
+    });
+  });
+</script>
+
+<script>
+// Initialize all tooltips in manual mode
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
+  new bootstrap.Tooltip(el, { trigger: 'manual' })
+);
+
+// Click handler: copy email + show tooltip
+document.getElementById('copy-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  const email = 'nachocismondi@gmail.com';
+  const tip = bootstrap.Tooltip.getInstance(this);
+  navigator.clipboard.writeText(email)
+    .then(() => { tip.show(); setTimeout(() => tip.hide(), 3000); })
+    .catch(console.error);
+
+});
+</script>
+
+
+        <!-- Menu fixed on scroll to top-->
+        <script>
+          const navbar = document.getElementById("smartNavbar");
+          let lastScrollTop = 0;
+
+          window.addEventListener("scroll", function () {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            // Mostrar/ocultar navbar según dirección
+            if (scrollTop > lastScrollTop) {
+              navbar.style.top = "-100px"; // scroll hacia abajo → ocultar
+            } else {
+              navbar.style.top = "4px";   // scroll hacia arriba → mostrar
+            }
+
+            // Agregar/quitar fondo al hacer scroll > 20px
+            if (scrollTop > 20) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          });
+        </script>
+
+<script>
+  (function () {
+    const btn = document.getElementById('copy-btn');
+    let contactVisible = false;
+  
+    function toggleByScroll() {
+      if (contactVisible) { btn.classList.remove('is-visible'); return; }
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+      const winHeight = window.innerHeight;
+      const maxScrollable = docHeight - winHeight;
+      const progress = maxScrollable > 0 ? (scrollTop / maxScrollable) : 0;
+  
+      if (progress >= 0.5) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    }
+
+    // Hide sticky when contact section enters the viewport
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      new IntersectionObserver(function(entries) {
+        contactVisible = entries[0].isIntersecting;
+        toggleByScroll();
+      }, { threshold: 0.05 }).observe(contactSection);
+    }
+  
+    // Inicial y en scroll/resize
+    toggleByScroll();
+    window.addEventListener('scroll', toggleByScroll, { passive: true });
+    window.addEventListener('resize', toggleByScroll);
+  })();
+  </script>
+  
+  <script>
+    // Inicialización mínima
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+      // opciones útiles:
+      // touchNavigation: true,
+      // loop: true,
+      // zoomable: true
+    });
+  </script>
+
+  <script>
+    (function () {
+      const you = document.getElementById('cursorYou');
+      const contact = document.getElementById('contact');
+      if (!you || !contact) return;
+      if (window.matchMedia('(hover:none) and (pointer:coarse)').matches) return;
+      contact.addEventListener('mousemove', function (e) {
+        you.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        you.style.opacity = '1';
+      });
+      contact.addEventListener('mouseleave', function () {
+        you.style.opacity = '0';
+      });
+    })();
+  </script>
+
+</html>
