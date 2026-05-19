@@ -97,7 +97,11 @@
 
     <!-- Lista principal centrada -->
     <ul class="navbar-nav align-items-center animate__animated animate__fadeIn">
-      <!-- Logo GIF -->
+      <li class="nav-item me-1">
+        <a class="nav-link d-flex align-items-center" href="#home" aria-label="Inicio">
+          <img src="assets/logo-circle.svg" alt="Logo" style="width: 24px; height: auto;" />
+        </a>
+      </li>
       <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
       <li class="nav-item"><a class="nav-link" href="#work">Trabajos</a></li>
       <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
@@ -113,6 +117,9 @@
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column gap-3">
+    <a class="nav-link text-white d-flex align-items-center" href="#home" aria-label="Inicio">
+      <img src="assets/logo-circle.svg" alt="Logo" style="width: 24px; height: auto;" />
+    </a>
     <a class="nav-link text-white" href="#home">Inicio</a>
     <a class="nav-link text-white" href="#work">Trabajos</a>
     <a class="nav-link text-white" href="crafts">Crafts</a>
@@ -143,7 +150,7 @@
 
                         <div class="d-grid d-sm-flex gap-2 justify-content-sm-left my-3 my-md-0">
                             <a class="button-primary-no-image me-sm-3 animate__animated animate__fadeIn animate__slower" href="#work" alt="Explorar mis trabajos">Explorar trabajos<i class="bi bi-arrow-down-circle-fill ps-2"></i></a>
-                            <a id="copy-btn" class="button-primary-gray-hover me-sm-3 animate__animated animate__fadeIn animate__slower" href="#" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="chip-tooltip" title="Email copiado al portapapeles" alt="Copiar email al portapapeles">
+                            <a id="copy-btn" class="button-primary-gray-hover me-sm-3 animate__animated animate__fadeIn animate__slower" href="#" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="chip-tooltip" title="Email copiado" alt="Email copiado">
                                 <span class="button-label">Copiar email</span>
                             </a>
                         </div>
@@ -287,14 +294,14 @@
 
                       <p class="mb-3">Entre usabilidad y belleza</p>
 
-                        <h3 class="mb-4 fw-bolder text-white">My specialty spans a wide range of formats. I built my foundational skills working with physical media —books and packaging— and then dove into the digital world. Every design I craft embodies simplicity, clarity, and beauty.</h3>
+                        <h3 class="mb-4 fw-bolder text-white">Mi especialidad abarca un amplio rango de formatos. Construí mis bases trabajando con formatos físicos —libros y empaques— y luego me enfoque en el mundo digital. Cada cosa que construyo busca la simplicidad, claridad y belleza.</h3>
 
             <div class="list-post-icon list-group justify-content-center">
                 <div class="bg-black mt-3 d-flex gap-3 pb-3 pb-sm-4 mb-3 mb-sm-4 align-items-center border-bottom border-dark">
                 <img src="assets/icons/1-product.svg" width="48px" class="rounded" alt="Imagen del post">
                     <div>
-                            <h5 class="mb-1 text-white">Digital product design</h5>
-                            <p class="mb-0 text-white-50">User research, benchmarking, UX.</p>
+                            <h5 class="mb-1 text-white">Diseño de productos digitales</h5>
+                            <p class="mb-0 text-white-50">Entrevistas, evaluación comparativa, experiencia de usuario.</p>
                     </div>
                 </div>
             </div>
@@ -303,8 +310,8 @@
                 <div class="bg-black d-flex gap-3 pb-3 pb-sm-4 mb-3 mb-sm-4 align-items-center border-bottom border-dark">
                 <img src="assets/icons/2-motion.svg" width="48px" class="rounded" alt="Imagen del post">
                     <div>
-                            <h5 class="mb-1 text-white">Animation</h5>
-                            <p class="mb-0 text-white-50">Lottie Files, micro-animations, logo animations.</p>
+                            <h5 class="mb-1 text-white">Animación</h5>
+                            <p class="mb-0 text-white-50">Lottie Files, micro-animaciones, animación de logotipos.</p>
                     </div>
                 </div>
             </div>
@@ -313,8 +320,8 @@
                 <div class="bg-black d-flex gap-3 pb-3 pb-sm-4 mb-3 mb-sm-4 align-items-center border-bottom border-dark">
                 <img src="assets/icons/3-web.svg" width="48px" class="rounded" alt="Imagen del post">
                     <div>
-                            <h5 class="mb-1 text-white">Web design</h5>
-                            <p class="mb-0 text-white-50">Desktop and mobile implementation.</p>
+                            <h5 class="mb-1 text-white">Diseño web</h5>
+                            <p class="mb-0 text-white-50">Implementación para celulares y computadoras.</p>
                     </div>
                 </div>
             </div>
@@ -323,8 +330,8 @@
                 <div class="bg-black d-flex gap-3 align-items-center">
                 <img src="assets/icons/4-brand.svg" width="48px" class="rounded" alt="Imagen del post">
                     <div>
-                            <h5 class="mb-1 text-white">Branding</h5>
-                            <p class="mb-0 text-white-50">Logos, brand strategy, pitch decks.</p>
+                            <h5 class="mb-1 text-white">Marca</h5>
+                            <p class="mb-0 text-white-50">Logos, estategia de marca, presentaciónes comerciales.</p>
                     </div>
                 </div>
             </div>
@@ -341,9 +348,9 @@
                         title="Email copiado al portapapeles"
                         alt="Copiar email al portapapeles"
                         onclick="copyEmailHandler.call(this, event)">
-                        <span class="button-label">Let´s work together</span>
+                        <span class="button-label">Trabajemos juntos</span>
                       </a>
-                      <a class="button-secondary me-sm-3" href="about"><span class="button-label">About me<i class="bi bi-info-circle-fill ms-2"></i></span></a>
+                      <a class="button-secondary me-sm-3" href="about"><span class="button-label">Sobre mi<i class="bi bi-info-circle-fill ms-2"></i></span></a>
 
                             </div>
 
@@ -379,7 +386,7 @@
                   <video class="rounded-3 video-desktop" src="assets/portfolio-labitconf.webm" autoplay muted loop playsinline></video>
                   <video class="rounded-3 video-mobile" src="assets/portfolio-labitconf-mobile.webm" autoplay muted loop playsinline></video>
                   <div class="portfolio-tags-overlay">
-                    <span class="chip-secondary badge rounded-pill">Branding</span>
+                    <span class="chip-secondary badge rounded-pill">Marca</span>
                   </div>
                 </div>
 
@@ -402,14 +409,14 @@
                           <video class="rounded-3 video-desktop" src="assets/portfolio-succes-stories.webm" autoplay muted loop playsinline></video>
                           <video class="rounded-3 video-mobile" src="assets/portfolio-succes-stories-mobile.webm" autoplay muted loop playsinline></video>
                           <div class="portfolio-tags-overlay">
-                            <span class="chip-secondary badge rounded-pill">Web design</span>
-                            <span class="chip-secondary badge rounded-pill">Animation</span>
+                            <span class="chip-secondary badge rounded-pill">Diseño web</span>
+                            <span class="chip-secondary badge rounded-pill">Animación</span>
                           </div>
                       </div>
   
                       <div class="col-12 pt-3">
   
-                          <h2 class="text-white">Historias de clientes</h2>
+                          <h2 class="text-white">Historias de éxito</h2>
                           <p class="text-white-50 d-none d-md-block">Campaña de entrevistas con clientes de un software foodtech líder en LATAM.</p>
                           <button class="button-tertiary btn bg-white d-inline-flex align-items-center mt-2 mt-md-0 mb-3" type="button">Ver proyecto <i class="bi bi-arrow-right ps-2"></i></button>
   
@@ -425,8 +432,8 @@
                    <div class="col-12 p-0 rounded-3 image-container">
                     <img class="rounded-3 img-fluid" src="assets/emeliuz.webp" alt="Vista previa del proyecto">
                     <div class="portfolio-tags-overlay">
-                      <span class="chip-secondary badge rounded-pill">Branding</span>
-                      <span class="chip-secondary badge rounded-pill">Web design</span>
+                      <span class="chip-secondary badge rounded-pill">Marca</span>
+                      <span class="chip-secondary badge rounded-pill">Diseño web</span>
                     </div>
                     </div>
 
@@ -449,8 +456,8 @@
                         <video class="rounded-3 video-desktop" src="assets/portfolio-descentralizar.webm" autoplay muted loop playsinline></video>
                         <video class="rounded-3 video-mobile" src="assets/portfolio-descentralizar-mobile.webm" autoplay muted loop playsinline></video>
                         <div class="portfolio-tags-overlay">
-                          <span class="chip-secondary badge rounded-pill">Branding</span>
-                          <span class="chip-secondary badge rounded-pill">Web design</span>
+                          <span class="chip-secondary badge rounded-pill">Marca</span>
+                          <span class="chip-secondary badge rounded-pill">Diseño web</span>
                         </div>
                     </div>
 
@@ -490,7 +497,7 @@
 
 
 
-                        <h3 class="mb-3 fw-bolder text-white">Últimos posteos</h3>
+                        <h3 class="mb-3 fw-bolder text-white">Últimos posts</h3>
                         <p class="mb-4 text-white">Escribo ideas e historias para leer en 5 minutos (o menos). Tecnología, internet y diseño en español.</p>
 
             <div class="list-post list-group justify-content-center">
@@ -514,7 +521,7 @@
                             <h5 class="mb-1 text-white">Latinoamérica está así por tu culpa</h5>
                             <p class="mb-0 text-white-50 pb-3 pb-md-0">Sí, es momento de aceptarlo. Por tu culpa y por la mía. No es válida la excusa de que el resto también hace todo mal. Es momento de actuar.</p>
                         </div>
-                            <small class="text-white-50 text-nowrap">Apr. 2021</small>
+                            <small class="text-white-50 text-nowrap">Abr. 2021</small>
                     </div>
                 </a>
             </div>
@@ -528,7 +535,7 @@
                             <h5 class="mb-1 text-white">Mucho que ocultar</h5>
                             <p class="mb-0 text-white-50 pb-3 pb-md-0">Me encargo de borrar uno a uno todos los sitios donde hay información personal sensible.</p>
                         </div>
-                            <small class="text-white-50 text-nowrap">Jan. 2021</small>
+                            <small class="text-white-50 text-nowrap">Ene. 2021</small>
                     </div>
                 </a>
             </div>
