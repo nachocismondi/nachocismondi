@@ -34,7 +34,7 @@
         <!-- Whatsapp Meta Tags -->
         <meta property="og:title" content="About Nacho Cismondi | Digital experience designer"/>
         <meta property="og:description" content="My story, tech stack, vision."/>
-        <meta property="og:url" content="https://nachocismondi.com/descentralizar"/>
+        <meta property="og:url" content="https://nachocismondi.com/about"/>
         <meta property="og:image"content="https://nachocismondi.com/assets/social-preview.webp"/>
 
 
@@ -72,101 +72,6 @@
             <script src="/js/posthog-init.js"></script>
         <script src="/js/posthog-tracking.js"></script>
 
-        <style>
-          .me-marquee {
-            position: relative;
-            overflow: hidden;
-            border-radius: 14px;
-            width: 100%;
-            max-width: 100%;
-            padding: 26px 0;
-          }
-
-          .me-marquee::before,
-          .me-marquee::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 80px;
-            z-index: 2;
-            pointer-events: none;
-          }
-
-          .me-marquee::before {
-            left: 0;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
-          }
-
-          .me-marquee::after {
-            right: 0;
-            background: linear-gradient(to left, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
-          }
-
-          .me-marquee-track {
-            display: flex;
-            gap: 22px;
-            width: max-content;
-            align-items: center;
-            animation: meMarqueeScroll 26s linear infinite;
-          }
-
-          .me-marquee-item {
-            flex: 0 0 auto;
-            width: clamp(145px, 17vw, 204px);
-            aspect-ratio: 4 / 5;
-            border-radius: 12px;
-            overflow: hidden;
-            transform-origin: center center;
-            --tilt: 0deg;
-            transform: rotate(var(--tilt));
-            transition: transform .38s ease;
-            position: relative;
-            z-index: 1;
-          }
-
-          .me-marquee-item:nth-child(odd) {
-            --tilt: -2.4deg;
-          }
-
-          .me-marquee-item:nth-child(even) {
-            --tilt: 2.4deg;
-          }
-
-          .me-marquee-item:hover {
-            transform: rotate(0deg) scale(1.02);
-            z-index: 4;
-          }
-
-          .me-marquee-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(1);
-          }
-
-          @keyframes meMarqueeScroll {
-            from {
-              transform: translateX(0);
-            }
-            to {
-              transform: translateX(calc(-50% - 11px));
-            }
-          }
-
-          @media (max-width: 767px) {
-            .me-marquee::before,
-            .me-marquee::after {
-              width: 34px;
-            }
-
-            .me-marquee {
-              padding: 18px 0;
-            }
-          }
-        </style>
-
     </head>
 
     <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
@@ -195,7 +100,11 @@
 
     <!-- Lista principal centrada -->
     <ul class="navbar-nav align-items-center animate__animated animate__fadeIn">
-      <!-- Logo GIF -->
+      <li class="nav-item me-1">
+        <a class="nav-link d-flex align-items-center" href="index" aria-label="Home">
+          <img src="assets/logo-circle.svg" alt="Logo" style="width: 24px; height: auto;" />
+        </a>
+      </li>
       <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
       <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
@@ -211,10 +120,13 @@
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column gap-3">
-    <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
-    <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
-  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <a class="nav-link text-white d-flex align-items-center" href="index" aria-label="Home">
+      <img src="assets/logo-circle.svg" alt="Logo" style="width: 24px; height: auto;" />
+    </a>
+    <a class="nav-link text-white" href="index">Home</a>
+    <a class="nav-link text-white" href="index#work">Work</a>
+    <a class="nav-link text-white" href="crafts">Crafts</a>
+    <a class="nav-link text-white" href="#contact">Contact</a>
     <a class="nav-link text-white" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a>
   </div>
 </div>
@@ -276,35 +188,35 @@
       <div class="me-marquee">
         <div class="me-marquee-track">
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider01.jpeg" alt="Foto personal 1" loading="lazy">
+            <img src="assets/me/me_slider01.webp" alt="Foto personal 1" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider02.jpeg" alt="Foto personal 2" loading="lazy">
+            <img src="assets/me/me_slider02.webp" alt="Foto personal 2" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider03.jpeg" alt="Foto personal 3" loading="lazy">
+            <img src="assets/me/me_slider03.webp" alt="Foto personal 3" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider04.jpeg" alt="Foto personal 4" loading="lazy">
+            <img src="assets/me/me_slider04.webp" alt="Foto personal 4" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider05.jpeg" alt="Foto personal 5" loading="lazy">
+            <img src="assets/me/me_slider05.webp" alt="Foto personal 5" loading="lazy">
           </div>
 
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider01.jpeg" alt="Foto personal 1" loading="lazy">
+            <img src="assets/me/me_slider01.webp" alt="Foto personal 1" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider02.jpeg" alt="Foto personal 2" loading="lazy">
+            <img src="assets/me/me_slider02.webp" alt="Foto personal 2" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider03.jpeg" alt="Foto personal 3" loading="lazy">
+            <img src="assets/me/me_slider03.webp" alt="Foto personal 3" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider04.jpeg" alt="Foto personal 4" loading="lazy">
+            <img src="assets/me/me_slider04.webp" alt="Foto personal 4" loading="lazy">
           </div>
           <div class="me-marquee-item">
-            <img src="assets/me/me_slider05.jpeg" alt="Foto personal 5" loading="lazy">
+            <img src="assets/me/me_slider05.webp" alt="Foto personal 5" loading="lazy">
           </div>
         </div>
       </div>
@@ -332,8 +244,8 @@
                 title="Copied email to clipboard"
                 alt="Copy my email to clipboard"
                 onclick="copyEmailHandler.call(this, event)">
-               <span class="button-label">Write me</span>
-             </a>
+                <span class="button-label">Write to Nacho</span>
+              </a>
               </div>
 
             <div class="col-12 col-lg-6">
@@ -570,18 +482,58 @@ document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
   new bootstrap.Tooltip(el, { trigger: 'manual' })
 );
 
-// Click handler: copy email + show tooltip
-document.getElementById('copy-btn').addEventListener('click', function(e) {
+// Shared copy handler used by inline onclick and listeners
+function copyEmailHandler(e) {
   e.preventDefault();
   const email = 'nachocismondi@gmail.com';
-  const tip = bootstrap.Tooltip.getInstance(this);
+  const target = this;
+  const tip = bootstrap.Tooltip.getInstance(target);
   navigator.clipboard.writeText(email)
-    .then(() => { tip.show(); setTimeout(() => tip.hide(), 3000); })
+    .then(() => {
+      if (tip) {
+        tip.show();
+        setTimeout(() => tip.hide(), 3000);
+      }
+    })
     .catch(console.error);
+}
 
-});
+const copyBtn = document.getElementById('copy-btn');
+if (copyBtn) copyBtn.addEventListener('click', copyEmailHandler);
+
+const copyBtnContact = document.getElementById('copy-btn-contact');
+if (copyBtnContact) copyBtnContact.addEventListener('click', copyEmailHandler);
 </script>
 
+
+        <script>
+          (function () {
+            const mobileMenuEl = document.getElementById('mobileMenu');
+            if (!mobileMenuEl || typeof bootstrap === 'undefined') return;
+            const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(mobileMenuEl);
+            function cleanupBackdrop() {
+              document.querySelectorAll('.offcanvas-backdrop').forEach(function (node) { node.remove(); });
+              document.body.classList.remove('offcanvas-open');
+              document.body.style.removeProperty('overflow');
+              document.body.style.removeProperty('padding-right');
+            }
+            mobileMenuEl.addEventListener('hidden.bs.offcanvas', cleanupBackdrop);
+            mobileMenuEl.querySelectorAll('a[href]').forEach(function (link) {
+              link.addEventListener('click', function (event) {
+                const href = link.getAttribute('href') || '';
+                if (href.startsWith('#') && href.length > 1) {
+                  event.preventDefault();
+                  mobileMenuEl.addEventListener('hidden.bs.offcanvas', function onHidden() {
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, { once: true });
+                }
+                offcanvas.hide();
+                setTimeout(cleanupBackdrop, 420);
+              });
+            });
+          })();
+        </script>
 
         <!-- Menu fixed on scroll to top-->
         <script>
