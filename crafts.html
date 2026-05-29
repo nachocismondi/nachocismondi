@@ -216,8 +216,10 @@
     <!-- Work section-->
     <section class="container pb-3">
 
-        <div class="row grid">
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item animate__animated animate__fadeIn animate__delay-1s">
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
+            <div class="grid-item mb-4 animate__animated animate__fadeIn animate__delay-1s">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/widget-tracker.webp" rel="preload">
                 <div class="card-body">
@@ -226,7 +228,7 @@
               </div>
             </div>
 
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item animate__animated animate__fadeIn animate__delay-1s">
+            <div class="grid-item mb-4 animate__animated animate__fadeIn animate__delay-1s">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/icon-bill.webp" rel="preload">
                 <div class="card-body">
@@ -235,7 +237,7 @@
               </div>
             </div>
 
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item animate__animated animate__fadeIn animate__delay-1s">
+            <div class="grid-item mb-4 animate__animated animate__fadeIn animate__delay-1s">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/empty-state.webp" rel="preload">
                 <div class="card-body">
@@ -243,7 +245,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item">
+            <div class="grid-item mb-4">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/loop.gif" rel="preload">
                 <div class="card-body">
@@ -251,7 +253,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item animate__animated animate__fadeIn animate__slower">
+            <div class="grid-item mb-4 animate__animated animate__fadeIn animate__slower">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/icon-building.webp" rel="preload">
                 <div class="card-body">
@@ -259,7 +261,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item animate__animated animate__fadeIn animate__slower">
+            <div class="grid-item mb-4 animate__animated animate__fadeIn animate__slower">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/poster2.webp" rel="preload">
                 <div class="card-body">
@@ -267,7 +269,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item animate__animated animate__fadeIn animate__slower">
+            <div class="grid-item mb-4 animate__animated animate__fadeIn animate__slower">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/book.webp" rel="preload">
                 <div class="card-body">
@@ -275,7 +277,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item">
+            <div class="grid-item mb-4">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/miscelanea.gif" rel="preload">
                 <div class="card-body">
@@ -283,7 +285,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item">
+            <div class="grid-item mb-4">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/bang.gif" rel="preload">
                 <div class="card-body">
@@ -291,7 +293,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item">
+            <div class="grid-item mb-4">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/poster1.webp" rel="preload">
                 <div class="card-body">
@@ -299,7 +301,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 grid-item">
+            <div class="grid-item mb-4">
               <div class="card bg-black border-dark">
                 <img class="card-img-top" src="assets/crafts/nice.gif" rel="preload">
                 <div class="card-body">
@@ -413,15 +415,54 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var grid = document.querySelector('.grid');
-            imagesLoaded(grid, function () {
-                var msnry = new Masonry(grid, {
-                    itemSelector: '.grid-item',
-                    columnWidth: '.grid-item',  // Esto asegura que las columnas se ajusten al tamaño del item
-                    percentPosition: true  // Esto permite el uso de porcentajes en el CSS
-                });
+            if (!grid) return;
+
+            var msnry = new Masonry(grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                gutter: '.gutter-sizer',
+                percentPosition: true,
+                transitionDuration: 0
+            });
+
+            imagesLoaded(grid).on('progress', function () {
+                msnry.layout();
+            });
+
+            window.addEventListener('resize', function () {
+                msnry.layout();
             });
         });
     </script>
+
+            <script>
+                (function () {
+                    const mobileMenuEl = document.getElementById('mobileMenu');
+                    if (!mobileMenuEl || typeof bootstrap === 'undefined') return;
+                    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(mobileMenuEl);
+                    function cleanupBackdrop() {
+                        document.querySelectorAll('.offcanvas-backdrop').forEach(function (node) { node.remove(); });
+                        document.body.classList.remove('offcanvas-open');
+                        document.body.style.removeProperty('overflow');
+                        document.body.style.removeProperty('padding-right');
+                    }
+                    mobileMenuEl.addEventListener('hidden.bs.offcanvas', cleanupBackdrop);
+                    mobileMenuEl.querySelectorAll('a[href]').forEach(function (link) {
+                        link.addEventListener('click', function (event) {
+                            const href = link.getAttribute('href') || '';
+                            if (href.startsWith('#') && href.length > 1) {
+                                event.preventDefault();
+                                mobileMenuEl.addEventListener('hidden.bs.offcanvas', function onHidden() {
+                                    const target = document.querySelector(href);
+                                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }, { once: true });
+                            }
+                            offcanvas.hide();
+                            setTimeout(cleanupBackdrop, 420);
+                        });
+                    });
+                })();
+            </script>
 
             <!-- Menu fixed on scroll to top-->
         <script>

@@ -60,6 +60,12 @@
         <!-- CSS Animations -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+        <style>
+          .tool-icon-link { display: block; text-decoration: none; }
+          .tool-icon-img { transition: transform 0.18s ease; }
+          .tool-icon-link:hover .tool-icon-img { transform: scale(1.1); }
+        </style>
+
         <!-- Toltips  -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -67,6 +73,7 @@
         <!-- GLightbox (CDN) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/css/glightbox.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js"></script>
+
 
 
             <script src="/js/posthog-init.js"></script>
@@ -132,231 +139,715 @@
 </div>
 
 <!-- Hero -->
-<header class="bg-black" id="craft">
-  <div class="container px-5">
-      <div class="row gx-4 justify-content-center">
-          
-        <div class="col-md-10 col-lg-8 col-xl-6 px-4 px-sm-0">
-          <div class="text-left mb-2">
+<header class="bg-black about-hero" id="craft">
+  <div class="container">
+    <div class="row gx-4 justify-content-center">
 
-              <h1 class="mb-3 fw-bolder animate__animated animate__fadeIn animate__slower">About me</h1>
-              
-              <p class="mb-sm-2 mb-md-4 animate__animated animate__fadeIn animate__slower">Curious by nature and passionate about technology. I learn, design, and create things to make a real impact. Transforming ideas into experiences that improve people’s lives.</p>
-
-              <p class="mb-sm-2 mb-md-4 animate__animated animate__fadeIn animate__slower">I have the privilege of designing experiences for more than <b>+100.000 users</b> (B2B) across Latin America. In this role, I’ve learned how to add value to small and medium-sized entrepreneurs by developing a SaaS platform and payment gateway solutions.</p>
-
-          </div>
-          </div>
-
+      <!-- Left: About Me text -->
+      <div class="col-md-12 col-lg-8 col-xl-4 px-4 px-sm-3 mb-5 mb-md-0">
+        <h1 class="mb-4 fw-bolder animate__animated animate__fadeIn">About me</h1>
+        <p class="mb-4 animate__animated animate__fadeIn animate__slower">Curious by nature and passionate about technology. I learn, design, and create things to make a real impact. Transforming ideas into experiences that improve people’s lives.</p>
+        <p class="mb-0 animate__animated animate__fadeIn animate__slower">I have the privilege of designing experiences for more than <b>+100.000 users</b> (B2B) across Latin America. In this role, I’ve learned how to add value to small and medium-sized entrepreneurs by developing a SaaS platform and payment gateway solutions.</p>
       </div>
-  </div>
 
-  <section class="container text-white">
-    <div class="row justify-content-center">      
-      <div class="col-md-12 col-lg-10 col-xl-8 container mb-5">
-        <div class="row stats-row">
-          
-          <div class="col-12 col-md-4">
-            <div class="personal-card">
-              <span class="stat-icon" style="color: #f29640"><i class="bi bi-share-fill"></i></span>
-              <div class="personal-value">Experience</div>
-            </div>
-          </div>
-    
-          <div class="col-12 col-md-4">
-            <div class="personal-card">
-              <span class="stat-icon" style="color: #f29640"><i class="bi bi-person-badge"></i></span>
-              <div class="personal-value">Stack</div>
-            </div>
-          </div>
-    
-          <div class="col-12 col-md-4">
-            <div class="personal-card">
-              <span class="stat-icon" style="color: #f29640"><i class="bi bi-chat-text-fill"></i></span>
-              <div class="personal-value">Resume</div>
-            </div>
-          </div>
-    
-        </div>
-        </div>
-        </div>
-        </section>
-
-
-  <div class="row gx-4 justify-content-center">
-    <div class="col-12 col-lg-10">
-      <div class="me-marquee">
-        <div class="me-marquee-track">
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider01.webp" alt="Foto personal 1" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider02.webp" alt="Foto personal 2" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider03.webp" alt="Foto personal 3" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider04.webp" alt="Foto personal 4" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider05.webp" alt="Foto personal 5" loading="lazy">
-          </div>
-
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider01.webp" alt="Foto personal 1" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider02.webp" alt="Foto personal 2" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider03.webp" alt="Foto personal 3" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider04.webp" alt="Foto personal 4" loading="lazy">
-          </div>
-          <div class="me-marquee-item">
-            <img src="assets/me/me_slider05.webp" alt="Foto personal 5" loading="lazy">
+      <!-- Right: Photo marquee -->
+      <div class="col-md-12 col-lg-8 col-xl-6 about-marquee-col">
+        <div class="me-marquee animate__animated animate__fadeIn">
+          <div class="me-marquee-track">
+            <div class="me-marquee-item"><img src="assets/me/me_slider01.webp" alt="Nacho 1" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider02.webp" alt="Nacho 2" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider03.webp" alt="Nacho 3" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider04.webp" alt="Nacho 4" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider05.webp" alt="Nacho 5" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider01.webp" alt="Nacho 1" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider02.webp" alt="Nacho 2" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider03.webp" alt="Nacho 3" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider04.webp" alt="Nacho 4" loading="lazy"></div>
+            <div class="me-marquee-item"><img src="assets/me/me_slider05.webp" alt="Nacho 5" loading="lazy"></div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </header>
 
+<!-- ── Bento Cards ─────────────────────────────────────────── -->
+<section class="bento-section animate__animated animate__fadeIn animate__slower">
+  <div class="container col-12 col-md-10 col-lg-8 col-xl-6">
+    <div class="bento-grid">
 
-    <!-- Contact section -->
-    <section class="contact my-5 py-5" id="contact">
+      <!-- ROW 1: 1/3 + 2/3 -->
+      <div class="row g-4">
 
-    <div class="container contact-cta rounded-3 my-5">
-        <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
+        <!-- Story — 1/3 -->
+        <div class="col-12 col-md-4">
+          <a href="#" class="bento-card" data-bs-toggle="modal" data-bs-target="#modal-story">
+            <div class="bento-card-header">
+              <div class="bento-title-row">
+                <h2 class="bento-title">Story</h2>
+                <span class="bento-icon"><i class="bi bi-plus-circle"></i></span>
+              </div>
+              <p class="bento-desc">Read my story of life</p>
+            </div>
+            <div class="bento-thumb">
+              <img src="assets/me/bento-story.svg" alt="CV/Resume illustration" style="width:100%;height:auto;display:block;" loading="lazy">
+            </div>
+          </a>
+        </div>
 
-            <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
+        <!-- Tools — 2/3 -->
+        <div class="col-12 col-md-8">
+          <a href="#" class="bento-card" data-bs-toggle="modal" data-bs-target="#modal-tools">
+            <div class="bento-card-header">
+              <div class="bento-title-row">
+                <h2 class="bento-title">Tools</h2>
+                <span class="bento-icon"><i class="bi bi-plus-circle"></i></span>
+              </div>
+              <p class="bento-desc">See the tools I use every day</p>
+            </div>
+            <div class="bento-thumb">
+              <picture>
+                <source media="(max-width: 767px)" srcset="assets/me/bento-tools-mobile.svg">
+                <img src="assets/me/bento-tools.svg" alt="Tools illustration" style="width:100%;height:auto;display:block;" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
 
-                <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
-                <div class="h4 text-white text-opacity-75"><a class="text-white" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> <i class="bi bi-envelope-fill"></i></div>
-                <a id="copy-btn-contact"
-                class="button-primary-contact mt-3"
-                href="#"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-custom-class="chip-tooltip"
-                title="Copied email to clipboard"
-                alt="Copy my email to clipboard"
-                onclick="copyEmailHandler.call(this, event)">
-                <span class="button-label">Write to Nacho</span>
-              </a>
+      </div><!-- /ROW 1 -->
+
+      <!-- ROW 2: 2/3 + 1/3 -->
+      <div class="row g-4">
+
+        <!-- Crafts — 2/3 -->
+        <div class="col-12 col-md-8">
+          <a href="crafts.html" class="bento-card">
+            <div class="bento-card-header">
+              <div class="bento-title-row">
+                <h2 class="bento-title">Crafts</h2>
+              </div>
+              <p class="bento-desc">Projects and little ideas</p>
+            </div>
+            <div class="bento-thumb">
+              <picture>
+                <source media="(max-width: 767px)" srcset="assets/me/bento-craft-mobile.svg">
+                <img src="assets/me/bento-craft.svg" alt="Crafts illustration" style="width:100%;height:auto;display:block;" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <!-- Curriculum — 1/3 -->
+        <div class="col-12 col-md-4">
+          <a href="#" class="bento-card" data-bs-toggle="modal" data-bs-target="#modal-curriculum">
+            <div class="bento-card-header">
+              <div class="bento-title-row">
+                <h2 class="bento-title">Curriculum</h2>
+                <span class="bento-icon"><i class="bi bi-plus-circle"></i></span>
+              </div>
+              <p class="bento-desc">Work experience</p>
+            </div>
+            <div class="bento-thumb">
+              <img src="assets/me/bento-cv.svg" alt="CV/Resume illustration" style="width:100%;height:auto;display:block;" loading="lazy">
+            </div>
+          </a>
+        </div>
+
+      </div><!-- /ROW 2 -->
+
+      <!-- ROW 3: Full width — GitHub contributions -->
+      <div class="row g-4 mb-4">
+        <div class="col-12">
+          <a href="https://github.com/nachocismondi" target="_blank" rel="noopener" class="bento-card bento-card-github">
+            <div class="gh-wrap">
+              <div class="gh-graph-outer">
+                <!-- Day labels -->
+                <div class="gh-day-col" aria-hidden="true">
+                  <span></span>
+                  <span>Mon</span>
+                  <span></span>
+                  <span>Wed</span>
+                  <span></span>
+                  <span>Fri</span>
+                  <span></span>
+                </div>
+                <!-- Month row + grid -->
+                <div class="gh-right">
+                  <div id="ghMonthRow" class="gh-month-row"></div>
+                  <div id="ghGrid" class="gh-grid"></div>
+                </div>
+              </div>
+              <div class="gh-footer">
+                <span id="ghFooterText"><span id="ghTotal">Obteniendo contribuciones</span></span>
+                <div class="gh-legend">
+                  <span>Less</span>
+                  <div class="gh-legend-cells">
+                    <div class="gh-cell gh-lv0"></div>
+                    <div class="gh-cell gh-lv1"></div>
+                    <div class="gh-cell gh-lv2"></div>
+                    <div class="gh-cell gh-lv3"></div>
+                    <div class="gh-cell gh-lv4"></div>
+                  </div>
+                  <span>More</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div><!-- /ROW 3 -->
+
+    </div><!-- /bento-grid -->
+  </div>
+</section>
+
+
+<!-- ── Modals ──────────────────────────────────────────── -->
+
+<div class="modal fade nc-modal" id="modal-story" tabindex="-1" aria-labelledby="lbl-story" aria-hidden="true">
+  <div class="modal-dialog nc-modal-dialog">
+    <div class="modal-content">
+      <div class="nc-modal-shell">
+        <button type="button" class="nc-modal-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle-fill"></i></button>
+        <div class="nc-modal-scroll">
+          <div class="nc-modal-body">
+            <h2 class="nc-modal-title" id="lbl-story">Story</h2>
+            <p class="nc-modal-lead">In progress...</p>
+            <div class="nc-modal-divider"></div>
+            <div class="nc-modal-skeleton-block"></div>
+            <div class="nc-modal-skeleton-block" style="width:80%;opacity:.5"></div>
+            <div class="nc-modal-skeleton-block" style="width:60%;opacity:.3;margin-bottom:0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade nc-modal" id="modal-tools" tabindex="-1" aria-labelledby="lbl-tools" aria-hidden="true">
+  <div class="modal-dialog nc-modal-dialog">
+    <div class="modal-content">
+      <div class="nc-modal-shell">
+        <button type="button" class="nc-modal-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle-fill"></i></button>
+        <div class="nc-modal-scroll">
+          <div class="nc-modal-body">
+            <h2 class="nc-modal-title" id="lbl-tools">Tools</h2>
+            <p class="nc-modal-lead">The tools I use every day.</p>
+
+
+            <h4 class="text-white mt-4 mb-3">Design</h4>
+            <div class="row row-cols-4 row-cols-sm-5 g-3 mb-1">
+              <div class="col">
+                <a href="https://www.figma.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/figma.png" alt="Figma" class="tool-icon-img" />
+                    <span class="text-secondary small">Figma</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/ps.png" alt="Photoshop" class="tool-icon-img" />
+                    <span class="text-secondary small">Adobe Photoshop</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://www.adobe.com/products/illustrator.html" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/illustrator.png" alt="Illustrator" class="tool-icon-img" />
+                    <span class="text-secondary small">Adobe Illustrator</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://www.adobe.com/products/indesign.html" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/indesign.png" alt="InDesign" class="tool-icon-img" />
+                    <span class="text-secondary small">Adobe InDesign</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://miro.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/miro.png" alt="Miro" class="tool-icon-img" />
+                    <span class="text-secondary small">Miro</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <h4 class="text-white mt-4 mb-3">Animation</h4>
+            <div class="row row-cols-4 row-cols-sm-5 g-3 mb-1">
+              <div class="col">
+                <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/after.png" alt="After Effects" class="tool-icon-img" />
+                    <span class="text-secondary small">Adobe After Effects</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://www.adobe.com/products/premiere.html" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/premier.png" alt="Premiere Pro" class="tool-icon-img" />
+                    <span class="text-secondary small">Adobe Premiere Pro</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://jitter.video" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/jitter.png" alt="Jitter" class="tool-icon-img" />
+                    <span class="text-secondary small">Jitter</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://lottiefiles.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/lottie.png" alt="Lottie Files" class="tool-icon-img" />
+                    <span class="text-secondary small">Lottie Files</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <h4 class="text-white mt-4 mb-3">Code</h4>
+            <div class="row row-cols-4 row-cols-sm-5 g-3 mb-1">
+              <div class="col">
+                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/html.png" alt="HTML" class="tool-icon-img" />
+                    <span class="text-secondary small">HTML</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/css.png" alt="CSS" class="tool-icon-img" />
+                    <span class="text-secondary small">CSS</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/js.png" alt="JavaScript" class="tool-icon-img" />
+                    <span class="text-secondary small">JavaScript</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://github.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/github.png" alt="GitHub" class="tool-icon-img" />
+                    <span class="text-secondary small">GitHub</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <h4 class="text-white mt-4 mb-3">AI</h4>
+            <div class="row row-cols-4 row-cols-sm-5 g-3 mb-1">
+              <div class="col">
+                <a href="https://chatgpt.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/gpt.png" alt="ChatGPT" class="tool-icon-img" />
+                    <span class="text-secondary small">ChatGPT</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://claude.ai" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/claude.png" alt="Claude" class="tool-icon-img" />
+                    <span class="text-secondary small">Claude</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://gemini.google.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/gemini.png" alt="Gemini" class="tool-icon-img" />
+                    <span class="text-secondary small">Gemini</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://www.cursor.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/cursor.png" alt="Cursor" class="tool-icon-img" />
+                    <span class="text-secondary small">Cursor</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://lovable.dev" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/lovable.png" alt="Lovable" class="tool-icon-img" />
+                    <span class="text-secondary small">Lovable</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://v0.dev" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/v0.png" alt="v0.dev" class="tool-icon-img" />
+                    <span class="text-secondary small">v0</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <h4 class="text-white mt-4 mb-3">Research</h4>
+            <div class="row row-cols-4 row-cols-sm-5 g-3 mb-1">
+              <div class="col">
+                <a href="https://posthog.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/posthog.png" alt="PostHog" class="tool-icon-img" />
+                    <span class="text-secondary small">PostHog</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://mobbin.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/mobbin.png" alt="Mobbin" class="tool-icon-img" />
+                    <span class="text-secondary small">Mobbin</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="https://dribbble.com" target="_blank" rel="noopener" class="tool-icon-link">
+                  <div class="tool-icon d-flex flex-column align-items-start gap-2">
+                    <img src="assets/me/tools/dribbble.png" alt="Dribbble" class="tool-icon-img" />
+                    <span class="text-secondary small">Dribbble</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade nc-modal" id="modal-curriculum" tabindex="-1" aria-labelledby="lbl-curriculum" aria-hidden="true">
+  <div class="modal-dialog nc-modal-dialog">
+    <div class="modal-content">
+      <div class="nc-modal-shell">
+        <button type="button" class="nc-modal-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle-fill"></i></button>
+        <div class="nc-modal-scroll">
+          <div class="nc-modal-handle"></div>
+          <div class="nc-modal-body nc-modal-body--cv">
+            <h2 class="nc-modal-title" id="lbl-curriculum">Curriculum vitae</h2>
+            <p class="text-white mt-3 mb-3" style="font-size:0.9rem;line-height:1.7;">Designer, Tecnophile, Enthusiastic, 29 yrs.</p>
+            <!--
+            <a class="button-secondary me-sm-3" href="#" alt="Download">Download<i class="bi bi-caret-down-fill ms-2"></i></a>
+            -->
+
+            <h5 class="mt-5 text-white">Work</h5>
+            <div class="cv-timeline">
+
+              <div class="cv-entry cv-entry--continues">
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://fu.do" target="_blank" rel="noopener">Fudo</a></p>
+                      <p class="small text-white mb-0">Senior UX Designer | Fintech • Product Design</p>
+                    </div>
+                    <span class="small text-white-50 text-nowrap">Feb 2025 — Present</span>
+                  </div>
+                  <ul class="cv-bullets list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li>Launched payment terminals in 3 countries.</li>
+                    <li>Conducted 50+ user interviews to improve the product.r</li>
+                    <li>$3M+ USD in ARR through a new revenue stream.</li>
+                  </ul>
+                </div>
               </div>
 
-            <div class="col-12 col-lg-6">
-
-                <!-- Figma canvas widget -->
-                <div class="figma-contact-widget">
-                  <div class="outer" id="outer">
-                    <div class="cursor-nacho" id="cursorNacho" style="left:220px;top:200px">
-                      <svg class="csvg" viewBox="0 0 20 20">
-                        <defs>
-                          <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#ffaa70"/>
-                            <stop offset="100%" stop-color="#ea580c"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gn)"/>
-                      </svg>
-                      <span class="lbl lbl-nacho">Nacho</span>
+              <div class="cv-entry cv-entry--same-company cv-entry--continues">
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://fu.do" target="_blank" rel="noopener">Fudo</a></p>
+                      <p class="small text-white mb-0 mt-3">Senior UX Designer | Fintech • Mobile app</p>
                     </div>
+                    <span class="small text-white-50 text-nowrap">Jun 2022 — Feb 2025</span>
+                  </div>
+                  <ul class="cv-bullets list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li>Implementation of a reseller and referral program.</li>
+                    <li>Designed new product features for WebApp, iOS, and Android.</li>
+                    <li>Designed 4 new sections of the website.</li>
+                  </ul>
+                </div>
+              </div>
 
-                    <div class="canvas-area">
-                      <div class="canvas-bg"></div>
-
-                      <div class="frame-label" id="lblLogin" style="left:-80px;top:6px">Login</div>
-                      <div class="frame-label" id="lblHome"  style="left:176px;top:6px">Home</div>
-                      <div class="frame-label" id="lblProfile" style="left:400px;top:116px;opacity:0">Profile</div>
-
-                      <div class="sel" id="selLogin"  style="left:-80px;top:20px;width:200px;height:360px;"></div>
-                      <div class="sel" id="selHome"   style="left:176px;top:20px;width:200px;height:360px;"></div>
-                      <div class="sel" id="selProfile" style="left:400px;top:130px;width:170px;height:170px;"></div>
-
-                      <!-- Login -->
-                      <div class="ab-login" id="abLogin" style="left:-80px;top:20px;">
-                        <div class="ab1-top">
-                          <div class="ab1-logo"></div>
-                          <div class="ab1-bar1"></div>
-                          <div class="ab1-bar2"></div>
-                        </div>
-                        <div class="ab1-body">
-                          <div class="ab1-field lit"></div>
-                          <div class="ab1-field"></div>
-                          <div class="ab1-cta"></div>
-                          <div class="ab1-divrow"><div class="ab1-divline"></div><div class="ab1-divdot"></div><div class="ab1-divline"></div></div>
-                          <div class="ab1-ghost"></div>
-                        </div>
-                      </div>
-
-                      <!-- Home -->
-                      <div class="ab-home" id="abHome" style="left:176px;top:20px;">
-                        <div class="ab2-topbar">
-                          <div class="ab2-avatar"></div>
-                          <div class="ab2-bargroup">
-                            <div class="ab2-minibar" style="width:55%"></div>
-                            <div class="ab2-minibar" style="width:35%"></div>
-                          </div>
-                          <div class="ab2-notif"></div>
-                        </div>
-                        <div class="ab2-body">
-                          <div class="ab2-hero"><div class="ab2-hero-glow"></div></div>
-                          <div class="ab2-card">
-                            <div class="ab2-card-sq"></div>
-                            <div class="ab2-card-lines">
-                              <div class="ab2-card-line" style="width:80%"></div>
-                              <div class="ab2-card-line" style="width:50%"></div>
-                            </div>
-                            <div class="ab2-pill"></div>
-                          </div>
-                          <div class="ab2-card">
-                            <div class="ab2-card-sq" style="background:#222;border-color:#2a2a2a"></div>
-                            <div class="ab2-card-lines">
-                              <div class="ab2-card-line" style="width:70%"></div>
-                              <div class="ab2-card-line" style="width:40%"></div>
-                            </div>
-                            <div class="ab2-pill"></div>
-                          </div>
-                          <div class="ab2-card">
-                            <div class="ab2-card-sq"></div>
-                            <div class="ab2-card-lines">
-                              <div class="ab2-card-line" style="width:85%"></div>
-                              <div class="ab2-card-line" style="width:45%"></div>
-                            </div>
-                            <div class="ab2-pill"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Profile -->
-                      <div class="ab-profile" id="abProfile" style="left:400px;top:130px;transform:scale(0.82);opacity:0;">
-                        <img src="assets/figma-profile.webp" alt="Profile">
-                      </div>
-
-                      <!-- Stickies -->
-                      <div class="sticky" id="st2" style="left:152px;top:270px;background:#0f2318;color:#4caf82;">
-                        <div class="sticky-title">Interaction</div>
-                        <div class="sticky-body">Add swipe to dismiss</div>
-                      </div>
-                      <div class="sticky" id="st3" style="left:456px;top:18px;background:#0f1526;color:#6b8cff;">
-                        <div class="sticky-title">Nav</div>
-                        <div class="sticky-body">Missing tab bar</div>
-                      </div>
+              <div class="cv-entry cv-entry--same-company">
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://fu.do" target="_blank" rel="noopener">Fudo</a></p>
+                      <p class="small text-white mb-0 mt-3">Digital Designer | Marketing • Branding</p>
                     </div>
+                    <span class="small text-white-50 text-nowrap">Jul 2021 — Jun 2022</span>
+                  </div>
+                  <ul class="cv-bullets list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li>Recruitment and creating the design team.</li>
+                    <li>USD $7.5M raised through the Seed Round pitch deck I designed (a16z, Atlántico, Latitud & Maya Capital).</li>
+                    <li>Achieved a 3x increase in Instagram followers.</li>
+                    <li>Social media assets and paid-media campaigns.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="cv-entry">
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://nachocismondi.com" target="_blank" rel="noopener">nachocismondi.com</a></p>
+                      <p class="small text-white mb-0">CEO | Designer & Web Developer</p>
+                    </div>
+                    <span class="small text-white-50 text-nowrap">Dec 2017 — Dec 2022</span>
+                  </div>
+                  <ul class="cv-bullets list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li>100k+ interactions on social media.</li>
+                    <li>Helped over 20 clients build and strengthen their online brand presence.</li>
+                    <li>Web design (HTML/CSS/JavaScript), interface design, and prototyping.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="cv-entry cv-entry--last">
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://www.buenosaires.gob.ar" target="_blank" rel="noopener">Gobierno de la Ciudad de Buenos Aires</a></p>
+                      <p class="small text-white-50 mb-0">Diseñador Editorial · Publicación digital</p>
+                    </div>
+                    <span class="small text-white-50 text-nowrap">Jan 2018 — Jun 2021</span>
+                  </div>
+                  <ul class="cv-bullets list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li>Designed +400 editorial pieces, both print and digital (PDF and ePUB).</li>
+                    <li>Created communication materials and visual assets.</li>
+                    <li>Developed diagrams and illustrations.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <h5 class="mt-5 text-white">Education</h5>
+            <div class="cv-timeline">
+
+              <div class="cv-entry">
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://somosedison.co" target="_blank" rel="noopener">Edison</a></p>
+                      <p class="small text-white-50 mb-0">UX Design, gamification, and writing courses</p>
+                    </div>
+                    <span class="small text-white-50 text-nowrap">2022 — 2024</span>
                   </div>
                 </div>
+
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://platzi.com" target="_blank" rel="noopener">Platzi</a></p>
+                      <p class="small text-white-50 mb-0">Online learning</p>
+                    </div>
+                    <span class="small text-white-50 text-nowrap">2020 — 2022</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-entry cv-entry--last">
+                <div class="cv-entry-right">
+                  <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                    <div>
+                      <p class="cv-company"><a href="https://uade.edu.ar" target="_blank" rel="noopener">UADE</a></p>
+                      <p class="small text-white-50 mb-0">Bachelor's Degree in Graphic Design</p>
+                      <p class="small text-white-50 mb-0">GPA: 7/10</p>
+                    </div>
+                    <span class="small text-white-50 text-nowrap">2014 — 2019</span>
+                  </div>
+                </div>
+              </div>
             </div>
-                    <div class="white-rabbit-text">Follow the white rabbit</div>
 
+            <h5 class="mt-5 text-white">Skills</h5>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="cv-tag">Early adopter</span>
+              <span class="cv-tag">Curious</span>
+              <span class="cv-tag">Lean</span>
+              <span class="cv-tag">Design Thinking</span>
+              <span class="cv-tag">Blogger</span>
+              <span class="cv-tag">Self-taught</span>
+              <span class="cv-tag">High Agency</span>
+              <span class="cv-tag">Crafter</span>
+              <span class="cv-tag">Creative</span>
+              <span class="cv-tag">Disruptive</span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+</div>
 
-    </section>
+         <!-- Contact section -->
+         <section class="contact my-5 py-5" id="contact">
 
+          <div class="container contact-cta rounded-3 my-0">
+              <div class="row g-0 py-0">
+
+                  <div class="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-center px-4 px-sm-4 px-md-5 py-5">
+                    
+                      <div class="h1 fw-bold text-white">We create something</br> amazing side by side</div>
+                      <div class="h4 text-white text-opacity-75">Contact me at <a class="text-white" id="copy-btn-contact" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="chip-tooltip" title="Copied email to clipboard" alt="Copy my email to clipboard">nachocismondi@gmail.com</a></div>
+                      <a id="copy-btn-contact"
+                        class="button-primary-contact mt-3"
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-custom-class="chip-tooltip"
+                        title="Copied email to clipboard"
+                        alt="Copy my email to clipboard"
+                        onclick="copyEmailHandler.call(this, event)">
+                        <span class="button-label">Write to Nacho</span>
+                      </a>
+                      <div class="white-rabbit-text mt-3">Follow the white rabbit</div>
+
+                    </div>
+      
+                  <div class="col-12 col-lg-6 p-0">
+
+                      <!-- Contact form -->
+                      <div class="figma-contact-widget">
+                        <div class="outer" id="outer">
+                          <div class="cursor-nacho" id="cursorNacho" style="left:380px;top:200px">
+                            <svg class="csvg" viewBox="0 0 20 20">
+                              <defs>
+                                <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
+                                  <stop offset="0%" stop-color="#ffaa70"/>
+                                  <stop offset="100%" stop-color="#ea580c"/>
+                                </linearGradient>
+                              </defs>
+                              <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gn)"/>
+                            </svg>
+                            <span class="lbl lbl-nacho">Nacho</span>
+                          </div>
+      
+                          <div class="canvas-area">
+                            <div class="canvas-bg"></div>
+
+                            <div id="cursorYouMobile" style="left:30px;top:340px;opacity:0">
+                              <svg class="csvg" viewBox="0 0 20 20">
+                                <defs>
+                                  <linearGradient id="gy2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#f06aff"/>
+                                    <stop offset="100%" stop-color="#c020e0"/>
+                                  </linearGradient>
+                                </defs>
+                                <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy2)"/>
+                              </svg>
+                              <span class="lbl lbl-you">you</span>
+                            </div>
+      
+                            <div class="frame-label" id="lblLogin" style="left:80px;top:6px">Login</div>
+                            <div class="frame-label" id="lblHome"  style="left:336px;top:6px">Home</div>
+                            <div class="frame-label" id="lblProfile" style="left:560px;top:116px;opacity:0">Profile</div>
+
+                            <div class="sel" id="selLogin"  style="left:80px;top:20px;width:200px;height:360px;"></div>
+                            <div class="sel" id="selHome"   style="left:336px;top:20px;width:200px;height:360px;"></div>
+                            <div class="sel" id="selProfile" style="left:560px;top:130px;width:170px;height:170px;"></div>
+
+                            <!-- Login -->
+                            <div class="ab-login" id="abLogin" style="left:80px;top:20px;">
+                              <div class="ab1-top">
+                                <div class="ab1-logo"></div>
+                                <div class="ab1-bar1"></div>
+                                <div class="ab1-bar2"></div>
+                              </div>
+                              <div class="ab1-body">
+                                <div class="ab1-field lit"></div>
+                                <div class="ab1-field"></div>
+                                <div class="ab1-cta"></div>
+                                <div class="ab1-divrow"><div class="ab1-divline"></div><div class="ab1-divdot"></div><div class="ab1-divline"></div></div>
+                                <div class="ab1-ghost"></div>
+                              </div>
+                            </div>
+      
+                            <!-- Home -->
+                            <div class="ab-home" id="abHome" style="left:336px;top:20px;">
+                              <div class="ab2-topbar">
+                                <div class="ab2-avatar"></div>
+                                <div class="ab2-bargroup">
+                                  <div class="ab2-minibar" style="width:55%"></div>
+                                  <div class="ab2-minibar" style="width:35%"></div>
+                                </div>
+                                <div class="ab2-notif"></div>
+                              </div>
+                              <div class="ab2-body">
+                                <div class="ab2-hero"><div class="ab2-hero-glow"></div></div>
+                                <div class="ab2-card">
+                                  <div class="ab2-card-sq"></div>
+                                  <div class="ab2-card-lines">
+                                    <div class="ab2-card-line" style="width:80%"></div>
+                                    <div class="ab2-card-line" style="width:50%"></div>
+                                  </div>
+                                  <div class="ab2-pill"></div>
+                                </div>
+                                <div class="ab2-card">
+                                  <div class="ab2-card-sq" style="background:#222;border-color:#2a2a2a"></div>
+                                  <div class="ab2-card-lines">
+                                    <div class="ab2-card-line" style="width:70%"></div>
+                                    <div class="ab2-card-line" style="width:40%"></div>
+                                  </div>
+                                  <div class="ab2-pill"></div>
+                                </div>
+                                <div class="ab2-card">
+                                  <div class="ab2-card-sq"></div>
+                                  <div class="ab2-card-lines">
+                                    <div class="ab2-card-line" style="width:85%"></div>
+                                    <div class="ab2-card-line" style="width:45%"></div>
+                                  </div>
+                                  <div class="ab2-pill"></div>
+                                </div>
+                              </div>
+                            </div>
+      
+                            <!-- Profile -->
+                            <div class="ab-profile" id="abProfile" style="left:560px;top:130px;transform:scale(0.82);opacity:0;">
+                              <img src="assets/figma-profile.webp" alt="Profile">
+                            </div>
+      
+                            <!-- Stickies -->
+                            <div class="sticky" id="st2" style="left:312px;top:270px;background:#0f2318;color:#4caf82;">
+                              <div class="sticky-title">Interaction</div>
+                              <div class="sticky-body">Add swipe to dismiss</div>
+                            </div>
+                            <div class="sticky" id="st3" style="left:616px;top:18px;background:#0f1526;color:#6b8cff;">
+                              <div class="sticky-title">Nav</div>
+                              <div class="sticky-body">Missing tab bar</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      
+          </section>
 
     <!-- Footer -->
     <div class="container">
@@ -380,6 +871,9 @@
                 </div>
         </footer>
     </div>
+
+    <!-- GitHub contribution tooltip -->
+    <div id="ghTooltip" class="gh-tooltip" role="tooltip"></div>
 
     </body>
 
@@ -626,6 +1120,228 @@ if (copyBtnContact) copyBtnContact.addEventListener('click', copyEmailHandler);
         you.style.opacity = '0';
       });
     })();
+  </script>
+
+  <!-- GitHub Contribution Map -->
+  <script>
+  (function () {
+    var grid       = document.getElementById("ghGrid");
+    var monthRow   = document.getElementById("ghMonthRow");
+    var totalEl    = document.getElementById("ghTotal");
+    var tooltip    = document.getElementById("ghTooltip");
+    var footerText = document.getElementById("ghFooterText");
+    if (!grid) return;
+
+    var MON    = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var GH_API = "https://github-contributions-api.jogruber.de/v4/nachocismondi?y=last";
+    var cachedMap = null, cachedTotal = null;
+
+    function pad(n) { return String(n).padStart(2,"0"); }
+    function toISO(d) { return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+
+    function startOfGrid() {
+      var today = new Date(); today.setHours(0,0,0,0);
+      var d0 = new Date(today);
+      d0.setDate(d0.getDate() - 364);
+      d0.setDate(d0.getDate() - d0.getDay());
+      return d0;
+    }
+
+    /* pixel width of one week column (cell + gap) — mirrors CSS breakpoints */
+    function getWeekPx() {
+      var w = window.innerWidth;
+      if (w <= 575) return 9;   /* 7px cell + 2px gap */
+      if (w <= 767) return 10;  /* 8px cell + 2px gap */
+      if (w <= 991) return 11;  /* 9px cell + 2px gap */
+      return 14;                /* 11px cell + 3px gap */
+    }
+
+    /* how many weeks fit in the available container width */
+    function computeMaxWeeks() {
+      var right = grid.parentElement;
+      if (!right) return 53;
+      return Math.max(6, Math.floor(right.clientWidth / getWeekPx()));
+    }
+
+    function fallbackData() {
+      var map = {}, today = new Date(); today.setHours(0,0,0,0);
+      var d0 = startOfGrid();
+      for (var i = 0; i < 365; i++) {
+        var d = new Date(d0); d.setDate(d0.getDate()+i);
+        if (d > today) break;
+        map[toISO(d)] = { level:0, count:0 };
+      }
+      return map;
+    }
+
+    function render(dataMap, totalCount) {
+      grid.innerHTML = "";
+      if (monthRow) monthRow.innerHTML = "";
+
+      var today      = new Date(); today.setHours(0,0,0,0);
+      var d0Full     = startOfGrid();
+      var totalWeeks = Math.ceil((today - d0Full) / (7*86400000));
+      var maxWeeks   = computeMaxWeeks();
+      var startWeek  = Math.max(0, totalWeeks - maxWeeks);
+      var weekCount  = totalWeeks - startWeek;
+      var weekPx     = getWeekPx();
+
+      /* offset origin to the first visible week */
+      var d0 = new Date(d0Full);
+      d0.setDate(d0Full.getDate() + startWeek * 7);
+
+      var monthLabels = {};
+
+      for (var w = 0; w < weekCount; w++) {
+        var weekEl = document.createElement("div");
+        weekEl.className = "gh-week";
+
+        for (var day = 0; day < 7; day++) {
+          var date = new Date(d0);
+          date.setDate(d0.getDate() + w*7 + day);
+          var cell = document.createElement("div");
+
+          if (date > today) {
+            cell.className = "gh-cell gh-empty";
+            weekEl.appendChild(cell);
+            continue;
+          }
+
+          var key  = toISO(date);
+          var info = dataMap[key] || { level:0, count:0 };
+          cell.className = "gh-cell gh-lv" + info.level;
+
+          if (date.getDate() === 1 && !(w in monthLabels)) {
+            monthLabels[w] = MON[date.getMonth()];
+          }
+
+          if (tooltip) {
+            (function(el, dt, n) {
+              var lbl = (n===0?"No":n)+" contribution"+(n!==1?"s":"")+" on "+
+                MON[dt.getMonth()]+" "+dt.getDate()+", "+dt.getFullYear();
+              el.addEventListener("mouseenter", function() {
+                tooltip.textContent = lbl;
+                tooltip.classList.add("visible");
+                var r = el.getBoundingClientRect();
+                var left = r.left + r.width/2 - tooltip.offsetWidth/2;
+                left = Math.max(8, Math.min(left, window.innerWidth - tooltip.offsetWidth - 8));
+                tooltip.style.left = left+"px";
+                tooltip.style.top  = (r.top - tooltip.offsetHeight - 6)+"px";
+              });
+              el.addEventListener("mouseleave", function() {
+                tooltip.classList.remove("visible");
+              });
+            })(cell, date, info.count);
+          }
+
+          weekEl.appendChild(cell);
+        }
+        grid.appendChild(weekEl);
+      }
+
+      if (totalCount != null && footerText) {
+        footerText.innerHTML = totalCount.toLocaleString()+
+          ' contributions in the last year on <strong><i class="bi bi-github"></i> GitHub</strong>';
+      }
+
+      if (monthRow) {
+        Object.keys(monthLabels).forEach(function(w) {
+          var span = document.createElement("span");
+          span.className   = "gh-month-lbl";
+          span.textContent = monthLabels[w];
+          span.style.left  = (parseInt(w,10) * weekPx) + "px";
+          monthRow.appendChild(span);
+        });
+      }
+    }
+
+    /* ── 1. fallback shimmer ──────────────────────────── */
+    if (totalEl) totalEl.textContent = "Obteniendo contribuciones";
+    cachedMap = fallbackData();
+    render(cachedMap, null);
+    grid.classList.add("gh-loading");
+
+    /* ── 2. fetch real data ───────────────────────────── */
+    fetch(GH_API)
+      .then(function(res) {
+        if (!res.ok) throw new Error("HTTP "+res.status);
+        return res.json();
+      })
+      .then(function(json) {
+        var map = {}, total = 0;
+        (json.contributions||[]).forEach(function(e) {
+          map[e.date] = { level:e.level, count:e.count };
+          total += e.count;
+        });
+        cachedMap   = map;
+        cachedTotal = (json.total && json.total.lastYear != null) ? json.total.lastYear : total;
+        grid.classList.remove("gh-loading");
+        render(cachedMap, cachedTotal);
+      })
+      .catch(function() {
+        grid.classList.remove("gh-loading");
+      });
+
+    /* ── 3. re-render on resize ───────────────────────── */
+    var resizeTimer;
+    var ro = new ResizeObserver(function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        render(cachedMap || fallbackData(), cachedTotal);
+      }, 80);
+    });
+    var outer = grid.closest(".gh-graph-outer");
+    if (outer) ro.observe(outer);
+
+  })();
+  </script>
+
+  <!-- Modal: scroll-lock, overflow detection, open/close animation -->
+  <script>
+  (function () {
+    document.querySelectorAll('.nc-modal').forEach(function (modalEl) {
+      var shell  = modalEl.querySelector('.nc-modal-shell');
+      var scroll = modalEl.querySelector('.nc-modal-scroll');
+
+      function checkOverflow() {
+        if (!scroll || !shell) return;
+        var overflows = scroll.scrollHeight > scroll.clientHeight + 2;
+        shell.classList.toggle('is-overflow', overflows);
+        if (!overflows) {
+          shell.classList.remove('is-at-bottom');
+        } else {
+          updateBottomEdge();
+        }
+      }
+
+      function updateBottomEdge() {
+        if (!scroll || !shell) return;
+        var atBottom = scroll.scrollTop + scroll.clientHeight >= scroll.scrollHeight - 4;
+        shell.classList.toggle('is-at-bottom', atBottom);
+      }
+
+      modalEl.addEventListener('shown.bs.modal', function () {
+        checkOverflow();
+        scroll && scroll.addEventListener('scroll', updateBottomEdge);
+      });
+
+      modalEl.addEventListener('hide.bs.modal', function () {
+        /* Reset risen position before close animation starts */
+        if (shell) shell.classList.remove('is-at-bottom');
+        /* Small delay so the shell snaps back, then close animation begins */
+        requestAnimationFrame(function () {
+          modalEl.classList.add('nc-modal--closing');
+        });
+        scroll && scroll.removeEventListener('scroll', updateBottomEdge);
+      });
+
+      modalEl.addEventListener('hidden.bs.modal', function () {
+        modalEl.classList.remove('nc-modal--closing');
+        if (shell) shell.classList.remove('is-overflow', 'is-at-bottom');
+        if (scroll) scroll.scrollTop = 0;
+      });
+    });
+  })();
   </script>
 
 </html>

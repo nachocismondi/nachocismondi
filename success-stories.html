@@ -688,6 +688,35 @@ document.getElementById('copy-btn-contact').addEventListener('click', copyEmailH
 </script>
 
 
+        <script>
+          (function () {
+            const mobileMenuEl = document.getElementById('mobileMenu');
+            if (!mobileMenuEl || typeof bootstrap === 'undefined') return;
+            const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(mobileMenuEl);
+            function cleanupBackdrop() {
+              document.querySelectorAll('.offcanvas-backdrop').forEach(function (node) { node.remove(); });
+              document.body.classList.remove('offcanvas-open');
+              document.body.style.removeProperty('overflow');
+              document.body.style.removeProperty('padding-right');
+            }
+            mobileMenuEl.addEventListener('hidden.bs.offcanvas', cleanupBackdrop);
+            mobileMenuEl.querySelectorAll('a[href]').forEach(function (link) {
+              link.addEventListener('click', function (event) {
+                const href = link.getAttribute('href') || '';
+                if (href.startsWith('#') && href.length > 1) {
+                  event.preventDefault();
+                  mobileMenuEl.addEventListener('hidden.bs.offcanvas', function onHidden() {
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, { once: true });
+                }
+                offcanvas.hide();
+                setTimeout(cleanupBackdrop, 420);
+              });
+            });
+          })();
+        </script>
+
         <!-- Menu fixed on scroll to top-->
         <script>
           const navbar = document.getElementById("smartNavbar");
@@ -769,7 +798,7 @@ document.getElementById('copy-btn-contact').addEventListener('click', copyEmailH
   (function () {
     const you        = document.getElementById('cursorYou');
     const nacho      = document.getElementById('cursorNacho');
-    const outer      = document.getElementById('outer');
+    const contact    = document.getElementById('contact');
     const abLogin    = document.getElementById('abLogin');
     const abHome     = document.getElementById('abHome');
     const abProfile  = document.getElementById('abProfile');
@@ -782,7 +811,7 @@ document.getElementById('copy-btn-contact').addEventListener('click', copyEmailH
     const st2        = document.getElementById('st2');
     const st3        = document.getElementById('st3');
 
-    if (!you || !nacho || !outer || !abLogin || !abHome || !abProfile ||
+    if (!you || !nacho || !contact || !abLogin || !abHome || !abProfile ||
         !selLogin || !selHome || !selProfile ||
         !lblLogin || !lblHome || !lblProfile || !st2 || !st3) {
       return;
@@ -791,13 +820,11 @@ document.getElementById('copy-btn-contact').addEventListener('click', copyEmailH
     const isMobile = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
 
     if (!isMobile) {
-      outer.addEventListener('mousemove', function (e) {
-        const r = outer.getBoundingClientRect();
-        you.style.left = (e.clientX - r.left) + 'px';
-        you.style.top  = (e.clientY - r.top) + 'px';
+      contact.addEventListener('mousemove', function (e) {
+        you.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
         you.style.opacity = '1';
       });
-      outer.addEventListener('mouseleave', function () {
+      contact.addEventListener('mouseleave', function () {
         you.style.opacity = '0';
       });
     }
