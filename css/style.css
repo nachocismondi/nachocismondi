@@ -307,16 +307,16 @@ li.tasks {
 
 #mobileMenu.show .offcanvas-body .nav-link,
 #mobileMenu.show .offcanvas-body .nav-item {
-  animation: mobileMenuItemIn 150ms ease-out both;
+  animation: mobileMenuItemIn 100ms ease-out both;
 }
 
-#mobileMenu.show .offcanvas-body > *:nth-child(1) { animation-delay: 200ms; }
-#mobileMenu.show .offcanvas-body > *:nth-child(2) { animation-delay: 240ms; }
-#mobileMenu.show .offcanvas-body > *:nth-child(3) { animation-delay: 280ms; }
-#mobileMenu.show .offcanvas-body > *:nth-child(4) { animation-delay: 320ms; }
-#mobileMenu.show .offcanvas-body > *:nth-child(5) { animation-delay: 360ms; }
-#mobileMenu.show .offcanvas-body > *:nth-child(6) { animation-delay: 400ms; }
-#mobileMenu.show .offcanvas-body > *:nth-child(7) { animation-delay: 440ms; }
+#mobileMenu.show .offcanvas-body > *:nth-child(1) { animation-delay: 0ms; }
+#mobileMenu.show .offcanvas-body > *:nth-child(2) { animation-delay: 20ms; }
+#mobileMenu.show .offcanvas-body > *:nth-child(3) { animation-delay: 40ms; }
+#mobileMenu.show .offcanvas-body > *:nth-child(4) { animation-delay: 60ms; }
+#mobileMenu.show .offcanvas-body > *:nth-child(5) { animation-delay: 80ms; }
+#mobileMenu.show .offcanvas-body > *:nth-child(6) { animation-delay: 100ms; }
+#mobileMenu.show .offcanvas-body > *:nth-child(7) { animation-delay: 120ms; }
 
 @keyframes mobileMenuItemIn {
   from {
@@ -3362,10 +3362,10 @@ label.text-white::after {
 
 /* Stagger the shimmer so it feels like a wave */
 .gh-grid.gh-loading .gh-week:nth-child(5n+1)  .gh-cell { animation-delay: 0ms;   }
-.gh-grid.gh-loading .gh-week:nth-child(5n+2)  .gh-cell { animation-delay: 60ms;  }
-.gh-grid.gh-loading .gh-week:nth-child(5n+3)  .gh-cell { animation-delay: 120ms; }
-.gh-grid.gh-loading .gh-week:nth-child(5n+4)  .gh-cell { animation-delay: 180ms; }
-.gh-grid.gh-loading .gh-week:nth-child(5n+5)  .gh-cell { animation-delay: 240ms; }
+.gh-grid.gh-loading .gh-week:nth-child(5n+2)  .gh-cell { animation-delay: 20ms;  }
+.gh-grid.gh-loading .gh-week:nth-child(5n+3)  .gh-cell { animation-delay: 40ms; }
+.gh-grid.gh-loading .gh-week:nth-child(5n+4)  .gh-cell { animation-delay: 60ms; }
+.gh-grid.gh-loading .gh-week:nth-child(5n+5)  .gh-cell { animation-delay: 120ms; }
 .gh-lv1   { background: rgba(239, 128, 26, 0.28); }
 .gh-lv2   { background: rgba(239, 128, 26, 0.52); }
 .gh-lv3   { background: rgba(239, 128, 26, 0.76); }
