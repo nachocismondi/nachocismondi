@@ -2612,8 +2612,7 @@ label.text-white::after {
    About page — hero 2-col layout
 ───────────────────────────────────────────────────────── */
 .about-hero {
-  padding-top: 64px;
-  padding-bottom: 128px;
+  padding-bottom: 6rem;
 }
 .about-marquee-col {
   overflow: hidden;
