@@ -132,7 +132,7 @@ li.tasks {
 
  /* --- Sticky Note --- */
  .sticky {
-  background: linear-gradient(0deg, #171717, #0c0c0c);
+  background: linear-gradient(145deg, #FCE889, #F9E26F);
   color: #000;              /* text color */
   border-radius: .2rem;
   padding: 2.1rem 1.25rem 3rem;
