@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" hreflang="en"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>Emeliuz | Nacho Cismondi | Digital experience designer</title>
+        <meta name="description" content="Branding and website design for a digital consultancy helping small Argentine companies become profitable." />
+        <meta name="author" content="Nacho Cismondi" />
+        <meta name="copyright" content="Copyright owner"/>
+        <meta name="keywords" content="ignacio cismondi, cismondi, argentine designer, #ef801a, design, portfolio, designer, digital, emeliuz, branding, consultancy"/>
+        <meta name="robots" content="follow"/>
+        <link rel="canonical" href="https://nachocismondi.com/emeliuz" />
+
+        <!--
+        * Main HTML
+        * By nachocismondi.com. Powered by Boostrap 5.0
+        * Cismondi Holdings -->
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://nachocismondi.com/emeliuz">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Emeliuz | Nacho Cismondi | Digital experience designer">
+        <meta property="og:description" content="Branding and website design for a digital consultancy helping small Argentine companies become profitable.">
+        <meta property="og:image" content="https://nachocismondi.com/assets/social-preview.webp">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:domain" content="nachocismondi.com">
+        <meta name="twitter:url" content="https://nachocismondi.com/emeliuz">
+        <meta name="twitter:title" content="Emeliuz | Nacho Cismondi | Digital experience designer">
+        <meta name="twitter:description" content="Branding and website design for a digital consultancy helping small Argentine companies become profitable.">
+        <meta name="twitter:image" content="https://nachocismondi.com/assets/social-preview.webp">
+
+        <!-- Whatsapp Meta Tags -->
+        <meta property="og:title" content="Emeliuz | Nacho Cismondi | Digital experience designer"/>
+        <meta property="og:description" content="Branding and website design for a digital consultancy helping small Argentine companies become profitable."/>
+        <meta property="og:url" content="https://nachocismondi.com/emeliuz"/>
+        <meta property="og:image"content="https://nachocismondi.com/assets/social-preview.webp"/>
+
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
+
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <!-- Main CSS-->
+        <link href="css/style.css" rel="stylesheet" />
+
+        <!-- Bootstrap CSS-->
+        <link href="css/boostrap-styles.css" rel="stylesheet" />
+
+        <!-- Swiper carousel CSS-->
+        <link href="css/swiper-bundle.min.css" rel="stylesheet" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- CSS Animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- Toltips  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- GLightbox (CDN) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/css/glightbox.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js"></script>
+
+
+            <script src="/js/posthog-init.js"></script>
+        <script src="/js/posthog-tracking.js"></script>
+
+    </head>
+
+    <body id="home" data-bs-target="#navbarSupportedContent" data-bs-spy="scroll" data-bs-offset="0">
+
+    <div id="cursorYou" style="opacity:0">
+      <svg class="csvg" viewBox="0 0 20 20">
+        <defs>
+          <linearGradient id="gy" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f06aff"/>
+            <stop offset="100%" stop-color="#c020e0"/>
+          </linearGradient>
+        </defs>
+        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gy)"/>
+      </svg>
+      <span class="lbl lbl-you">you</span>
+    </div>
+
+
+<!-- Menú responsive flotante -->
+<nav id="smartNavbar" class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+  <div class="container justify-content-center position-relative">
+    <!-- Toggle (solo visible en mobile) -->
+    <button class="navbar-toggler position-absolute animate__animated animate__fadeIn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Lista principal centrada -->
+    <ul class="navbar-nav align-items-center animate__animated animate__fadeIn">
+      <li class="nav-item me-1">
+        <a class="nav-link d-flex align-items-center" href="index" aria-label="Home">
+          <img src="assets/logo-circle.svg" alt="Logo" style="width: 24px; height: auto;" />
+        </a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
+      <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         <li class="nav-item"><a class="nav-link" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="height: 80vw;">
+  <div class="offcanvas-header justify-content-center">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column gap-3">
+    <a class="nav-link text-white d-flex align-items-center" href="index" aria-label="Home">
+      <img src="assets/logo-circle.svg" alt="Logo" style="width: 24px; height: auto;" />
+    </a>
+    <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="index#work">Work</a></li>
+    <li class="nav-item"><a class="nav-link" href="crafts">Crafts</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <a class="nav-link text-white" href="https://blog.nachocismondi.com" target="_blank">Blog <i class="bi bi-arrow-up-right-circle"></i></a>
+  </div>
+</div>
+
+<a id="copy-btn"
+   class="button-primary-sticky me-sm-3"
+   href="#"
+   data-bs-toggle="tooltip"
+   data-bs-placement="top"
+   data-bs-custom-class="chip-tooltip"
+   title="Copied email to clipboard"
+   alt="Copy my email to clipboard">
+  <span class="button-label">Write me</span>
+</a>
+
+<!-- Work section-->
+<section class="text-white bg-black mt-5" id="work">
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+                    <div class="col-md-12 col-lg-10 col-xl-8 px-sm-0">
+
+                    <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%" class="rounded">
+                      <source src="work/emeliuz/00_emeliuz_hero.webm" type="video/webm" alt="Project preview"/>
+                    </video>
+
+    <!-- Title & project info -->
+        <div class="row justify-content-center mt-3 mt-sm-4">
+      <div class="col-12 col-md-8 animate__animated animate__fadeIn">
+        <span class="chip-secondary badge rounded-pill mt-3 me-1">Branding</span><span class="chip-secondary badge rounded-pill mt-3 me-1">Web design</span><span class="chip-secondary badge rounded-pill mt-3">Social media</span>
+        <p class="mt-3 fs-5">A digital consultancy built from the ground up to help small Argentine companies turn complexity into profitability.</p>
+      </div>
+      <div class="col-md-4 animate__animated animate__fadeIn">
+        <dl class="row">
+            <dt class="col-12 text-uppercase small text-secondary">Year</dt>
+            <dd class="col-12 text-white">2020</dd>
+            <dt class="col-12 mt-2 text-uppercase small text-secondary">Channels</dt>
+            <dd class="col-12 text-white">Website, Instagram, LinkedIn</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- Overview & My Role -->
+        <div class="row gx-4 justify-content-center">
+
+      <div class="col-md-8 animate__animated animate__fadeIn">
+        <h5 class="text-uppercase small text-secondary">My Role</h5>
+          <p class="mt-2 fs-5">I led the project end-to-end: <strong>naming</strong>, <strong>visual identity</strong>, <strong>web design</strong>, and the <strong>social media system</strong> the team uses to reach new clients.</p>
+      </div>
+
+      <div class="col-md-4 mt-3 animate__animated animate__fadeIn">
+
+  </div>
+    </div>
+                    </div>
+         </div>
+
+
+
+     </div>
+</section>
+
+<section class="container text-white">
+    <div class="row justify-content-center">
+      <hr class="border-secondary my-5">
+
+
+      <div class="col-md-12 col-lg-10 col-xl-8 container py-5">
+        <div class="row">
+          <p class="fs-4 mt-2">We started working with Pablo, one of its founders, from the beginning. We think of a unique name with solid concepts behind it and then we work on the visual identity. Social media and the website were important to have a solid foundation and to be able to go out and find clients.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/04_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/04_emeliuz.webp" alt="Logo construction" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%" class="rounded-5">
+          <source src="work/emeliuz/05_emeliuz.webm" type="video/webm" alt="Identity in motion"/>
+        </video>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/06_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/06_emeliuz.webp" alt="Visual identity system" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-8">
+        <p class="fs-4 text-interval-top">The process started by defining the core concepts, then a grid, and finally the visual language that would carry the brand across every touchpoint.</p>
+      </div>
+
+      <div class="col-12">
+        <div class="container mb-5 pb-5">
+            <div class="row g-2 justify-content-center text-center">
+
+                <div class="col-8 col-sm-6 col-lg-3" style="transform: rotate(-2deg);">
+                <div class="sticky">
+                    <div class="label">KEY CONCEPTS</div>
+                    <p>Overcoming, Digital, Energy, Exergy, Iteration, Adaptability</p>
+                </div>
+                </div>
+
+                <div class="col-8 col-sm-6 col-lg-3" style="transform: rotate(0.5deg);">
+                    <div class="sticky">
+                        <div class="label">GRIDS</div>
+                        <p>A flexible grid was used, featuring the presence of the isologotype shape throughout the visual system.</p>
+                    </div>
+                </div>
+
+                <div class="col-8 col-sm-6 col-lg-3" style="transform: rotate(3deg);">
+                    <div class="sticky">
+                        <div class="label">VISUAL REFERENCES</div>
+                        <p>Tech, Code, Expansion, Iteration, Messaging</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/02_emeliuz.webp" class="glightbox" data-gallery="g1">
+        <img src="work/emeliuz/02_emeliuz.webp" alt="Emeliuz brand overview" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/03_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/03_emeliuz.webp" alt="Naming and concept exploration" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/07_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/07_emeliuz.webp" alt="Brand application" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/08_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/08_emeliuz.webp" alt="Stationery and merchandising" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/09_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/09_emeliuz.webp" alt="Social media system" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <video autoplay muted loop playsinline webkit-playsinline preload="auto" width="100%" class="rounded-5">
+          <source src="work/emeliuz/10_emeliuz.webm" type="video/webm" alt="Website walkthrough"/>
+        </video>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/11_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/11_emeliuz.webp" alt="Website — home" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/12_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/12_emeliuz.webp" alt="Website — services" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-md-12 col-lg-10 col-xl-8 container py-5">
+        <div class="row">
+          <p class="fs-4 text-interval-top"><svg xmlns='http://www.w3.org/2000/svg' width='80' height='82' viewport='0 0 100 100' style='fill:black;font-size:3rem;'><text y='50%'>🖥️</text></svg></br>The website is the team's first impression with cold leads. It opens with a clear value proposition, walks visitors through the services in plain language, and closes with a low-friction way to start a conversation — no long forms, no jargon.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-10 mt-4">
+        <a href="work/emeliuz/13_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/13_emeliuz.webp" alt="Website — detail" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-10">
+        <a href="work/emeliuz/14_emeliuz.webp" class="glightbox" data-gallery="g1">
+          <img src="work/emeliuz/14_emeliuz.webp" alt="Brand wrap-up" class="img-fluid rounded-5" loading="lazy">
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+    <!-- Contact section -->
+    <section class="contact my-5 py-5" id="contact">
+
+    <div class="container contact-cta rounded-3 my-5">
+        <div class="row px-sm-2 px-md-3 px-lg-5 py-5">
+
+            <div class="col-11 col-md-10 col-lg-6 p-2 mb-3 justify-content-center">
+
+                <div class="h1 fw-bold text-white">Create something</br> amazing side by side</div>
+                <div class="h4 text-white text-opacity-75"><a class="text-white" href="mailto:nachocismondi@gmail.com">nachocismondi@gmail.com</a> <i class="bi bi-envelope-fill"></i></div>
+                <a id="copy-btn-contact"
+                class="button-primary-contact mt-3"
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="chip-tooltip"
+                title="Copied email to clipboard"
+                alt="Copy my email to clipboard"
+                onclick="copyEmailHandler.call(this, event)">
+               <span class="button-label">Write me</span>
+             </a>
+              </div>
+
+            <div class="col-12 col-lg-6">
+
+                <!-- Figma canvas widget -->
+                <div class="figma-contact-widget">
+                  <div class="outer" id="outer">
+                    <div class="cursor-nacho" id="cursorNacho" style="left:220px;top:200px">
+                      <svg class="csvg" viewBox="0 0 20 20">
+                        <defs>
+                          <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffaa70"/>
+                            <stop offset="100%" stop-color="#ea580c"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M3 2l15 6.5-6.5 2L9 17z" fill="url(#gn)"/>
+                      </svg>
+                      <span class="lbl lbl-nacho">Nacho</span>
+                    </div>
+
+                    <div class="canvas-area">
+                      <div class="canvas-bg"></div>
+
+                      <div class="frame-label" id="lblLogin" style="left:-80px;top:6px">Login</div>
+                      <div class="frame-label" id="lblHome"  style="left:176px;top:6px">Home</div>
+                      <div class="frame-label" id="lblProfile" style="left:400px;top:116px;opacity:0">Profile</div>
+
+                      <div class="sel" id="selLogin"  style="left:-80px;top:20px;width:200px;height:360px;"></div>
+                      <div class="sel" id="selHome"   style="left:176px;top:20px;width:200px;height:360px;"></div>
+                      <div class="sel" id="selProfile" style="left:400px;top:130px;width:170px;height:170px;"></div>
+
+                      <!-- Login -->
+                      <div class="ab-login" id="abLogin" style="left:-80px;top:20px;">
+                        <div class="ab1-top">
+                          <div class="ab1-logo"></div>
+                          <div class="ab1-bar1"></div>
+                          <div class="ab1-bar2"></div>
+                        </div>
+                        <div class="ab1-body">
+                          <div class="ab1-field lit"></div>
+                          <div class="ab1-field"></div>
+                          <div class="ab1-cta"></div>
+                          <div class="ab1-divrow"><div class="ab1-divline"></div><div class="ab1-divdot"></div><div class="ab1-divline"></div></div>
+                          <div class="ab1-ghost"></div>
+                        </div>
+                      </div>
+
+                      <!-- Home -->
+                      <div class="ab-home" id="abHome" style="left:176px;top:20px;">
+                        <div class="ab2-topbar">
+                          <div class="ab2-avatar"></div>
+                          <div class="ab2-bargroup">
+                            <div class="ab2-minibar" style="width:55%"></div>
+                            <div class="ab2-minibar" style="width:35%"></div>
+                          </div>
+                          <div class="ab2-notif"></div>
+                        </div>
+                        <div class="ab2-body">
+                          <div class="ab2-hero"><div class="ab2-hero-glow"></div></div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:80%"></div>
+                              <div class="ab2-card-line" style="width:50%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq" style="background:#222;border-color:#2a2a2a"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:70%"></div>
+                              <div class="ab2-card-line" style="width:40%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                          <div class="ab2-card">
+                            <div class="ab2-card-sq"></div>
+                            <div class="ab2-card-lines">
+                              <div class="ab2-card-line" style="width:85%"></div>
+                              <div class="ab2-card-line" style="width:45%"></div>
+                            </div>
+                            <div class="ab2-pill"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Profile -->
+                      <div class="ab-profile" id="abProfile" style="left:400px;top:130px;transform:scale(0.82);opacity:0;">
+                        <img src="assets/figma-profile.webp" alt="Profile">
+                      </div>
+
+                      <!-- Stickies -->
+                      <div class="sticky" id="st2" style="left:152px;top:270px;background:#0f2318;color:#4caf82;">
+                        <div class="sticky-title">Interaction</div>
+                        <div class="sticky-body">Add swipe to dismiss</div>
+                      </div>
+                      <div class="sticky" id="st3" style="left:456px;top:18px;background:#0f1526;color:#6b8cff;">
+                        <div class="sticky-title">Nav</div>
+                        <div class="sticky-body">Missing tab bar</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                    <div class="white-rabbit-text">Follow the white rabbit</div>
+
+        </div>
+    </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between py-3 mb-4 border-top">
+
+                <div class="col-md-10 d-flex align-items-center">
+                  <a href="/" class="mb-3 me-3 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <img src="assets/logo.svg" height="48px" alt="Nacho Cismondi Logo">
+                  </a>
+                  <span class="mb-3 mb-md-0 text-white-50 align-items-center"><a href="https://creativecommons.org/licenses/by/3.0/" targer="blank" class="text-white-50">© CC 3.0</a> | Web made with <i class="bi bi-heart-fill"></i> and Boostrap 5. <script>document.write(new Date().getFullYear());</script>
+                  </span>
+                </div>
+
+                <div class="d-flex align-items-center pt-3">
+                <ul class="social-icons list-unstyled d-flex gap-4">
+                    <li><a href="https://twitter.com/nachocismondi" target="blank"><i class="bi bi-twitter-x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/nachocismondi" target="blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="https://dribbble.com/nachocismondi" target="blank"><i class="bi bi-dribbble"></i></a></li>
+                    <li><a href="https://www.behance.net/nachocismondi" target="blank"><i class="bi bi-behance"></i></a></li>
+                </ul>
+                </div>
+        </footer>
+    </div>
+
+    </body>
+
+
+        <!-- Popper JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+        <!-- Swiper Carrousel JS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Button primary delay to recreate hover-->
+        <script>
+          document.querySelectorAll('.button-primary-sticky').forEach(boton => {
+            let tapTimeout;
+
+            boton.addEventListener('touchstart', () => {
+              boton.classList.add('tap-activo');
+              clearTimeout(tapTimeout);
+              tapTimeout = setTimeout(() => {
+                boton.classList.remove('tap-activo');
+              }, 1000);
+            });
+
+            boton.addEventListener('touchend', () => {
+              clearTimeout(tapTimeout);
+              tapTimeout = setTimeout(() => {
+                boton.classList.remove('tap-activo');
+              }, 1000);
+            });
+          });
+        </script>
+
+<script>
+// Initialize all tooltips in manual mode
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
+  new bootstrap.Tooltip(el, { trigger: 'manual' })
+);
+
+// Click handler: copy email + show tooltip
+document.getElementById('copy-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  const email = 'nachocismondi@gmail.com';
+  const tip = bootstrap.Tooltip.getInstance(this);
+  navigator.clipboard.writeText(email)
+    .then(() => { tip.show(); setTimeout(() => tip.hide(), 3000); })
+    .catch(console.error);
+
+});
+</script>
+
+
+        <script>
+          (function () {
+            const mobileMenuEl = document.getElementById('mobileMenu');
+            if (!mobileMenuEl || typeof bootstrap === 'undefined') return;
+            const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(mobileMenuEl);
+            function cleanupBackdrop() {
+              document.querySelectorAll('.offcanvas-backdrop').forEach(function (node) { node.remove(); });
+              document.body.classList.remove('offcanvas-open');
+              document.body.style.removeProperty('overflow');
+              document.body.style.removeProperty('padding-right');
+            }
+            mobileMenuEl.addEventListener('hidden.bs.offcanvas', cleanupBackdrop);
+            mobileMenuEl.querySelectorAll('a[href]').forEach(function (link) {
+              link.addEventListener('click', function (event) {
+                const href = link.getAttribute('href') || '';
+                if (href.startsWith('#') && href.length > 1) {
+                  event.preventDefault();
+                  mobileMenuEl.addEventListener('hidden.bs.offcanvas', function onHidden() {
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, { once: true });
+                }
+                offcanvas.hide();
+                setTimeout(cleanupBackdrop, 420);
+              });
+            });
+          })();
+        </script>
+
+        <!-- Menu fixed on scroll to top-->
+        <script>
+          const navbar = document.getElementById("smartNavbar");
+          let lastScrollTop = 0;
+
+          window.addEventListener("scroll", function () {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+              navbar.style.top = "-100px";
+            } else {
+              navbar.style.top = "4px";
+            }
+
+            if (scrollTop > 20) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          });
+        </script>
+
+<script>
+  (function () {
+    const btn = document.getElementById('copy-btn');
+    let contactVisible = false;
+
+    function toggleByScroll() {
+      if (contactVisible) { btn.classList.remove('is-visible'); return; }
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+      const winHeight = window.innerHeight;
+      const maxScrollable = docHeight - winHeight;
+      const progress = maxScrollable > 0 ? (scrollTop / maxScrollable) : 0;
+
+      if (progress >= 0.5) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    }
+
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      new IntersectionObserver(function(entries) {
+        contactVisible = entries[0].isIntersecting;
+        toggleByScroll();
+      }, { threshold: 0.05 }).observe(contactSection);
+    }
+
+    toggleByScroll();
+    window.addEventListener('scroll', toggleByScroll, { passive: true });
+    window.addEventListener('resize', toggleByScroll);
+  })();
+  </script>
+
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+
+  <script>
+    (function () {
+      const you = document.getElementById('cursorYou');
+      const contact = document.getElementById('contact');
+      if (!you || !contact) return;
+      if (window.matchMedia('(hover:none) and (pointer:coarse)').matches) return;
+      contact.addEventListener('mousemove', function (e) {
+        you.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        you.style.opacity = '1';
+      });
+      contact.addEventListener('mouseleave', function () {
+        you.style.opacity = '0';
+      });
+    })();
+  </script>
+
+</html>
